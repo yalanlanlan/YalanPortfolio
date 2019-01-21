@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;
+	padding: 55px 130px;}
+	a{
+		font-size: 21px;
+		text-decoration: none;
+		font-weight: bold;
+		font-style: italic;
+		color: black;
+		padding-right: 40px;
+	}
+	a:hover{
+		font-style: normal;
+		color: black;
+	}
+	h3{
+		font-size: 18px;
+		font-weight: lighter;
+		padding-top: 20px;
+		width: 100%;
+		color: black;
+	}
+.theGallery{
+	padding-left: 20vw;
+    float: left;
+	}
+.work{
+  display: table;
+  
+  width: 100%;
+  padding-right: 2vw;
+  padding-left: 0vw;
+  margin-bottom: 2vw;
+	}
+.theWork{
+	padding: 0;
+    float: left;
+	}
+.float{
+		float: left;
+	}
+div.gallery {
+  margin: 3vw 0vw;
+  float: left;
+  width: 23vw;
+  padding-right: 2vw;
+  padding-left: 0vw;
+  
+}
+@media screen and (min-width: 1300px) {
+  div.gallery {
+  width: 330px;
+  height: auto;
+}
+	}
+div.gallery img {
+  height: auto;
+  width: 100%;	
+}
+
+div.modal-content h2 {
+  padding-left: 20vw;
+  font-size: 21px;
+}
+div.modal-content p {
+  padding-left: 20vw;
+  padding-right: 20vw;
+  font-size: 18px;
+}
+.modalDialog {
+        position: fixed;
+        font-family: Arial, Helvetica, sans-serif;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+	padding: 55px 70px;
+		 
+        background: rgba(255,255,255,1);
+        z-index: 99;
+        opacity:0;
+        -webkit-transition: opacity 400ms ease-in;
+        -moz-transition: opacity 400ms ease-in;
+        transition: opacity 400ms ease-in;
+        pointer-events: none;
+    }
+
+    .modalDialog:target {
+        opacity:1;
+        pointer-events: auto;
+    }
+
+    .modalDialog > div {
+		position: relative;
+		margin: auto;
+		padding-left: 2rem;
+		padding-right: 2rem;
+		padding-top: 2vh;
+		padding-bottom: 2vh;
+    width: 90vw;
+    height:90vh;
+    border-radius: 0px;
+    background: #ffffff;
+		overflow: scroll;
+    }
+.modalDialog::-webkit-scrollbar { 
+    display: none; 
+}
+::-webkit-scrollbar {
+    width: 0px;
+	height: 0px;/* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+/* optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
+/* Theffffffdal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 20px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: scroll; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(255,0,0,0.4); /* Black w/ opacity */
+}
+
+/*
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 10px;
+  border: 2px solid #000000;
+  width: 90vw;
+  height:90vh;
+}
+*/
+
+/* The Close Button */
+.close {
+  color: #ffffff;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+	text-decoration: none;
+	-webkit-text-stroke: 1.5px black;
+  position: sticky;
+  position: -webkit-sticky;
+  top:0;
+}
+
+.close:hover,
+.close:focus {
+  color: #000000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.myVideo
+{
+	display: block;
+	padding-top: 30px;
+	padding-bottom: 30px;
+    margin: 0 auto;
+	width: 60vw;
+	height: 60vh;
+}
+.tooltiptext {
+  visibility: hidden;
+  width: auto;
+  background-color: black;
+  border: 18px solid black;
+  border-top-style:none;
+  border-bottom-style:none;
+  color: #fff;
+  text-align: center;
+  border-radius: 0px;
+  padding: 5px 0;
+  font-size: 14px;
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+.gallery:hover .tooltiptext {
+  visibility: visible;
+}
+.work:hover .tooltiptext {
+  visibility: visible;
+}
+video::-webkit-media-controls-panel {
+     background-image: linear-gradient(transparent, transparent); !important;
+}
+video::-webkit-media-controls-timeline {
+     opacity: .2;
+}
+video::-webkit-media-controls-current-time-display {
+     opacity: .2;
+}
+	video::-webkit-media-controls-time-remaining-display {
+     opacity: .4;
+}
+	video::-webkit-media-controls-play-button {
+     color: #000;
+	 text-decoration-color: black;
+}
+</style>
+</head>
+<body>
+<a href="index2.html" onmouseclick="click();">REEL</a>
+<a href="#" onmouseclick="click();">WORKS</a>
+<a href="#" onmouseclick="click();">ABOUT</a>
+<a href="#" onmouseclick="click();">CONTACT</a>
+<h3></h3>
+
+<!-- Trigger/Open The Modal -->
+<div class="theWork">
+  <div class="work">
+  <div class="float">
+<a href="#openModal1"><img src="
+img/2018-09-12P.gif"></a>
+<span class="tooltiptext"> REEL </span>
+  </div>
+<!--
+<button class="button" data-modal="#modalOne" style="position: absolute; top: 200px; background-color: rgba(0,0,0,0); border: none;"><img src="
+img/portfolio-img4.jpg"></button>
+-->
+   <div class="float">
+    <h2>REEL</h2>
+	   <p>12 rules of animation</p>
+   </div>
+</div>
+
+<!-- The Modal -->
+<div id="openModal1" class="modalDialog">
+<!-- Modal content -->
+  <div class="modal-content">
+    <a href="#close" title="Close" class="close">&larr; Back</a>
+    
+      <video class="myVideo" controls>
+  <source src="ree3.mp4" type="video/mp4">
+  <source src="ree3.ogg" type="video/ogg">
+Your browser does not support the video tag.
+      </video>
+      <h2>12 RULES OF ANIMATION</h2>
+      <p>Tooltip textTooltip text Tooltip text Tooltip text Tooltip text Tooltip text vTooltip textTooltip textTooltip textTooltip textTooltip text Tooltip text Tooltip text Tooltip text Tooltip text vTooltip textTooltip textTooltip textTooltip textTooltip text Tooltip text Tooltip text Tooltip </p>
+      <div class="theGallery">
+      <div class="gallery">
+      <a href="#openModal1"><img src="
+img/2018-09-12P.gif"></a>
+<span class="tooltiptext"> 12 RULES OF ANIMATION </span>
+      </div>
+      <div class="gallery">
+      <a href="#openModal1"><img src="
+img/2018-09-12P.gif"></a>
+<span class="tooltiptext"> 12 RULES OF ANIMATION </span>
+      </div>
+      <div class="gallery">
+      <a href="#openModal1"><img src="
+img/2018-09-12P.gif"></a>
+<span class="tooltiptext"> 12 RULES OF ANIMATION </span>
+      </div>
+      </div>
+  </div>
+</div>
+
+<div class="work">
+<a href="#openModal2"><img src="
+img/2018-09-count.gif"></a>
+
+</div>
+<!-- The Modal -->
+<div id="openModal2" class="modalDialog">
+<!-- Modal content -->
+  <div class="modal-content">
+    <a href="#close" title="Close" class="close">&larr; Back</a>
+    <p>2ed Modal..</p>
+      <video autoplay muted loop class="myVideo">
+  <source src="?.mp4" type="video/mp4">
+      </video>
+  </div>
+</div>
+
+<div class="work">
+<a href="#openModal3"><img src="
+img/2018-09-count.gif"></a>
+
+</div>
+<!-- The Modal -->
+<div id="openModal3" class="modalDialog">
+<!-- Modal content -->
+  <div class="modal-content">
+    <a href="#close" title="Close" class="close">&larr; Back</a>
+    <p>2ed Modal..</p>
+      <video autoplay muted loop class="myVideo">
+  <source src="?.mp4" type="video/mp4">
+      </video>
+  </div>
+</div>
+
+<div class="work">
+<a href="#openModal4"><img src="
+img/2018-09-count.gif"></a>
+
+</div>
+<!-- The Modal -->
+<div id="openModal4" class="modalDialog">
+<!-- Modal content -->
+  <div class="modal-content">
+    <a href="#close" title="Close" class="close">&larr; Back</a>
+    <p>2ed Modal..</p>
+      <video autoplay muted loop class="myVideo">
+  <source src="?.mp4" type="video/mp4">
+      </video>
+  </div>
+</div>
+
+
+<div class="work">
+<a href="#openModal5"><img src="
+img/2018-09-count.gif"></a>
+
+</div>
+<!-- The Modal -->
+<div id="openModal5" class="modalDialog">
+<!-- Modal content -->
+  <div class="modal-content">
+    <a href="#close" title="Close" class="close">&larr; Back</a>
+    <p>2ed Modal..</p>
+      <video autoplay muted loop class="myVideo">
+  <source src="?.mp4" type="video/mp4">
+      </video>
+  </div>
+</div>
+
+</div>
+</body>
+
+<script>
+//// Get the modal
+//var modal = document.getElementsByClassName("modal");
+//
+//// Get the button that opens the modal
+//var btn = document.getElementsByClassName("button");
+//
+//// Get the <span> element that closes the modal
+//var span = document.getElementsByClassName("close")[0];
+//
+//// When the user clicks the button, open the modal 
+//btn.onclick = function() {
+//  modal.style.display = "block";
+//}
+//
+//// When the user clicks on <span> (x), close the modal
+//span.onclick = function() {
+//  modal.style.display = "none";
+//}
+//
+//// When the user clicks anywhere outside of the modal, close it
+//window.onclick = function(event) {
+//  if (event.target == modal) {
+//    modal.style.display = "none";
+//  }
+//}
+
+</script>
+
+
+</html>
