@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<script src="processing.js"></script>
+<style>
+
+body {font-family: Arial, Helvetica, sans-serif;
+	padding: 6vw 10vw;}
+	a{
+		font-size: 24px;
+		text-decoration: none;
+		font-weight: bold;
+		font-style: italic;
+		color: black;
+		padding-right: 40px;
+	}
+	a:hover{
+		font-style: normal;
+		color: #FFA485;
+	}
+	h2{
+		font-size: 18px;
+	}
+	h3{
+		font-size: 18px;
+		font-weight: lighter;
+		padding-top: 20px;
+		width: 100%;
+		color: black;
+	}
+	.theWork{
+	padding: 10vw 0;
+    float: left;
+	}
+	.smallText{
+		font-size: 9pt;
+	}
+	.footer{
+		padding-top: 10vw;
+		color: #FFA485;
+	}
+	#myVideo2 {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 100vw; 
+  height: 100vh;
+  z-index: -1;
+}
+	</style>
+</head>
+<body>
+<a href="hi.html" onmouseclick="click();">HI</a>
+<a href="index.html" onmouseclick="click();">WORKS</a>
+<a href="about.html" onmouseclick="click();">ABOUT</a>
+<a href="contact.html" onmouseclick="click();">CONTACT</a>
+
+<script type="text/processing">
+   void setup() {
+  fullScreen();
+  rectMode(CENTER);
+  frameRate(120);
+}
+
+void draw() {
+  background(20);
+  noStroke();
+  fill(mouseY/2, 0, 0);
+  rect(mouseX, mouseY, 100, 100);
+  rect(mouseX/2, mouseY/2, 100, 100);
+  println(mouseY);
+  rect(random(width), random(height),50,50);
+  stroke(255);
+  strokeWeight(.2);
+  line(random(width+20)-80,random(height+20)-80,random(width+100)-80,random(height+100)-80);
+  noFill();
+  stroke(255);
+  arc(100,100,100,100,random(TAU), random(TAU),PIE);
+}
+</script>
+<canvas id="myVideo2"> </canvas>
+        <span style="position: absolute; left: 0px; opacity: 0; font-family: PjsEmptyFont, fantasy;">AAAAAAAA</span>
+<div class="footer">
+	<p class="smallText">writen by yalan wen . 2019 . ywen@sva.edu</p>
+	</div>
+</body>
+</html>

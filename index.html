@@ -6,7 +6,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="keywords" content="">
 	<meta name="description" content="">
-<style>
+	<style>
+
 body {font-family: Arial, Helvetica, sans-serif;
 	padding: 6vw 10vw;}
 	a{
@@ -19,7 +20,10 @@ body {font-family: Arial, Helvetica, sans-serif;
 	}
 	a:hover{
 		font-style: normal;
-		color: black;
+		color: #FFA485;
+	}
+	h2{
+		font-size: 18px;
 	}
 	h3{
 		font-size: 18px;
@@ -29,18 +33,25 @@ body {font-family: Arial, Helvetica, sans-serif;
 		color: black;
 	}
 .theGallery{
-	padding-left: 20vw;
+	padding-left: 15vw;
     float: left;
+	margin-bottom: 100px;
+	}
+.theGallery>a>img{
+    width: 60vw;
+	}
+.sketch>img{
+    width: 60vw;
 	}
 .work{
   display: table;
   width: 100%;
   padding-right: 2vw;
   padding-left: 0vw;
-  margin-bottom: 2vw;
+  margin-bottom: 5vw;
 	}
 .theWork{
-	padding: 0;
+	padding: 10vw 0;
     float: left;
 	}
 @media screen and (min-width:1300px){
@@ -54,14 +65,21 @@ body {font-family: Arial, Helvetica, sans-serif;
 }
 .float{
 	float: left;
+	margin-right: 20px;
 	}
+
 .float p{
-		width:35vw;
+	
+	width:35vw;
+	font-size: 12px;
+	}
+.smallText{
+		font-size: 9pt;
 	}
 div.gallery {
   margin: 3vw 0vw;
   float: left;
-  width: 23vw;
+  width: 30vw;
   padding-right: 2vw;
   padding-left: 0vw;
   
@@ -76,13 +94,24 @@ div.gallery img {
   height: auto;
   width: 100%;	
 }
-
+.project > img{
+		padding-left: 15vw;
+		padding-right: 15vw;
+		width: 60vw;
+	}
+.project > a{
+		padding-left: 15vw;
+		padding-right: 15vw;
+	}
+	.project{
+		margin-bottom: 20vw;
+	}
 div.modal-content h2 {
   padding-left: 15vw;
   padding-right: 15vw;
   font-size: 21px;
 }
-div.modal-content p {
+div.modal-content p, .watch{
   padding-left: 15vw;
   padding-right: 15vw;
   font-size: 18px;
@@ -181,7 +210,7 @@ div.modal-content p {
 }
 .tooltiptext {
   visibility: hidden;
-  width: auto;
+  width: 27vw;
   background-color: black;
   border: 18px solid black;
   border-top-style:none;
@@ -199,46 +228,33 @@ div.modal-content p {
   visibility: visible;
 }
 
-video::-webkit-media-controls-panel {
-     background-image: linear-gradient(transparent, transparent); !important;
-}
-video::-webkit-media-controls-timeline {
-     opacity: .2;
-}
-video::-webkit-media-controls-current-time-display {
-     opacity: .2;
-}
-	video::-webkit-media-controls-time-remaining-display {
-     opacity: .4;
-}
-	video::-webkit-media-controls-play-button {
-     color: #000;
-	 text-decoration-color: black;
-}
+.footer{
+		padding-top: 10vw;
+		color: #FFA485;
+	}
 </style>
+
 </head>
 <body>
-<a href="index2.html" onmouseclick="click();">REEL</a>
-<a href="#" onmouseclick="click();">WORKS</a>
-<a href="#" onmouseclick="click();">ABOUT</a>
-<a href="#" onmouseclick="click();">CONTACT</a>
-<h3></h3>
+
+<a href="index.html" onmouseclick="click();">WORKS</a>
+<a href="about.html" onmouseclick="click();">ABOUT</a>
+<a href="contact.html" onmouseclick="click();">CONTACT</a>
+
 
 <!-- Trigger/Open The Modal -->
 <div class="theWork">
   <div class="work">
   <div class="float">
 <a href="#openModal1"><img src="
-img/2018-09-12P.gif"></a>
+img/reel_cover.png"></a>
 <span class="tooltiptext"> REEL </span>
   </div>
-<!--
-<button class="button" data-modal="#modalOne" style="position: absolute; top: 200px; background-color: rgba(0,0,0,0); border: none;"><img src="
-img/portfolio-img4.jpg"></button>
--->
    <div class="float">
     <h2>REEL</h2>
-	   <p>12 rules of animation . Blade Runner Title sequence . Motion Graphics . Stop Motion . </p>
+	   <p>Train・12 Rules of Animation・Movement・Text Animation・Breath・Blade Runner Title Sequence</p>
+	   <p class="smallText">Techniques <br>
+After Effects . Photoshop . Stop Motion . 3ds Max . C4D . Hand Painted Films </p>
    </div>
 </div>
 
@@ -248,137 +264,255 @@ img/portfolio-img4.jpg"></button>
   <div class="modal-content">
     <a href="#close" title="Close" class="close">&larr; Back</a>
     
-<!--
-      <video class="myVideo" controls>
-  <source src="ree3.mp4" type="video/mp4">
-  <source src="ree3.ogg" type="video/ogg">
-Your browser does not support the video tag.
-      </video>
--->
-	  <div class="myVideo"><iframe src="https://player.vimeo.com/video/305373129?autoplay=1" style="width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
-<p><a href="https://vimeo.com/305373129">yalan_14 Motion Reel</a> from <a href="https://vimeo.com/user57460687">yalan</a></p>
-      <h2>12 RULES OF ANIMATION</h2>
-      <p>Tooltip textTooltip text Tooltip text Tooltip text Tooltip text Tooltip text vTooltip textTooltip textTooltip textTooltip textTooltip text Tooltip text Tooltip text Tooltip text Tooltip text vTooltip textTooltip textTooltip textTooltip textTooltip text Tooltip text Tooltip text Tooltip </p>
+	  <div class="myVideo"><iframe src="https://player.vimeo.com/video/305373129" style="width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+<p><a href="https://vimeo.com/305373129" target="_blank">Motion Reel</a> from <a href="https://vimeo.com/user57460687" target="_blank">yalan on Vimeo</a></p>
+      
       <div class="theGallery">
+		  <p style="padding-left: 0;">Break down-Click to see the whole video-</p>
       <div class="gallery">
-      <a href="#openModal1"><img src="
-img/2018-09-12P.gif"></a>
-<span class="tooltiptext"> 12 RULES OF ANIMATION </span>
+      <a href="https://vimeo.com/290189499" target="_blank"><img src="
+img/2018-10-move.gif"></a>
+<span class="tooltiptext">MOVEMENT<br>
+2018 Sep  After Effects</span>
       </div>
       <div class="gallery">
-      <a href="#openModal1"><img src="
+      <a href="https://vimeo.com/289006394" target="_blank"><img src="
 img/2018-09-12P.gif"></a>
-<span class="tooltiptext"> 12 RULES OF ANIMATION </span>
+<span class="tooltiptext"> 12 RULES OF ANIMATION <br>
+2018 Aug  Photoshop Animation</span>
       </div>
       <div class="gallery">
-      <a href="#openModal1"><img src="
+      <a href="https://vimeo.com/292618487" target="_blank"><img src="
 img/2018-09-12P.gif"></a>
-<span class="tooltiptext"> 12 RULES OF ANIMATION </span>
+<span class="tooltiptext"> TRAIN<br>
+2018 Sep  After Effects </span>
+      </div>
+      <div class="gallery">
+      <a href="https://vimeo.com/295071615" target="_blank"><img src="
+img/2018-09-count.gif"></a>
+<span class="tooltiptext"> TEXT ANIMATION<br>
+2018 Oct  After Effects </span>
+      </div>
+      <div class="gallery">
+      <a href="https://vimeo.com/248292749" target="_blank"><img src="
+img/2018-09-12P.gif"></a>
+<span class="tooltiptext"> BREATH<br>
+2017 Hand Painted Films </span>
+      </div>
+      <div class="gallery">
+      <a href="https://www.youtube.com/watch?v=YZPDXj3u5aU" target="_blank"><img src="
+img/2018-09-12P.gif"></a>
+<span class="tooltiptext"> BLADE RUNNER TITLE SEQUENCE<br>
+2016 3ds Max</span>
       </div>
       </div>
   </div>
 </div>
 
-<div class="work">
+<!-- Trigger/Open The Modal -->
+  <div class="work">
+  <div class="float">
 <a href="#openModal2"><img src="
-img/2018-09-count.gif"></a>
-
+img/design_cover.jpg"></a>
+<span class="tooltiptext"> GRAPHIC DESIGN </span>
+  </div>
+   <div class="float">
+    <h2>GRAPHIC DESIGN</h2>
+	   <p>HIHIT Visual Identity・Difficulty Map</p>
+   </div>
 </div>
+
 <!-- The Modal -->
 <div id="openModal2" class="modalDialog">
 <!-- Modal content -->
   <div class="modal-content">
     <a href="#close" title="Close" class="close">&larr; Back</a>
-    <p>2ed Modal..</p>
-      <video autoplay muted loop class="myVideo">
-  <source src="?.mp4" type="video/mp4">
-      </video>
+    <div class="project">
+    <h2>HIHIT Visual Identity</h2>
+    <p>2018  – Creative project to bring people closer together.</p>
+    <p>We searched for sounds made by things in our daily lives and created musical instruments. </p>
+	  <img src="https://docs.google.com/uc?id=1Skn-3D0ZDbcEVSeZXZQ6p30C6c--Ef5E" >
+	  <p>Visual Design</p>
+	  <img src="https://docs.google.com/uc?id=1MuJpmJAmErEyyuaLsdBz0X0Y_EVZiMQj" >
+	  <img src="https://docs.google.com/uc?id=10SJPWLc6ASmAjsQkHqhUjYf1Q1Ds_6tU" >
+	  <img src="https://docs.google.com/uc?id=1AISUGhMahBmOKzA61IojMgE3nByLaO6W" >
+	  <img src="https://docs.google.com/uc?id=1tFz1kVo5RFEq6e1As0sH864V-Op2aRKM" >
+	  <p>Draft</p>
+	  <img src="https://docs.google.com/uc?id=1hNQ4iiEB-9LWk0IUf6bi2LrR4-SfuiiQ" >
+	  <img src="https://docs.google.com/uc?id=1lRhxpufaEzvSYULpJNTMtnqLtibf1EYF" ><br>
+	  <a href=" https://leaps7bounds.wixsite.com/yalanart/hihit" class="watch" target="_blank">&#x21FF; See the Whole Project</a>
+	</div>
+	
+	<div class="project">
+    <h2>Difficulty Map</h2>
+    <p>The map shows visually the obstacles on my way home in different routes. Colors distinguishes the kind of difficulty.</p>
+	  <img src="https://docs.google.com/uc?id=1Zf6-W3N77DR2ztONBneAcwh_rfLI5ILL" >
+	  <p>Research</p>
+	  <img src="https://docs.google.com/uc?id=17aL90KVAxZcYyyQSKCbkWULdl2kdvVQp" >
+	  <p>Display</p>
+	  <img src="https://docs.google.com/uc?id=1iDE5ZjtSUdmER20703NJXUJHlR845qUn" >
+	  <img src="https://docs.google.com/uc?id=1HpcfUieghZMyLD5ZjTDc7XYYERzcUMPh" >
+	</div>
   </div>
 </div>
 
-<div class="work">
+<!-- Trigger/Open The Modal -->
+  <div class="work">
+  <div class="float">
 <a href="#openModal3"><img src="
-img/2018-09-count.gif"></a>
-
+img/sketch_cover.png"></a>
+<span class="tooltiptext"> SKETCHES </span>
+  </div>
+   <div class="float">
+	   <h2>SKETCHES</h2>
+   </div>
 </div>
+
 <!-- The Modal -->
 <div id="openModal3" class="modalDialog">
 <!-- Modal content -->
   <div class="modal-content">
     <a href="#close" title="Close" class="close">&larr; Back</a>
-    <p>2ed Modal..</p>
-      <video autoplay muted loop class="myVideo">
-  <source src="?.mp4" type="video/mp4">
-      </video>
+    <div class="theGallery">
+      <div class="sketch">
+      <img src="https://docs.google.com/uc?id=1cz1L9reVMdTAEynqy0mYD92DMW7MSsox">
+      <img src="https://docs.google.com/uc?id=1TA-BVEwsBB2YitkCdoUG6TURwOTt98tV">
+      <img src="https://docs.google.com/uc?id=1XLAYjRFvKNCcJFZzEFsJgAifN5a7C3b0">
+      <img src="https://docs.google.com/uc?id=1w3ykBHqjvo76Vdm6-xHWi0Ex81XFUXzm">
+      <img src="https://docs.google.com/uc?id=1DW6du0x_5iMjdIBxqS1kiFII-fhxI4nf">
+	  </div>
   </div>
 </div>
+	</div>
 
-<div class="work">
+<!-- Trigger/Open The Modal -->
+
+  <div class="work">
+  <div class="float">
 <a href="#openModal4"><img src="
-img/2018-09-count.gif"></a>
-
+img/photo_cover.png"></a>
+<span class="tooltiptext"> PHOTOGRAPHY </span>
+  </div>
+   <div class="float">
+    <h2>PHOTOGRAPHY</h2>
+	   </div>
 </div>
+
 <!-- The Modal -->
 <div id="openModal4" class="modalDialog">
 <!-- Modal content -->
   <div class="modal-content">
     <a href="#close" title="Close" class="close">&larr; Back</a>
-    <p>2ed Modal..</p>
-      <video autoplay muted loop class="myVideo">
-  <source src="?.mp4" type="video/mp4">
-      </video>
+    <div class="theGallery">
+      
+      <a href="https://drive.google.com/open?id=1C31snIoCItam_deUtMEuHJ--vzG2ESGR" target="_blank"><img src="
+https://docs.google.com/uc?id=1C31snIoCItam_deUtMEuHJ--vzG2ESGR"></a>
+     
+      
+      <a href="https://drive.google.com/open?id=1NP-yOmFHTEts1jkxpfHyh_KAs0U4SZPU" target="_blank"><img src="
+https://docs.google.com/uc?id=1NP-yOmFHTEts1jkxpfHyh_KAs0U4SZPU"></a>
+      
+      
+      <a href="https://drive.google.com/open?id=1JwRgmawzPkecz35ijW64GucRFcWnLZHD" target="_blank"><img src="
+https://docs.google.com/uc?id=1JwRgmawzPkecz35ijW64GucRFcWnLZHD"></a>
+      
+      <a href="https://drive.google.com/open?id=1YHYdKTcV-tPJz74MSYQyj9b76ZVhdTrH" target="_blank"><img src="
+https://docs.google.com/uc?id=1YHYdKTcV-tPJz74MSYQyj9b76ZVhdTrH"></a>
+      
+      <a href="https://drive.google.com/open?id=1JPwgQ-iw-jS8daOt-ed1LHdrI6WQhNiv" target="_blank"><img src="
+https://docs.google.com/uc?id=1JPwgQ-iw-jS8daOt-ed1LHdrI6WQhNiv"></a>
+      
+      <a href="https://drive.google.com/open?id=13C7Yvmc01ev2GXac36Cjyy2rPui2CCpS" target="_blank"><img src="
+https://docs.google.com/uc?id=13C7Yvmc01ev2GXac36Cjyy2rPui2CCpS"></a>
+      
+      <a href="https://drive.google.com/open?id=1fzFe1msAAOKOqnHc1frG6Wwx141-EEuY" target="_blank"><img src="
+https://docs.google.com/uc?id=1fzFe1msAAOKOqnHc1frG6Wwx141-EEuY"></a>
+      
+      <a href="https://drive.google.com/open?id=1X8vLjrmpks97iFRsCKai50C5BxDa_V4k" target="_blank"><img src="
+https://docs.google.com/uc?id=1X8vLjrmpks97iFRsCKai50C5BxDa_V4k"></a>
+      
+      <a href="https://drive.google.com/open?id=1FIjVdJTvlp2SOvTviKGm_x8jttEidIFB" target="_blank"><img src="
+https://docs.google.com/uc?id=1FIjVdJTvlp2SOvTviKGm_x8jttEidIFB"></a>
+      
+      <a href="https://drive.google.com/open?id=12xwGPZDBbW1NeWNOblM49aXDl5F07WI4" target="_blank"><img src="
+https://docs.google.com/uc?id=12xwGPZDBbW1NeWNOblM49aXDl5F07WI4"></a>
+      
+      <a href="https://drive.google.com/open?id=1z_4QBaF3zDyFxORW9B8A4hbZYSl9hQP5" target="_blank"><img src="
+https://docs.google.com/uc?id=1z_4QBaF3zDyFxORW9B8A4hbZYSl9hQP5"></a>
+      
+      <a href="https://drive.google.com/open?id=1btLaM17T76tdEreiJl5nJQgdum2USSha" target="_blank"><img src="
+https://docs.google.com/uc?id=1btLaM17T76tdEreiJl5nJQgdum2USSha"></a>
+      
+      </div>
   </div>
 </div>
 
 
-<div class="work">
-<a href="#openModal5"><img src="
-img/2018-09-count.gif"></a>
+<!-- Trigger/Open The Modal -->
 
+  <div class="work">
+  <div class="float">
+<a href="#openModal5"><img src="
+img/web_cover.png"></a>
+<span class="tooltiptext"> WEB DESIGN </span>
+  </div>
+   <div class="float">
+    <h2>WEB DESIGN</h2>
+	   <p>Interface Design・This Portfolio</p>
+   </div>
 </div>
+
 <!-- The Modal -->
 <div id="openModal5" class="modalDialog">
 <!-- Modal content -->
   <div class="modal-content">
     <a href="#close" title="Close" class="close">&larr; Back</a>
-    <p>2ed Modal..</p>
-      <video autoplay muted loop class="myVideo">
-  <source src="?.mp4" type="video/mp4">
-      </video>
+    <div class="project">
+    <h2>Wizard Map</h2>
+    <p>2018 Interface<br>
+Idea: The map helps you categorize things in different places.
+</p>  
+	  <img src="img/sitemap.png" >
+	  <img src="img/2018-09-wm.png" >
+	  <iframe width="560" height="315" src="https://www.youtube.com/embed/Mk8fn7zgiYY" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="myVideo"></iframe>
+	</div>
+	<div class="project">
+    <h2>This Portfolio Website</h2>
+    <p>See codes of the site on Github.</p>
+    <a href="https://github.com/yalanlanlan/YalanPortfolio" target="_blank">:D</a>
+	  
+	</div>
   </div>
 </div>
-
+<!-- Trigger/Open The Modal -->
+  <div class="work">
+  <div class="float">
+<a href="#openModal6"><img src="
+img/drifting_cover.png"></a>
+<span class="tooltiptext">PROJECTION MAPPING</span>
+  </div>
+   <div class="float">
+    <h2>PROJECTION MAPPING</h2>
+	   <p>Drifting</p>
+   </div>
 </div>
+
+<!-- The Modal -->
+<div id="openModal6" class="modalDialog">
+<!-- Modal content -->
+  <div class="modal-content">
+    <a href="#close" title="Close" class="close">&larr; Back</a>
+    <div class="project">
+    <h2>Drifting</h2>
+    <p>2018 VDMX projection mapping</p>
+	  <img src="https://docs.google.com/uc?id=1Skn-3D0ZDbcEVSeZXZQ6p30C6c--Ef5E" >
+	</div>
+  </div>
+</div>
+<div class="footer">
+	<p class="smallText">writen by yalan wen . 2019 . ywen@sva.edu</p>
+</div>
+</div>
+
 </body>
-
-<script>
-//// Get the modal
-//var modal = document.getElementsByClassName("modal");
-//
-//// Get the button that opens the modal
-//var btn = document.getElementsByClassName("button");
-//
-//// Get the <span> element that closes the modal
-//var span = document.getElementsByClassName("close")[0];
-//
-//// When the user clicks the button, open the modal 
-//btn.onclick = function() {
-//  modal.style.display = "block";
-//}
-//
-//// When the user clicks on <span> (x), close the modal
-//span.onclick = function() {
-//  modal.style.display = "none";
-//}
-//
-//// When the user clicks anywhere outside of the modal, close it
-//window.onclick = function(event) {
-//  if (event.target == modal) {
-//    modal.style.display = "none";
-//  }
-//}
-
-</script>
-
-
 </html>
