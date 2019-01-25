@@ -35,6 +35,7 @@ body {font-family: Arial, Helvetica, sans-serif;
 	}
 	.theWork{
 	padding: 10vw 0;
+		width: 100vw;
 	}
 	.smallText{
 		font-size: 9pt;
@@ -43,13 +44,53 @@ body {font-family: Arial, Helvetica, sans-serif;
 		padding-top: 10vw;
 		color: #FFA485;
 	}
-	</style>
+	@-webkit-keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
+@-moz-keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
+@keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
+		.fadeIn{
+			float: left;
+			opacity: 0;
+			-webkit-animation: fadeIn ease-in 1;
+			-moz-animation: fadeIn ease-in 1;
+			animation: fadeIn ease-in 1;
+			-webkit-animation-fill-mode: forwards;
+			-moz-animation-fill-mode: forwards;
+			animation-fill-mode: forwards;
+			-webkit-animation-duration:1s;
+			-moz-animation-duration:1s;
+			animation-duration:1s;
+		}		.fadeIn.one{
+			-webkit-animation-delay:.3s;
+			-moz-animation-delay:.3s;
+			animation-delay:.3s;
+		}
+		.fadeIn.two{
+			-webkit-animation-delay:.6s;
+			-moz-animation-delay:.6s;
+			animation-delay:.6s;
+		}
+		.fadeIn.three{
+			-webkit-animation-delay:.8s;
+			-moz-animation-delay:.8s;
+			animation-delay:.8s;
+		}
+</style>
+
 </head>
 <body>
-<a href="hi.html" onmouseclick="click();">HI</a>
-<a href="index.html" onmouseclick="click();">WORKS</a>
+<div class="fadeIn">
+<a href="index.html" onmouseclick="click();">HI</a>
+</div>
+<div class="fadeIn one">
+<a href="work.html" onmouseclick="click();">WORKS</a>
+</div>
+<div class="fadeIn two">
 <a href="about.html" onmouseclick="click();">ABOUT</a>
+</div>
+<div class="fadeIn three">
 <a href="contact.html" onmouseclick="click();">CONTACT</a>
+</div>
+<div class="fadeIn">
 <div class="theWork">
 <p>ywen5@sva.edu<br><br>
 leaps7bounds@gmail.com<br><br>
@@ -57,10 +98,13 @@ leaps7bounds@gmail.com<br><br>
 </p>
 	<a href="https://www.instagram.com/yalanlanlan/" style="font-size: 12pt;" target="_blank">Instagram</a>
 	<a href="https://www.facebook.com/profile.php?id=100003158406411" style="font-size: 12pt;" target="_blank">Facebook</a>
+	<a href="https://lantrip.tumblr.com/" style="font-size: 12pt;" target="_blank">Tumblr</a>
 
 <div class="footer">
-	<p class="smallText">writen by yalan wen . 2019 . ywen@sva.edu</p>
+	<p class="smallText">writen by yalan wen . 2019 . ywen5@sva.edu</p>
 </div>
+
+	</div>
 </div>
 </body>
 </html>
