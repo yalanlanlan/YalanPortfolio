@@ -6,11 +6,18 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="keywords" content="">
 	<meta name="description" content="">
-	<script src="processing.js"></script>
+	
 <style>
 
 body {font-family: Arial, Helvetica, sans-serif;
-	padding: 6vw 10vw;}
+	margin: 0;
+	}
+	.sketch-holder{
+		position: relative;
+		
+		z-index: -1;
+	}
+
 	a{
 		font-size: 24px;
 		text-decoration: none;
@@ -33,60 +40,41 @@ body {font-family: Arial, Helvetica, sans-serif;
 		width: 100%;
 		color: black;
 	}
-	.theWork{
-	padding: 10vw 0;
+	.body2{
+    position: absolute;
+	padding: 6vw 10vw;
     float: left;
+	z-index: 1000;
 	}
 	.smallText{
 		font-size: 9pt;
 	}
-	.footer{
-		padding-top: 10vw;
-		color: #FFA485;
-	}
-	#myVideo2 {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  width: 100vw; 
-  height: 100vh;
-  z-index: -1;
+	
+	::-webkit-scrollbar {
+    width: 0px;
+	height: 0px;/* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+/* optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
 }
 	</style>
 </head>
 <body>
+     
+<div class="body2">
 <a href="hi.html" onmouseclick="click();">HI</a>
 <a href="index.html" onmouseclick="click();">WORKS</a>
 <a href="about.html" onmouseclick="click();">ABOUT</a>
 <a href="contact.html" onmouseclick="click();">CONTACT</a>
 
-<script type="text/processing">
-   void setup() {
-  fullScreen();
-  rectMode(CENTER);
-  frameRate(120);
-}
-
-void draw() {
-  background(20);
-  noStroke();
-  fill(mouseY/2, 0, 0);
-  rect(mouseX, mouseY, 100, 100);
-  rect(mouseX/2, mouseY/2, 100, 100);
-  println(mouseY);
-  rect(random(width), random(height),50,50);
-  stroke(255);
-  strokeWeight(.2);
-  line(random(width+20)-80,random(height+20)-80,random(width+100)-80,random(height+100)-80);
-  noFill();
-  stroke(255);
-  arc(100,100,100,100,random(TAU), random(TAU),PIE);
-}
-</script>
-<canvas id="myVideo2"> </canvas>
-        <span style="position: absolute; left: 0px; opacity: 0; font-family: PjsEmptyFont, fantasy;">AAAAAAAA</span>
-<div class="footer">
-	<p class="smallText">writen by yalan wen . 2019 . ywen@sva.edu</p>
+</div>
+<div id="sketch-holder">
+<script src="p5.js"></script>
+	<script src="sketch.js"></script>
 	</div>
+
+
 </body>
 </html>
