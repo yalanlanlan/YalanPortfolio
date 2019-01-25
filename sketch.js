@@ -18,6 +18,14 @@ function draw() {
   
 	fill(mouseY, 0, 0);
   ellipse(mouseX, mouseY, mouseX/3, mouseX/3);
+	fill(0);
+  rect(mouseX-mouseX/30, mouseY-mouseX/80, mouseX/80, mouseX/80);
+  rect(mouseX+mouseX/30, mouseY-mouseX/80, mouseX/80, mouseX/80);
+	noFill();
+	stroke(0);
+	strokeWeight(2);
+	arc(mouseX, mouseY-mouseX/80, mouseX/5, mouseX/5,QUARTER_PI,HALF_PI+QUARTER_PI);
+	
 	fill(0, 0, 0);
   ellipse(mouseX,mouseY/1.3,mouseX/5,mouseX/5);
   print(mouseY);
