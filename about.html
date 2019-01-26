@@ -47,7 +47,16 @@ body {font-family: Arial, Helvetica, sans-serif;
 	.me{
 		width:10vw;
 	}
-	@-webkit-keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
+::-webkit-scrollbar {
+    width: 0px;
+	height: 0px;/* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+/* optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
+@-webkit-keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
 @-moz-keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
 @keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
 		.fadeIn{
@@ -100,7 +109,7 @@ body {font-family: Arial, Helvetica, sans-serif;
 <img src="img/me.jpg" style="width: 300px; padding-bottom: 20px;">
 <p>The present we are in now is the continuation of the last one. I like to seek out those meaningful, unrepeatable and subtle moments, and I’m always passionate about learning new things.<br><br>
 
-Through art, I try to convey the feelings and moments I’ve captured. Through design, photography, coding and composing music, I communicate with myself, with others and with the world.
+Through art, I try to convey the feelings and moments I’ve captured. Through design, photography, coding and composing music, I communicate with myself, with others and with the world :)
 </p><br><br>
 	<a href="https://docs.google.com/uc?id=1uiMu9gWFOkvp7v28ERBiNBa_eYX3OImC" target="_blank" style="font-size: 18px;">RESUME download</a>
 	</div>
