@@ -13,7 +13,7 @@ function windowResized() {
 }
 
 function draw() {
-  background(255);
+  
   strokeWeight(1);
   
 	fill(255, 164, 133, mouseY/2);
@@ -31,14 +31,8 @@ function draw() {
   ellipse(mouseX,mouseY/1.3,mouseX/5,mouseX/5);
   print(mouseY);
 	
-  stroke(mouseY, 0, 0);
-	
-	noFill();
-  rect(random(width), random(height),50,50);
-  stroke(0);
-  strokeWeight(.5);
-  line(random(width+20)-80,random(height+20)-80,random(width+100)-80,random(height+100)-80);
+  
   noFill();
   stroke(0);
-  arc(160,120,100,100,random(TAU), random(TAU),PIE);
+  arc(windowWidth/2,windowHeight/2,100,100,random(TAU), random(TAU),PIE);
 }// JavaScript Document
