@@ -239,33 +239,40 @@ div.modal-content p, .watch{
 		padding-top: 10vw;
 		color: #FFA485;
 	}
+  @-ms-keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
 @-webkit-keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
 @-moz-keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
 @keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
 		.fadeIn{
 			float: left;
 			opacity: 0;
+      -ms-animation: fadeIn ease-in 1;
 			-webkit-animation: fadeIn ease-in 1;
 			-moz-animation: fadeIn ease-in 1;
 			animation: fadeIn ease-in 1;
+      -ms-animation-fill-mode: forwards;
 			-webkit-animation-fill-mode: forwards;
 			-moz-animation-fill-mode: forwards;
 			animation-fill-mode: forwards;
+      -ms-animation-duration:1s;
 			-webkit-animation-duration:1s;
 			-moz-animation-duration:1s;
 			animation-duration:1s;
 		}
 		.fadeIn.one{
+       -ms-animation-delay:.3s;
 			-webkit-animation-delay:.3s;
 			-moz-animation-delay:.3s;
 			animation-delay:.3s;
 		}
 		.fadeIn.two{
+      -ms-animation-delay:.6s;
 			-webkit-animation-delay:.6s;
 			-moz-animation-delay:.6s;
 			animation-delay:.6s;
 		}
 		.fadeIn.three{
+      -ms-animation-delay:.8s;
 			-webkit-animation-delay:.8s;
 			-moz-animation-delay:.8s;
 			animation-delay:.8s;
