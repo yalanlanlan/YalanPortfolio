@@ -251,7 +251,7 @@
 ];
 
 var weather;
-var api = 'http://api.openweathermap.org/data/2.5/weather?q=';
+var api = 'https://api.openweathermap.org/data/2.5/weather?q=';
 let city='New York';
 var apiKey = '&appid=eedf376d354bb8e856c0eeb272de048b'; //plz use your own api key if copy the code -yalan
 var units='&units=metric';
@@ -324,7 +324,7 @@ var checkIfDataRequested = function() {
 
   var getWeather = function(northLat, eastLng, southLat, westLng) {
     gettingData = true;
-    var requestString = "http://api.openweathermap.org/data/2.5/box/city?bbox="
+    var requestString = "https://api.openweathermap.org/data/2.5/box/city?bbox="
                         + westLng + "," + northLat + "," //left top
                         + eastLng + "," + southLat + "," //right bottom
                         + map.getZoom()
