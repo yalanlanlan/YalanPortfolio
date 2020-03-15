@@ -2,7 +2,7 @@ let palette = ["#FFCAAC","#FFA588","#FDBF69","#B7D8D7","#B7D8D7","#FFD799", "#F5
 let minS = 20;
 
 function setup() {
-	var canvas = createCanvas(windowWidth, 700);
+	var canvas = createCanvas(windowWidth, 770);
   // Move the canvas so it’s inside <div id="sketch-holder">.
   canvas.parent('sketch-holder');
     rectMode(CENTER);
@@ -11,7 +11,7 @@ function setup() {
 }
 
 function windowResized() {
-  resizeCanvas(windowWidth, 700);
+  resizeCanvas(windowWidth, 770);
 }
 //#E5725C
 function draw(){

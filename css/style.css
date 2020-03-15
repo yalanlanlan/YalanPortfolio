@@ -24,8 +24,13 @@ html,body {
 
 html {
   font-size: 100%;
+  /* scroll-behavior: smooth; */
 }
-
+/* @media screen and (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+} */
 
 /* Typography
 ------------------------------------- */
@@ -95,7 +100,82 @@ a:focus {
   -o-transition: all 0.25s ease-out;
   transition: all 0.25s ease-out;
 }
-
+.blur{
+  animation-iteration-count: infinite;
+     animation-duration: 5s;
+      animation-name: blurry;
+      animation-timing-function: cubic-bezier(.71,.55,.55,.71);
+}
+@keyframes blurry {
+  0% {
+    -webkit-filter: blur(0px);
+    -moz-filter: blur(0px);
+    -o-filter: blur(0px);
+    -ms-filter: blur(0px);
+    filter: blur(0px);
+  }
+  50% {
+    
+    -webkit-filter: blur(0.8px);
+    -moz-filter: blur(0.8px);
+    -o-filter: blur(0.8px);
+    -ms-filter: blur(0.8px);
+    filter: blur(0.8px);
+  }
+  100%{
+    -webkit-filter: blur(0px);
+    -moz-filter: blur(0px);
+    -o-filter: blur(0px);
+    -ms-filter: blur(0px);
+    filter: blur(0px);
+  }
+}
+.welcome{
+    
+    /* transform-origin: 50% 100%; */
+    /* transform: translate(-50%, -50%); */
+    text-align: center;
+    
+     animation-iteration-count: infinite;
+     animation-duration: 7s;
+      animation-name: fadeAndScale;
+      animation-timing-function: cubic-bezier(.71,.55,.55,.71);
+  
+}
+#welcome2{
+  animation-iteration-count: infinite;
+     animation-duration: 7s;
+      animation-name: fadeAndScale2;
+      animation-timing-function: cubic-bezier(.52,.35,.35,.52);
+}
+@keyframes fadeAndScale {
+  0% {
+      opacity: .5;
+      transform: scale(.98, .98);
+  }
+  50% {
+      opacity: 1;
+      transform: scale(1, 1);
+  }
+  100%{
+      opacity: .5;
+      transform: scale(.98, .98);
+  }
+}
+@keyframes fadeAndScale2 {
+  0% {
+      
+      transform: scale(.98, .98);
+  }
+  50% {
+      
+      transform: scale(0.99, 0.99);
+  }
+  100%{
+      
+      transform: scale(.98, .98);
+  }
+}
 
 /* preloader styles
 /* ========================================== */
@@ -562,7 +642,7 @@ z-index: 1;
 /* ========================================== */
 #portfolio {
   text-align: center;
-  padding-top: 3rem;
+  padding-top: 4rem;
   padding-bottom: 6rem;
 }
 
@@ -709,7 +789,7 @@ z-index: 1;
   padding-bottom: 15px;
 }
 .wow.fadeInUp.col-md-2.col-sm-2 h4{
-padding-top: 250px;
+padding-top: 180px;
 }
 
 
@@ -1058,7 +1138,7 @@ div.modal-content p, .watch{
   
 }
 .back {
-  color: rgba(0, 0, 0, 0);
+  color: rgb(255, 255, 255);
   float: left;
   font-size: 24px;
   font-weight: bold;
