@@ -1,128 +1,426 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<!-- Google Analytics -->
-<script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-ga('create', 'UA-112845896-2', 'auto');
-ga('send', 'pageview');
-</script>
-<!-- End Google Analytics -->
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="keywords" content="">
 	<meta name="description" content="">
-	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+	<!-- Site title
+   ================================================== -->
+	<title>YALAN。ART</title>
+
+	<!-- Bootstrap CSS
+   ================================================== -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<!-- Animate CSS
+   ================================================== -->
+	<link rel="stylesheet" href="css/animate.min.css">
+
+	<!-- Font Icons CSS
+   ================================================== -->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/ionicons.min.css">
+
+	<!-- Main CSS
+   ================================================== -->
+	<link rel="stylesheet" href="css/style.css">
+
 	
-<style>
-
-body {font-family: Arial, Helvetica, sans-serif;
-	margin: 0;
-	}
-	.sketch-holder{
-		position: relative;
-		
-		z-index: -1;
-	}
-
-	a{
-		display:table-cell;
-		font-size: 32px;
-		text-decoration: none;
-		font-weight: bold;
-		font-style: italic;
-		color: black;
-		text-align: center;
-		vertical-align: middle;
-	}
-	a:hover{
-		font-style: normal;
-		color: #FFA485;
-	}
-	h2{
-		font-size: 18px;
-	}
-	h3{
-		font-size: 18px;
-		font-weight: lighter;
-		padding-top: 20px;
-		width: 100%;
-		color: black;
-	}
-	.body2{
-		display:table;
-    position: absolute;
-	text-align: center;
-    float: left;
-	z-index: 1000;
-	width: 100vw;
-	height: 100vh;
-	}
-	.smallText{
-		font-size: 9pt;
-	}
-	
-	::-webkit-scrollbar {
-    width: 0px;
-	height: 0px;/* remove scrollbar space */
-    background: transparent;  /* optional: just make scrollbar invisible */
-}
-/* optional: show position indicator in red */
-::-webkit-scrollbar-thumb {
-    background: #FF0000;
-}
-	@-webkit-keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
-@-moz-keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
-@keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
-		.fadeIn{
-			opacity: 0;
-			-webkit-animation: fadeIn ease-in 1;
-			-moz-animation: fadeIn ease-in 1;
-			animation: fadeIn ease-in 1;
-			-webkit-animation-fill-mode: forwards;
-			-moz-animation-fill-mode: forwards;
-			animation-fill-mode: forwards;
-			-webkit-animation-duration:1s;
-			-moz-animation-duration:1s;
-			animation-duration:1s;
-		}
-	@keyframes fadeAndScale {
-    0% {
-        opacity: .3;
-        transform: scale(.98, .98);
-    }
-    50% {
-        opacity: 1;
-        transform: scale(1, 1);
-    }
-    100%{
-        opacity: .3;
-        transform: scale(.98, .98);
-    }
-}
-	.hi{
-  transform-origin: 50% 100%;
-
-   animation-iteration-count: infinite;
-   animation-duration: 3s;
-    animation-name: fadeAndScale;
-    animation-timing-function: cubic-bezier(.71,.55,.55,.71);
-}
-	</style>
 </head>
 <body>
-<div class="body2">
-<a href="work.html" onmouseclick="click();" class="hi">HI, I'm Yalan Wen</a>
+
+
+<!-- Preloader section
+================================================== -->
+<!-- <div class="preloader">
+
+	<div class="sk-double-bounce">
+      <div class="sk-child sk-double-bounce-1"></div>
+      <div class="sk-child sk-double-bounce-2"></div>
+   </div>
+
+</div> -->
+
+
+<!-- Navigation section
+================================================== -->
+
+<div class="nav-container">
+   <nav class="nav-inner transparent">
+
+      <div class="navbar navbar-fixed-top">
+         <div class="container">
+            <div class="row">
+
+               <div class="brand"style="padding-left:15px;">
+                  <a href="index.html" onmouseclick="click();"><img style="height:24px;"src="img/logoPng.png"></a>
+                </div>
+  
+                <div class="navicon" style="padding-right:15px; height:24px;">
+                <div class="menu-container">
+
+                  <div class="circle dark inline">
+                    <i class="icon ion-navicon"></i>
+                  </div>
+
+                  <div class="list-menu">
+                    <i class="icon ion-close-round close-iframe"></i>
+                    <div class="intro-inner">
+                      <ul id="nav-menu">
+                        <li>
+                           <a href="about.html" onmouseclick="click();">ABOUT</a>
+						</li>
+						<li>
+							<a href="index.html#portfolio" onmouseclick="click();">PROJECTS</a><br>
+							<a href="graphicdesign.html" style="font-size: 0.8rem; font-weight: normal; line-height: 1.5rem;" onmouseclick="click();">Graphic</a><br>
+							<a href="motiongraphic.html" style="font-size: 0.8rem; font-weight: normal; line-height: 1.5rem;" onmouseclick="click();">Motion</a><br>
+							<a href="interactive.html" style="font-size: 0.8rem; font-weight: normal; line-height: 1.5rem;" onmouseclick="click();">Interactive</a><br>
+							<a href="web.html" style="font-size: 0.8rem; font-weight: normal; line-height: 1.5rem;" onmouseclick="click();">Web & Data</a><br>
+							<a href="photography.html" style="font-size: 0.8rem; font-weight: normal; line-height: 1.5rem;" onmouseclick="click();">Photography</a><br>
+							<a href="sketches.html" style="font-size: 0.8rem; font-weight: normal; line-height: 1.5rem;" onmouseclick="click();">Sketches</a>
+						
+						 </li>
+                        <li>
+                           <a href="contact.html" onmouseclick="click();">SHOP</a>
+                        </li>
+                        <li>
+							<a href="https://www.instagram.com/yalanlanlan/" target="_blank"onmouseclick="click();"><img style="height:24px; padding-left: 20px;" src="img/instagram-icon-logo-vector-download.jpg"></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+         </div>
+      </div>
+
+   </nav>
 </div>
-<div id="sketch-holder">
-<script src="p5.js"></script>
-	<script src="sketch.js"></script>
+
+
+<!-- Header section
+================================================== -->
+<!-- <script>
+   $(document).scroll(function() {
+  var y = $(this).scrollTop();
+  if (y > 1000) {
+    $('#sketch-holder').fadeOut();
+  } else {
+    $('#sketch-holder').fadeIn();
+  }
+});
+</script> -->
+<div style="height: 700px;">
+   <div class="fadeIn four" id="sketch-holder" style="height: 700px; z-index: -10; position: absolute; top: 0px;">
+      <script src="js/p5.js"></script>
+         <script src="js/sketch3.js"></script>
+   </div>  
+</div>
+<div id="backTo" style="top: 300px; position: absolute;"></div>
+
+<!-- Portfolio section
+================================================== -->
+<section id="portfolio">
+   <div class="container">
+      <div class="row">
+
+         <div class="col-md-12 col-sm-12">
+            
+               <!-- iso section -->
+               <div class="iso-section">
+                  
+                  <ul class="filter-wrapper clearfix">
+                           <li><a href="#" data-filter="*" class="selected opc-main-bg">All</a></li>
+                           <li><a href="#" class="opc-main-bg" data-filter=".graphic">Graphic</a></li>
+                           <li><a href="#" class="opc-main-bg" data-filter=".motion">Motion</a></li>
+                           <li><a href="#" class="opc-main-bg" data-filter=".interactive">Interactive</a></li>
+                        <li><a href="#" class="opc-main-bg" data-filter=".web">Web & Data</a></li>
+                        </ul>
+                  
+
+                        <!-- iso box section -->
+                        <div class="iso-box-section wow fadeInUp" data-wow-delay="0.4s">
+                           <div class="iso-box-wrapper col4-iso-box">
+                              <div class="iso-box graphic motion col-md-4 col-sm-6">
+                                 <div class="portfolio-thumb">
+                                    <a href="motiongraphic.html">
+                                    <img src="img/2018-09-count.gif";class="img-responsive" alt="Portfolio">
+                                       <div class="portfolio-overlay">
+                                          <div class="portfolio-item">
+                                             <!-- <i class="fa fa-folder-open"></i> -->
+                                                <h2>Reel</h2>
+                                             </div>
+                                       </div>
+                                    </a>
+                                 </div>
+                              </div>
+
+
+
+                              <div class="iso-box graphic motion col-md-4 col-sm-6">
+                                 <div class="portfolio-thumb">
+                                    <a href="motiongraphic.html">
+                                    <img src="img/2018-09-12P.gif";class="img-responsive" alt="Portfolio">
+                                       <div class="portfolio-overlay">
+                                          <div class="portfolio-item">
+                                             <!-- <i class="fa fa-folder-open"></i> -->
+                                                <h2>Reel</h2>
+                                             </div>
+                                       </div>
+                                    </a>
+                                 </div>
+                              </div>
+
+                              <div class="iso-box graphic motion col-md-4 col-sm-6">
+                                 <div class="portfolio-thumb">
+                                    <a href="motiongraphic.html">
+                                    <img src="img/text.gif";class="img-responsive" alt="Portfolio">
+                                       <div class="portfolio-overlay">
+                                          <div class="portfolio-item">
+                                             <!-- <i class="fa fa-folder-open"></i> -->
+                                                <h2>Reel</h2>
+                                             </div>
+                                       </div>
+                                    </a>
+                                 </div>
+                              </div>
+
+                              
+                              <div class="iso-box interactive motion col-md-4 col-sm-6">
+                                 <div class="portfolio-thumb">
+                                    <a href="interactive.html#drifting">
+                                    <img src="img/drifting_cover.png";class="img-responsive" alt="Portfolio">
+                                       <div class="portfolio-overlay">
+                                          <div class="portfolio-item">
+                                             <!-- <i class="fa fa-folder-open"></i> -->
+                                                <h2>Drifting</h2>
+                                                <p style="color: white;">VDMX mapping</p>
+                                             </div>
+                                       </div>
+                                    </a>
+                                 </div>
+                              </div>
+                              <div class="iso-box graphic col-md-4 col-sm-6">
+                                 <div class="portfolio-thumb">
+                                    <a href="photography.html">
+                                    <img src="img/covers-03.jpg";class="img-responsive" alt="Portfolio">
+                                       <div class="portfolio-overlay">
+                                          <div class="portfolio-item">
+                                             <!-- <i class="fa fa-folder-open"></i> -->
+                                                <h2>Photography</h2>
+                                                
+                                             </div>
+                                       </div>
+                                    </a>
+                                 </div>
+                              </div>
+                              <div class="iso-box graphic col-md-4 col-sm-6">
+                                 <div class="portfolio-thumb">
+                                    <a href="sketches.html">
+                                    <img src="img/sketch_cover.png";class="img-responsive" alt="Portfolio">
+                                       <div class="portfolio-overlay">
+                                          <div class="portfolio-item">
+                                             <!-- <i class="fa fa-folder-open"></i> -->
+                                                <h2>Sketches</h2>
+                                               
+                                             </div>
+                                       </div>
+                                    </a>
+                                 </div>
+                              </div>
+                              <div class="iso-box graphic motion col-md-4 col-sm-6">
+                                 <div class="portfolio-thumb">
+                                    <a href="motiongraphic.html">
+                                    <img src="img/train.gif";class="img-responsive" alt="Portfolio">
+                                       <div class="portfolio-overlay">
+                                          <div class="portfolio-item">
+                                             <!-- <i class="fa fa-folder-open"></i> -->
+                                                <h2>Reel</h2>
+                                             </div>
+                                       </div>
+                                    </a>
+                                 </div>
+                              </div>
+
+                              <div class="iso-box graphic motion col-md-4 col-sm-6">
+                                 <div class="portfolio-thumb">
+                                    <a href="motiongraphic.html">
+                                    <img src="img/2018-10-move.gif";class="img-responsive" alt="Portfolio">
+                                       <div class="portfolio-overlay">
+                                          <div class="portfolio-item">
+                                             <!-- <i class="fa fa-folder-open"></i> -->
+                                                <h2>Reel</h2>
+                                             </div>
+                                       </div>
+                                    </a>
+                                 </div>
+                              </div>
+
+                              <div class="iso-box graphic col-md-4 col-sm-6">
+                                 <div class="portfolio-thumb">
+                                    <a href="graphicdesign.html">
+                                    <img src="img/design_cover.jpg";class="img-responsive" alt="Portfolio">
+                                       <div class="portfolio-overlay">
+                                          <div class="portfolio-item">
+                                             <!-- <i class="fa fa-folder-open"></i> -->
+                                                <h2>Graphic Design</h2>
+                                                <p style="color: white;">CI design</p>
+                                             </div>
+                                       </div>
+                                    </a>
+                                 </div>
+                              </div>
+                              <div class="iso-box graphic motion web col-md-4 col-sm-6">
+                                 <div class="portfolio-thumb">
+                                    <a href="web.html#waterdancer">
+                                    <img src="img/web_cover2.png";class="img-responsive" alt="Portfolio">
+                                       <div class="portfolio-overlay">
+                                          <div class="portfolio-item">
+                                             <!-- <i class="fa fa-folder-open"></i> -->
+                                                <h2>Water Dancer</h2>
+                                                <p style="color: white;">Web Design</p>
+                                             </div>
+                                       </div>
+                                    </a>
+                                 </div>
+                              </div>
+                              
+                              <div class="iso-box graphic web interactive col-md-4 col-sm-6">
+                                 <div class="portfolio-thumb">
+                                    <a href="web.html">
+                                    <img src="https://docs.google.com/uc?id=1OLU_z0hErwXktMeeS9RgYfvdE_dDaNaq" class="img-responsive" alt="Portfolio">
+                                       <div class="portfolio-overlay">
+                                          <div class="portfolio-item">
+                                                <!-- <i class="fa fa-folder-open"></i> -->
+                                                <h2>Weather</h2>
+                                                <p style="color: white;">Data Visualization</p>
+                                             </div>
+                                       </div>
+                                    </a>
+                                 </div>
+                              </div>
+                              <div class="iso-box graphic interactive col-md-4 col-sm-6">
+                                 <div class="portfolio-thumb">
+                                    <a href="interactive.html#scan">
+                                    <img src="https://docs.google.com/uc?id=1cvqhtLYrRaJ9d5507om9OsB6dOtFZKWm";class="img-responsive" alt="Portfolio">
+                                       <div class="portfolio-overlay">
+                                          <div class="portfolio-item">
+                                             <!-- <i class="fa fa-folder-open"></i> -->
+                                                <h2>Scan</h2>
+                                                <p style="color: white;">Generative Art</p>
+                                             </div>
+                                       </div>
+                                    </a>
+                                 </div>
+                              </div>
+                              <div class="iso-box motion interactive col-md-4 col-sm-6">
+                                 <div class="portfolio-thumb">
+                                    <a href="interactive.html#sunMoon">
+                                    <img src="https://docs.google.com/uc?id=1KgOeuAG7EsdWSCqJ9yzL_cwCx9lvETat" class="img-responsive" alt="Portfolio">
+                                       <div class="portfolio-overlay">
+                                          <div class="portfolio-item">
+                                                <!-- <i class="fa fa-folder-open"></i> -->
+                                                <h2>Sun & Moon</h2>
+                                                <p style="color: white;">Interactive Installation</p>
+                                             </div>
+                                       </div>
+                                    </a>
+                                 </div>
+                              </div>
+                              <div class="iso-box graphic col-md-4 col-sm-6">
+                                 <div class="portfolio-thumb">
+                                    <a href="oilpainting.html">
+                                    <img src="https://docs.google.com/uc?id=1jpoQWULHfN-mchjsyg_ZlVNNcevcBcCM" class="img-responsive" alt="Portfolio">
+                                       <div class="portfolio-overlay">
+                                          <div class="portfolio-item">
+                                                <!-- <i class="fa fa-folder-open"></i> -->
+                                                <h2>Oil Painting</h2>
+                                                
+                                             </div>
+                                       </div>
+                                    </a>
+                                 </div>
+                              </div>
+                              <div class="iso-box graphic motion interactive col-md-4 col-sm-6">
+                                 <div class="portfolio-thumb">
+                                    <a href="interactive.html">
+                                    <img src="https://docs.google.com/uc?id=1Ok--YhOdNEP3iawdwKws2qWE8PESv447" class="img-responsive" alt="Portfolio">
+                                       <div class="portfolio-overlay">
+                                          <div class="portfolio-item">
+                                                <!-- <i class="fa fa-folder-open"></i> -->
+                                                <h2>Acoustic</h2>
+                                                <p style="color: white;">VR Immersive Environment</p>
+                                             </div>
+                                       </div>
+                                    </a>
+                                 </div>
+                              </div>
+                              
+                              <!-- <div class="iso-box graphic col-md-4 col-sm-6">
+                                 <div class="portfolio-thumb">
+                                    <a href="interactive.html">
+                                    <img src="https://docs.google.com/uc?id=13HXW4UzdsYFIKsSxOaC5PoTj2474rCWM" class="img-responsive" alt="Portfolio">
+                                       <div class="portfolio-overlay">
+                                          <div class="portfolio-item">
+                                                <i class="fa fa-folder-open"></i> 
+                                                <h2>Screen Printing</h2>
+                                                
+                                             </div>
+                                       </div>
+                                    </a>
+                                 </div>
+                              </div> -->
+                              
+
+                            </div>
+                        </div>
+
+               </div>
+
+         </div>
+
+      </div>
+   </div>
+</section>
+
+<!-- Footer section
+================================================== -->
+<footer>
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-12 col-sm-12">
+				
+				<ul class="social-icon wow fadeInUp"  data-wow-delay="0.2s">
+					
+					<li><a href="#" class="fa fa-tumblr"></a></li>
+					<li><a href="#" class="fa fa-linkedin"></a></li>
+					<li><a href="#" class="fa fa-envelope"></a></li>
+					
+				</ul>
+				<p class="smallText wow fadeInUp" data-wow-delay="0.1s">writen by yalan wen . 2020 . ywen5@sva.edu</p>
+			</div>
+			
+		</div>
 	</div>
+</footer>
+
+
+<!-- Javascript 
+================================================== -->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/isotope.js"></script>
+<script src="js/imagesloaded.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/custom.js"></script>
 
 </body>
 </html>

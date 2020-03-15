@@ -1,119 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="keywords" content="">
 	<meta name="description" content="">
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-<style>
+	<!-- Site title
+   ================================================== -->
+	<title>YALAN。ART</title>
 
-body {font-family: Arial, Helvetica, sans-serif;
-	padding: 6vw 10vw;}
-	a{
-		font-size: 24px;
-		text-decoration: none;
-		font-weight: bold;
-		font-style: italic;
-		color: black;
-		padding-right: 40px;
-	}
-	a:hover{
-		font-style: normal;
-		color: #FFA485;
-	}
-	h2{
-		font-size: 18px;
-	}
-	h3{
-		font-size: 18px;
-		font-weight: lighter;
-		padding-top: 20px;
-		width: 100%;
-		color: black;
-	}
-	.theWork{
-	padding: 10vw 0;
-		width: 100vw;
-	}
-	.smallText{
-		font-size: 9pt;
-	}
-	.footer{
-		padding-top: 10vw;
-		color: #FFA485;
-	}
-	@-webkit-keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
-@-moz-keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
-@keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
-		.fadeIn{
-			float: left;
-			opacity: 0;
-			-webkit-animation: fadeIn ease-in 1;
-			-moz-animation: fadeIn ease-in 1;
-			animation: fadeIn ease-in 1;
-			-webkit-animation-fill-mode: forwards;
-			-moz-animation-fill-mode: forwards;
-			animation-fill-mode: forwards;
-			-webkit-animation-duration:1s;
-			-moz-animation-duration:1s;
-			animation-duration:1s;
-		}		.fadeIn.one{
-			-webkit-animation-delay:.3s;
-			-moz-animation-delay:.3s;
-			animation-delay:.3s;
-		}
-		.fadeIn.two{
-			-webkit-animation-delay:.6s;
-			-moz-animation-delay:.6s;
-			animation-delay:.6s;
-		}
-		.fadeIn.three{
-			-webkit-animation-delay:.8s;
-			-moz-animation-delay:.8s;
-			animation-delay:.8s;
-		}
-		.fadeIn.four{
-      -ms-animation-delay:.9s;
-      -webkit-animation-delay:.9s;
-      -moz-animation-delay:.9s;
-      animation-delay:.9s;
-    }
-</style>
+	<!-- Bootstrap CSS
+   ================================================== -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
 
+	<!-- Animate CSS
+   ================================================== -->
+	<link rel="stylesheet" href="css/animate.min.css">
+
+	<!-- Font Icons CSS
+   ================================================== -->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/ionicons.min.css">
+
+	<!-- Main CSS
+   ================================================== -->
+	<link rel="stylesheet" href="css/style.css">
+
+	
 </head>
 <body>
-<div class="fadeIn">
-	<a href="index.html" onmouseclick="click();"><img style="height:24px;padding-right: 30px;"src="img/logoT.jpg"></a>
-</div>
-<div class="fadeIn one">
-<a href="work.html" onmouseclick="click();">WORKS</a>
-</div>
-<div class="fadeIn two">
-<a href="about.html" onmouseclick="click();">ABOUT</a>
-</div>
-<div class="fadeIn three">
-<a href="contact.html" onmouseclick="click();">CONTACT</a>
-</div>
-<div class="fadeIn four">
-	<a href="https://www.instagram.com/yalanlanlan/" target="_blank"onmouseclick="click();"><img style="width:24px;padding-left: 20px;" src="img/instagram-icon-logo-vector-download.jpg"></a>
-</div>
-<div class="fadeIn">
-<div class="theWork">
-<p>ywen5@sva.edu<br><br>
-leaps7bounds@gmail.com<br><br>
 
-</p>
-	<a href="https://www.instagram.com/yalanlanlan/" style="font-size: 12pt;" target="_blank">Instagram</a>
-	<a href="https://www.facebook.com/profile.php?id=100003158406411" style="font-size: 12pt;" target="_blank">Facebook</a>
-	<a href="https://lantrip.tumblr.com/" style="font-size: 12pt;" target="_blank">Tumblr</a>
 
-<div class="footer">
-	<p class="smallText">writen by yalan wen . 2019 . ywen5@sva.edu</p>
+<!-- Preloader section
+================================================== -->
+<!-- <div class="preloader">
+
+	<div class="sk-spinner sk-spinner-pulse"></div>
+
+</div> -->
+
+
+<!-- Navigation section
+================================================== -->
+
+<div class="nav-container">
+   <nav class="nav-inner transparent">
+
+      <div class="navbar navbar-fixed-top">
+         <div class="container">
+            <div class="row">
+
+              <div class="brand"style="padding-left:15px;">
+                <a href="index.html" onmouseclick="click();"><img style="height:24px;"src="img/logoT.jpg"></a>
+              </div>
+
+              <div class="navicon" style="padding-right:15px; height:24px;">
+                <div class="menu-container">
+
+                  <div class="circle dark inline">
+                    <i class="icon ion-navicon"></i>
+                  </div>
+
+                  <div class="list-menu">
+                    <i class="icon ion-close-round close-iframe"></i>
+                    <div class="intro-inner">
+                      <ul id="nav-menu">
+                        
+                        <li>
+                           <a href="about.html" onmouseclick="click();">ABOUT</a>
+						</li>
+						<li>
+							<a href="index.html#backTo" onmouseclick="click();">PROJECTS</a>
+							<a href="graphicdesign.html" style="font-size: 0.8rem; font-weight: normal; line-height: 1.5rem;" onmouseclick="click();">Graphic</a><br>
+							<a href="motiongraphic.html" style="font-size: 0.8rem; font-weight: normal; line-height: 1.5rem;" onmouseclick="click();">Motion</a><br>
+							<a href="interactive.html" style="font-size: 0.8rem; font-weight: normal; line-height: 1.5rem;" onmouseclick="click();">Interactive</a><br>
+							<a href="web.html" style="font-size: 0.8rem; font-weight: normal; line-height: 1.5rem;" onmouseclick="click();">Web & Data</a><br>
+							<a href="photography.html" style="font-size: 0.8rem; font-weight: normal; line-height: 1.5rem;" onmouseclick="click();">Photography</a><br>
+							<a href="sketches.html" style="font-size: 0.8rem; font-weight: normal; line-height: 1.5rem;" onmouseclick="click();">Sketches</a>
+						 </li>
+                        <li>
+                           <a href="contact.html" onmouseclick="click();">SHOP</a>
+                        </li>
+                        <li>
+							<a href="https://www.instagram.com/yalanlanlan/" target="_blank"onmouseclick="click();"><img style="height:24px; padding-left: 20px;" src="img/instagram-icon-logo-vector-download.jpg"></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+         </div>
+      </div>
+
+   </nav>
 </div>
 
+<!-- Single Project section
+================================================== -->
+<div class="backBtn fadeIn four col-md-3 col-sm-3">
+	<a href="index.html#backTo" title="Close" class="back">&larr; Back</a>
+</div>
+<section id="single-project">
+	
+	<div class="container">
+	   <div class="row">
+		 
+		 <div id="in" class="wow fadeInUp" data-wow-delay="0.4s">
+			<div class="project-info">
+				<h4>Page is under construction:D</h4>
+				<p>
+				</p>
+				
+						
+			</div>
+		 </div>
+		 
+
+	   </div>
 	</div>
-</div>
+ </section>
+
+<!-- Footer section
+================================================== -->
+<footer>
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-12 col-sm-12">
+				
+				<ul class="social-icon wow fadeInUp"  data-wow-delay="0.2s">
+					
+					<li><a href="https://lantrip.tumblr.com/" class="fa fa-tumblr" target="_blank"></a></li>
+					<li><a href="https://www.linkedin.com/in/yalan-wen-822058a9/" class="fa fa-linkedin" target="_blank"></a></li>
+					<li><a href="mailto:ywen5@sva.edu" class="fa fa-envelope" target="_blank"></a></li>
+					
+				</ul>
+				<p class="smallText wow fadeInUp" data-wow-delay="0.1s">writen by yalan wen . 2020 . ywen5@sva.edu</p>
+			</div>
+			
+		</div>
+	</div>
+</footer>
+
+
+<!-- Javascript 
+================================================== -->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/isotope.js"></script>
+<script src="js/imagesloaded.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/custom.js"></script>
+
 </body>
 </html>

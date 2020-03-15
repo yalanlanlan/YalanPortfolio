@@ -1,7 +1,7 @@
 function setup() {
   
   
-	var canvas = createCanvas(windowWidth, windowHeight);
+	var canvas = createCanvas(windowWidth, 900);
  
   // Move the canvas so it’s inside our <div id="sketch-holder">.
   canvas.parent('sketch-holder');
@@ -9,7 +9,7 @@ function setup() {
 }
 
 function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
+  resizeCanvas(windowWidth, 900);
 }
 
 function draw() {
