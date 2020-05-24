@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112845896-2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+   })(window,document,'script','dataLayer','GTM-NDLFF93');</script>
+<!-- End Google Tag Manager -->
 
-  gtag('config', 'UA-112845896-2');
-</script>
 
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -41,7 +40,10 @@
 	
 </head>
 <body>
-
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NDLFF93"
+   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 <!-- Preloader section
 ================================================== -->
@@ -66,7 +68,7 @@
             <div class="row">
 
                <div class="brand"style="padding-left:15px;">
-                  <a href="index.html" onmouseclick="click();"><img style="height:24px;"src="img/logoPng.png"></a>
+                  <a href="index.html" onmouseclick="click();"><img style="height:24px;"src="img/logoPng.png"><p id="welcome2" style="color:#FFA485; font-size: 0.7rem; letter-spacing: 0.09rem; -webkit-text-stroke: 0.5px black; ">Motion Graphic Designer . New Media Artist</p></a>
                 </div>
   
                 <div class="navicon" style="padding-right:15px; height:24px;">
@@ -117,22 +119,27 @@
 <!-- Header section
 ================================================== -->
 
-<div style="height: 770px;">
+<div style="height: 75vh;">
    <div class="fadeIn one" style="position: absolute; top: 40vh; left: 50vw; width: 350px; display: table; text-align: center; transform: translate(-50%, -50%);">
       <a href="#portfolio" class="scroll-link" data-id="portfolio">
-         <div class="blur welcome" style="background-color: rgba(255, 255, 255,0.7); padding: 10px;">
-         <p id="welcome2" style="font-size: 0.9rem; letter-spacing: 0.09rem; text-align: center;">This website includes generative graphics, new media installations and motion graphics made by Yalan Wen. Enjoy
-         <i class="fa fa-music"></i></p>
-         
+         <div style="background-color: rgba(255, 255, 255, 0); padding: 33vh 50vw;"></div>
+         <!-- <div style="background-color: rgba(255, 255, 255,0);">
+         <p id="welcome2" style="color:#FFA485; font-size: 0.9rem; letter-spacing: 0.09rem; text-align: center;">Motion Graphic Designer . New Media Artist
+         </p>
          <br>
          <p style="font-style: italic; font-size: 1.1rem; letter-spacing: 0.11rem;"><i class="fa fa-arrow-down"></i> Project Thumbnails</p>
-      </div>
+         </div> -->
       </a>
    </div>
 
-   <div class="fadeIn four" id="sketch-holder" style="height: 770px; z-index: -10; position: absolute; top: 0px;">
-      <script src="js/p5.js"></script>
-         <script src="js/sketch3.js"></script>
+   <div class="fadeIn four" id="sketch-holder" style="height: 75vh; z-index: -10; position: absolute; top: 0px;">
+      <!-- <script src="js/p5.js"></script>
+         <script src="js/sketch3.js"></script> -->
+         <div class="bgContainer">
+         <video autoplay muted loop id="bgVideo">
+            <source src="img/bgVideo2.mp4" type="video/mp4">
+         </video>
+         </div>
    </div>  
 </div>
 <div id="backTo" style="top: 300px; position: absolute;"></div>
@@ -153,14 +160,14 @@
                            <li><a href="#" class="opc-main-bg" data-filter=".graphic">Graphic</a></li>
                            <li><a href="#" class="opc-main-bg" data-filter=".motion">Motion</a></li>
                            <li><a href="#" class="opc-main-bg" data-filter=".interactive">Interactive</a></li>
-                        <li><a href="#" class="opc-main-bg" data-filter=".web">Web & Data</a></li>
+                           <li><a href="#" class="opc-main-bg" data-filter=".web">Web & Data</a></li>
                         </ul>
                   
 
                         <!-- iso box section -->
                         <div class="iso-box-section wow fadeInUp" data-wow-delay="0.4s">
                            <div class="iso-box-wrapper col4-iso-box">
-                              <div class="iso-box graphic motion col-md-4 col-sm-6">
+                              <div class="iso-box motion col-md-4 col-sm-6">
                                  <div class="portfolio-thumb">
                                     <a href="motiongraphic.html">
                                     <img src="img/2018-09-count.gif";class="img-responsive" alt="Portfolio">
@@ -176,7 +183,7 @@
 
 
 
-                              <div class="iso-box graphic motion col-md-4 col-sm-6">
+                              <div class="iso-box motion col-md-4 col-sm-6">
                                  <div class="portfolio-thumb">
                                     <a href="motiongraphic.html#12rules">
                                     <img src="img/2018-09-12P.gif";class="img-responsive" alt="Portfolio">
@@ -191,7 +198,7 @@
                                  </div>
                               </div>
 
-                              <div class="iso-box graphic motion col-md-4 col-sm-6">
+                              <div class="iso-box motion col-md-4 col-sm-6">
                                  <div class="portfolio-thumb">
                                     <a href="motiongraphic.html#fixyou">
                                     <img src="img/text.gif";class="img-responsive" alt="Portfolio">
@@ -207,7 +214,7 @@
                               </div>
 
                               
-                              <div class="iso-box interactive motion col-md-4 col-sm-6">
+                              <div class="iso-box interactive col-md-4 col-sm-6">
                                  <div class="portfolio-thumb">
                                     <a href="interactive.html#drifting">
                                     <img src="img/drifting_cover.png";class="img-responsive" alt="Portfolio">
@@ -249,7 +256,7 @@
                                     </a>
                                  </div>
                               </div>
-                              <div class="iso-box graphic motion col-md-4 col-sm-6">
+                              <div class="iso-box motion col-md-4 col-sm-6">
                                  <div class="portfolio-thumb">
                                     <a href="motiongraphic.html#train">
                                     <img src="img/train.gif";class="img-responsive" alt="Portfolio">
@@ -264,7 +271,7 @@
                                  </div>
                               </div>
 
-                              <div class="iso-box graphic motion col-md-4 col-sm-6">
+                              <div class="iso-box motion col-md-4 col-sm-6">
                                  <div class="portfolio-thumb">
                                     <a href="motiongraphic.html#movement">
                                     <img src="img/2018-10-move.gif";class="img-responsive" alt="Portfolio">
@@ -293,7 +300,7 @@
                                     </a>
                                  </div>
                               </div>
-                              <div class="iso-box graphic motion web col-md-4 col-sm-6">
+                              <div class="iso-box web col-md-4 col-sm-6">
                                  <div class="portfolio-thumb">
                                     <a href="web.html#waterdancer">
                                     <img src="img/web_cover2.png";class="img-responsive" alt="Portfolio">
@@ -308,7 +315,7 @@
                                  </div>
                               </div>
                               
-                              <div class="iso-box graphic web interactive col-md-4 col-sm-6">
+                              <div class="iso-box web interactive col-md-4 col-sm-6">
                                  <div class="portfolio-thumb">
                                     <a href="web.html">
                                     <img src="https://docs.google.com/uc?id=1OLU_z0hErwXktMeeS9RgYfvdE_dDaNaq" class="img-responsive" alt="Portfolio">
@@ -322,7 +329,7 @@
                                     </a>
                                  </div>
                               </div>
-                              <div class="iso-box graphic interactive col-md-4 col-sm-6">
+                              <div class="iso-box interactive col-md-4 col-sm-6">
                                  <div class="portfolio-thumb">
                                     <a href="interactive.html#scan">
                                     <img src="https://docs.google.com/uc?id=1cvqhtLYrRaJ9d5507om9OsB6dOtFZKWm";class="img-responsive" alt="Portfolio">
@@ -336,7 +343,7 @@
                                     </a>
                                  </div>
                               </div>
-                              <div class="iso-box motion interactive col-md-4 col-sm-6">
+                              <div class="iso-box interactive col-md-4 col-sm-6">
                                  <div class="portfolio-thumb">
                                     <a href="interactive.html#sunMoon">
                                     <img src="https://docs.google.com/uc?id=1KgOeuAG7EsdWSCqJ9yzL_cwCx9lvETat" class="img-responsive" alt="Portfolio">
@@ -364,7 +371,7 @@
                                     </a>
                                  </div>
                               </div>
-                              <div class="iso-box graphic motion interactive col-md-4 col-sm-6">
+                              <div class="iso-box interactive col-md-4 col-sm-6">
                                  <div class="portfolio-thumb">
                                     <a href="interactive.html">
                                     <img src="https://docs.google.com/uc?id=1Ok--YhOdNEP3iawdwKws2qWE8PESv447" class="img-responsive" alt="Portfolio">
@@ -378,7 +385,7 @@
                                     </a>
                                  </div>
                               </div>
-                              <div class="iso-box graphic motion col-md-4 col-sm-6">
+                              <div class="iso-box motion col-md-4 col-sm-6">
                                  <div class="portfolio-thumb">
                                     <a href="motiongraphic.html#rushhours">
                                     <img src="https://docs.google.com/uc?id=17cNoA4OqDzgcsxMq2K1ZzxJZjtOyAcI1";class="img-responsive" alt="Portfolio">
@@ -430,13 +437,14 @@
 			<div class="col-md-12 col-sm-12">
 				
 				<ul class="social-icon wow fadeInUp"  data-wow-delay="0.2s">
-					
-					<li><a href="#" class="fa fa-tumblr"></a></li>
-					<li><a href="#" class="fa fa-linkedin"></a></li>
-					<li><a href="#" class="fa fa-envelope"></a></li>
+               
+               <li><a href="https://www.instagram.com/yalanlanlan/" class="fa fa-instagram" target="_blank"></a></li>
+					<li><a href="https://lantrip.tumblr.com/" class="fa fa-tumblr" target="_blank"></a></li>
+					<li><a href="https://www.linkedin.com/in/yalan-wen-822058a9/" class="fa fa-linkedin" target="_blank"></a></li>
+					<li><a href="mailto:ywen5@sva.edu" class="fa fa-envelope" target="_blank"></a></li>
 					
 				</ul>
-				<p class="smallText wow fadeInUp" data-wow-delay="0.1s">writen by yalan wen . 2020 . ywen5@sva.edu</p>
+				<p class="smallText wow fadeInUp" data-wow-delay="0.1s">written by Yalan Wen . 2020 . ywen5@sva.edu</p>
 			</div>
 			
 		</div>
