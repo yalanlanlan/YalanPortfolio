@@ -73,6 +73,12 @@ h5 {
   letter-spacing: 0.1rem;
 }
 
+h6{
+  color: #000;
+  font-size: 0.9rem;
+  
+}
+
 p {
   color: rgb(0, 0, 0);
   font-size: 0.8rem;
