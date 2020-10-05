@@ -1,44 +1,115 @@
-function setup() {
+var Engine = Matter.Engine,
+    //Render = Matter.Render,
+    World = Matter.World,
+    Bodies = Matter.Bodies,
+    Constraint=Matter.Constraint,
+    Mouse = Matter.Mouse,
+    MouseConstraint=Matter.MouseConstraint;
+var engine;
+var world;
+
+var ground;
+var theCircle;
+var boxes=[];
+var circles=[];
+var boundaries=[];
+
+var mConstraint;
+
+let train;
+function preload(){
+    train= loadImage('img/N036posters-02.png');
+}
+function setup(){
+    var canvas = createCanvas(windowWidth, windowHeight);
+
+    engine = Engine.create();
+    world = engine.world;
+    
+    var canvasmouse = Mouse.create(canvas.elt);
+    canvasmouse.pixelRatio = pixelDensity();
+    var options={
+        mouse:canvasmouse
+    }
+    mConstraint = MouseConstraint.create(engine,options);
+    World.add(world, mConstraint);
+    
+    //Engine.run(engine);
+
+    // var c1 = new theCircle(100 ,0,50,50);
+    // circles.push(c1);
+    // var c2 = new theCircle(100 ,0,50,50);
+    // circles.push(c2);
+    // var options={
+    //     bodyA: c1.body,
+    //     bodyB: c2.body,
+    //     length: 100,
+    //     stiffness: 0.5
+    // }
+    // var constraint = Constraint.create(options);
+    // World.add(world, constraint); 
+    
+    boundaries.push(new Boundary (windowWidth/2,windowHeight-windowHeight*0.07,windowWidth,10,0));
+    boundaries.push(new Boundary (0,windowHeight/2,windowHeight,10,PI/2));
+    boundaries.push(new Boundary (windowWidth,windowHeight/2,windowHeight,10,PI/2));
+    boundaries.push(new Boundary (windowWidth/2,0,windowWidth,10,0));
+    //ground=new Boundary (width/2,height,width,10);
+    //World.add(world, ground);
+
   
-  
-	var canvas = createCanvas(windowWidth, 900);
- 
-  // Move the canvas so it’s inside our <div id="sketch-holder">.
-  canvas.parent('sketch-holder');
-	rectMode(CENTER);
 }
 
-function windowResized() {
-  resizeCanvas(windowWidth, 900);
+function mouseClicked(){
+    var boxEdge= random(50,80);
+    boxes.push(new theBoxes(mouseX,mouseY,boxEdge,boxEdge));
+    
+    //circles.push(new theCircle(mouseX,mouseY,30,30));
 }
 
-function draw() {
-  background(255);
-  strokeWeight(1);
-  
-	fill(255, 164, 133, mouseY/2);
-  ellipse(mouseX, mouseY, mouseX/3, mouseX/3);
-	fill(0);
-  rect(mouseX-mouseX/30, mouseY-mouseX/80, mouseX/80, mouseX/80);
-  rect(mouseX+mouseX/30, mouseY-mouseX/80, mouseX/80, mouseX/80);
-	noFill();
-	stroke(0);
-	strokeWeight(2);
-	arc(mouseX, mouseY-mouseX/80, mouseX/5, mouseX/5,QUARTER_PI,HALF_PI+QUARTER_PI);
-	
-	fill(0, 0, 0, mouseY/2);
-	strokeWeight(1);
-  ellipse(mouseX,mouseY/1.3,mouseX/5,mouseX/5);
-  print(mouseY);
-	
-  stroke(mouseY, 0, 0);
-	
-	noFill();
-  rect(random(width), random(height),50,50);
-  stroke(0);
-  strokeWeight(.5);
-  line(random(width+20)-80,random(height+20)-80,random(width+100)-80,random(height+100)-80);
-  noFill();
-  stroke(0);
-  arc(160,120,100,100,random(TAU), random(TAU),PIE);
-}// JavaScript Document
+// function mouseDragged(){
+//     //boxes.push(new theBoxes(mouseX,mouseY,50,50));
+//     circles.push(new theCircle(mouseX,mouseY,50,50));
+// }
+
+function draw(){
+    background(255);
+    push();
+    rectMode(CENTER);
+    var isToogled = $('.reveal-modal').is(":visible");
+    if(isToogled==true){
+    var isHovered = $('.reveal-modal').find('#aboutlink').is(":hover");
+        if(isHovered==true){
+        image(train, 0, 0, height*720/1080,height);
+        }
+    }
+    
+    pop();
+
+    if(circles.length<20 && width>420){
+    circles.push(new theCircle(width/2,10,random(10,70)));
+    }
+    else if(circles.length<20 && width<=420){
+        circles.push(new theCircle(10,10,random(30,40)));
+    }
+
+    Engine.update(engine);
+    
+    for (var i=0; i < boxes.length; i++){
+        boxes[i].show();
+    }
+    for (var i=0; i < circles.length; i++){
+        circles[i].show();
+        if(circles[i].isOffScreen()){
+            circles[i].removeFromWorld();
+            circles.splice(i, 1);
+            i--; //going Backwards 
+        }
+    }
+    for (var i=0; i < boundaries.length; i++){
+        boundaries[i].show();
+    }
+    // console.log(circles.length, world.bodies.length);
+    if (mConstraint) {
+        cursor('grab');}else{cursor('')}
+
+}
