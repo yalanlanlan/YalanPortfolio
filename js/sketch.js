@@ -16,9 +16,16 @@ var boundaries=[];
 
 var mConstraint;
 
-let train;
+let textintro;
+//let graphic;
+let motion;
+let about;
+let interactive;
 function preload(){
-    train= loadImage('img/N036posters-02.png');
+    textintro= loadImage('img/textintro.gif');
+    motion= loadImage('img/motion.gif');
+    interactive= loadImage('img/installation_cover-01.png');
+    about= loadImage('img/drifting_cover.png');
 }
 function setup(){
     var canvas = createCanvas(windowWidth, windowHeight);
@@ -73,18 +80,40 @@ function mouseClicked(){
 
 function draw(){
     background(255);
-    push();
-    rectMode(CENTER);
+
+    imageMode(CENTER);
+    image(textintro, width/2, height/2, 640, 360);
+
+    let imagepx=width/2*(1+mouseX/width*0.4)-width*0.2;
+    let imagepy=height/2*(1+mouseY/height*0.4)-height*0.2;
+    let imagew=height*320/180*0.3;
+    let imageh=height*0.3;
     var isToogled = $('.reveal-modal').is(":visible");
+    push();
     if(isToogled==true){
     var isHovered = $('.reveal-modal').find('#aboutlink').is(":hover");
         if(isHovered==true){
-        image(train, 0, 0, height*720/1080,height);
+        image(about, imagepx, imagepy, imagew,imageh);
         }
     }
-    
     pop();
-
+    push();
+    if(isToogled==true){
+    var isHovered = $('.reveal-modal').find('#interactivelink').is(":hover");
+        if(isHovered==true){
+        image(interactive, imagepx, imagepy, imagew,imageh);
+        }
+    }
+    pop();
+    push();
+    if(isToogled==true){
+    var isHovered = $('.reveal-modal').find('#motionlink').is(":hover");
+        if(isHovered==true){
+        image(motion, imagepx, imagepy, imagew,imageh);
+        }
+    }
+    pop();
+    
     if(circles.length<20 && width>420){
     circles.push(new theCircle(width/2,10,random(10,70)));
     }

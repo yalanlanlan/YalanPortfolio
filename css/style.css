@@ -12,8 +12,6 @@ body {
 		background: #ffffff;
     font-family: Arial, Helvetica, sans-serif;
     font-style: normal;
-    
-    
     position: relative;
 }
 
@@ -48,7 +46,7 @@ h1 {
 }
 
 h2 {
-  color: #ffffff;
+  color: #000000;
   font-size: 1rem;
     font-weight: bold;
     letter-spacing: 0.1rem;
@@ -191,7 +189,7 @@ a:focus {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 99999;
+    z-index: 99;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
@@ -335,20 +333,24 @@ nav ul.right {
   right: 0
 }
 
-#nav-menu a {
-  font-weight: bold;
+#nav-menu .bold1 {
+  font-weight: bolder;
   font-size: 1rem;
   color: #000;
   text-transform: uppercase;
-  letter-spacing: 0.1rem;
-  line-height: 3rem;
+  line-height: 2.2rem;
 }
 
-#nav-menu a:hover{
-
+#nav-menu .bold1:hover,#nav-menu a:hover{
   color: #FFA485;
 }
 
+#nav-menu a{
+  font-size: 0.8rem; font-weight: normal; line-height: 2rem;
+}
+#nav-menu .small1 {
+  font-size: 0.6rem; font-weight: normal; font-style: italic;
+}
 #nav-menu li {
   list-style: none;
   padding: 10px;
@@ -403,9 +405,9 @@ a.icon {
       -ms-transform: translate(-20%, -50%);
           transform: translate(-20%, -50%);
   width: 100%;
-  text-align: right;
+  padding-left: 10px;
+  text-align: left;
 }
-
 
 
 .circle {
@@ -493,13 +495,13 @@ a.icon {
 .list-menu {
   position: fixed;
   visibility: hidden;
-  width: 200px;
+  width: 230px;
   height: 100%;
   top: 0;
   right: 0;
-  z-index: 9999999;
-  background: rgba(255,255,255,1);
-  border-left: 3px solid #000;
+  
+  background: rgba(253, 253, 253, 1);
+  border-left: 0px solid #000;
   transition: all 0.6s ease;
   -webkit-transition: all 0.6s ease;
   -moz-transition: all 0.6s ease;
@@ -509,7 +511,7 @@ a.icon {
 
 .list-menu.reveal-modal {
   opacity: 1;
-  z-index: 999999;
+  z-index: 99;
   visibility: visible;
 }
 
@@ -675,9 +677,15 @@ z-index: 1;
   overflow: hidden;
   margin: 0;
 } 
+#portfolio .portfolio-thumb #whitebg{
+  background: #f7f7f700;
+  opacity: 1;
+}
+
 
 #portfolio .portfolio-thumb .portfolio-overlay {
-  background: #141414;
+  background: #f7f7f7;
+  color: black;
   position: absolute;
   top: 0;
   right: 0;
@@ -685,14 +693,14 @@ z-index: 1;
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.55;
+  opacity: 0;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
-  border: solid 2px rgb(0, 0, 0, 1);
+  border: solid 0px rgb(0, 0, 0, 1);
 }
 
 #portfolio .portfolio-thumb:hover .portfolio-overlay {
-  opacity: 0;
+  opacity: 1;
   
 }
 .portfolio-item{
@@ -704,7 +712,8 @@ z-index: 1;
 }
 
 #portfolio .portfolio-thumb .portfolio-overlay .fa {
-    background: #f9f9f9;
+    
+    background: #f9f9f900;
     border-radius: 100px;
     color: #141414;
     font-size: 1rem;
@@ -746,6 +755,7 @@ z-index: 1;
     color: #000;
     font-size: 16px;
     font-weight: bold;
+     -webkit-text-stroke: 0.5px black;
     letter-spacing: 0.1rem;
     padding: 8px 17px;
     margin-right: 2px;
@@ -754,14 +764,15 @@ z-index: 1;
     display: block;
     text-decoration: none;
     transition: all 0.4s ease-in-out;
-    border: 2px solid rgba(0, 0, 0, 0);
+    border: 0px solid rgba(0, 0, 0, 0);
 }
 .filter-wrapper li a:active {
-  border: 2px solid #111112 !important;
+  border: 0px solid #111112 !important;
 }
 .filter-wrapper li a:hover,
 .filter-wrapper li a:focus {
-  border: 2px solid #111112;
+  border: 0px solid #111112;
+  -webkit-text-stroke: 0.5px black;
   color: #FFA485;
 }
 
@@ -784,7 +795,7 @@ z-index: 1;
     float: left;
     overflow: hidden;
     margin-bottom: 25px;
-    padding-bottom: 70px;
+    padding-bottom: 15px;
 }
 
 .iso-box > a {
@@ -808,14 +819,16 @@ z-index: 1;
     padding: 5px;
   }
   .filter-wrapper li a {
-    margin: 0;
+    margin-bottom: 5px;
+    font-size: 12px;
+    padding: 5px 5px;
   }
   #portfolio{
     padding-top: 2px;
     padding-bottom: 50px;
   }
   .filter-wrapper{
-    margin-bottom: 2px;
+    margin: 0px;
   }
   .iso-box-wrapper {
     width: 341px;
@@ -1342,12 +1355,11 @@ div.modal-content p, .watch{
 /* footer section styles
 /* ========================================== */
 footer {
-  background: rgba(255,255,255,1);
+  background: rgba(255,255,255,0);
   padding-top: 120px;
   padding-bottom: 120px;
   text-align: center;
 }
-
 
 /* social icon */
 .social-icon {
@@ -1361,7 +1373,7 @@ footer {
 .social-icon li a {
   border-radius: 100px;
   border: 1px solid transparent;
-  color: #000000;
+  color: #242424;
   font-size: 18px;
   width: 50px;
   height: 50px;
@@ -1410,6 +1422,7 @@ footer {
 
   .brand {
     padding-left: 24px;
+    z-index: 50;
   }
 
   .header-one, .header-two,
