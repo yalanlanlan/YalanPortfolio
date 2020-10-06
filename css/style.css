@@ -511,7 +511,7 @@ a.icon {
 
 .list-menu.reveal-modal {
   opacity: 1;
-  z-index: 99;
+  z-index: 999999;
   visibility: visible;
 }
 
