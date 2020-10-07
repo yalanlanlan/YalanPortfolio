@@ -306,6 +306,8 @@ nav a {
 }
 .preloadText{
   opacity: 0;
+  font-size: 0.6rem;
+  color: #5b5b5baf;
   letter-spacing: 0.1rem; 
 }
 @media screen and (max-width: 420px){
