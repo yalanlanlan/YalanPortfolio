@@ -1,3 +1,4 @@
+var canvas;
 var Engine = Matter.Engine,
     //Render = Matter.Render,
     World = Matter.World,
@@ -28,7 +29,10 @@ function preload(){
     about= loadImage('img/drifting_cover.png');
 }
 function setup(){
-    var canvas = createCanvas(windowWidth, windowHeight);
+    canvas = createCanvas(windowWidth, windowHeight);
+    canvas.parent('sketch-holder');
+    // canvas.position(0, 0);
+    // canvas.style('z-index', '-1');
 
     engine = Engine.create();
     world = engine.world;
