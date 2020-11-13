@@ -8,6 +8,26 @@ http://www.tooplate.com/view/2082-pure-mix
 
 /* Body 
 ------------------------------------- */
+.cursor{
+  width: 2rem;
+  height: 2rem;
+  border:0.1px solid  #FFA485;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  pointer-events: none;
+  z-index: 1000000;
+  transition: all 0.2s ease;
+  transition-property: background, transform;
+  transform-origin: 100% 100%;
+  backdrop-filter: blur(1px) saturate(150%);
+}
+.link-grow{
+  transform: scale(2);
+  border:0px solid rgb(0, 0, 0);
+  background-color: rgba(99, 99, 99, 0.084);
+  backdrop-filter: blur(1px) saturate(150%) contrast(110%);
+}
 body {
 		background: #ffffff;
     font-family: Arial, Helvetica, sans-serif;
@@ -304,6 +324,19 @@ nav a {
   opacity: 1;
   text-decoration: none;
 }
+.straightLink{
+  position: fixed;
+  padding: 40px 0 0;
+  padding-left: 50vw;
+}
+.straightLink a{
+  font-size: 18px;
+  padding: 15px;
+  color:#000000; -webkit-text-stroke: 0.5px #FFA485;
+}
+.straightLink a:hover{
+  color:#ffa755; -webkit-text-stroke: 0.5px black;
+}
 .preloadText{
   opacity: 0;
   font-size: 0.6rem;
@@ -313,6 +346,9 @@ nav a {
 @media screen and (max-width: 420px){
   .preloadText{
     opacity: 1;
+  }
+  .straightLink{
+    display: none;
   }
   }
 .ion-navicon{
@@ -1238,15 +1274,13 @@ div.modal-content p, .watch{
   color: rgb(255, 255, 255);
   float: left;
   font-size: 24px;
-  font-weight: bold;
-  font-style: italic;
-  stroke: 1.5px black;
+  stroke: 0.1px black;
 	-webkit-text-stroke: 1.5px black;
   position: sticky;
   position: -webkit-sticky;
-  top:90vh;
+  top:87vh;
   float: right;
-  padding-right: 5.5vw;
+  padding-right: 6vw;
 }
 
 .back:hover,

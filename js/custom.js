@@ -267,6 +267,12 @@ $(function() {
 
 //================
 $(document).ready(function() {
+  // port-thumb click actions	(dont put on a link that opens another page)
+  $('.pscroll').on('click', function(event) {
+    event.preventDefault();
+    var sectionID = $(this).attr("href");
+    scrollToID(sectionID, 750);
+  });
   // navigation click actions	
   $('.scroll-link').on('click', function(event) {
     event.preventDefault();
@@ -278,7 +284,7 @@ $(document).ready(function() {
     event.preventDefault();
     $('html, body').animate({
       scrollTop: 0
-    }, 'slow');
+    }, 500);
   });
   // mobile nav toggle
   $('#nav-toggle').on('click', function(event) {
@@ -305,3 +311,25 @@ if (typeof console === "undefined") {
     log: function() {}
   };
 }
+
+// cursor
+
+let mouseCursor = document.querySelector(".cursor");
+let allLinks = document.querySelectorAll('a');
+
+window.addEventListener('mousemove',cursor);
+
+function cursor(e){
+  console.log(mouseCursor);
+  mouseCursor.style.top = e.pageY + "px";
+  mouseCursor.style.left = e.pageX + "px";
+}
+
+allLinks.forEach(link => {
+  link.addEventListener("mouseleave",()=>{
+    mouseCursor.classList.remove("link-grow");
+  });
+  link.addEventListener("mouseover",()=>{
+    mouseCursor.classList.add("link-grow");    
+  });
+});

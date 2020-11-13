@@ -117,6 +117,18 @@ function draw(){
         }
     }
     pop();
+    push();
+    var vLink=$('#vLink').is(":hover");
+        if(vLink==true){
+        image(motion, imagepx+100, imagepy, imagew,imageh);
+        }
+    pop();
+    push();
+    var aLink=$('#aLink').is(":hover");
+        if(aLink==true){
+        image(interactive, imagepx+100, imagepy, imagew,imageh);
+        }
+    pop();
     
     if(circles.length<20 && width>420){
     circles.push(new theCircle(width/2,10,random(10,70)));
