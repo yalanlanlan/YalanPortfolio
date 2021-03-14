@@ -320,7 +320,6 @@ let allLinks = document.querySelectorAll('a');
 window.addEventListener('mousemove',cursor);
 
 function cursor(e){
-  console.log(mouseCursor);
   mouseCursor.style.top = e.pageY + "px";
   mouseCursor.style.left = e.pageX + "px";
 }
