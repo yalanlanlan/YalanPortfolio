@@ -810,7 +810,7 @@ z-index: 1;
 
 .filter-wrapper li a {
     color: #000;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
      -webkit-text-stroke: 0.5px black;
     letter-spacing: 0.1rem;
@@ -1162,7 +1162,7 @@ div.gallery {
   margin: 3vw 0vw;
   float: left;
   width: 30vw;
-  padding-right: 1vw;
+  padding-right: 3vw;
   padding-left: 0vw;
   
 }
