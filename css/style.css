@@ -935,6 +935,13 @@ z-index: 1;
 padding-top: 180px;
 }
 
+@media screen and (max-width: 760px){
+  #single-project {
+    padding-right: 8px;
+    padding-left: 8px;
+  }
+}
+
 
 
 /* about section styles
@@ -1291,7 +1298,7 @@ div.modal-content p, .watch{
   position: -webkit-sticky;
   top:87vh;
   float: right;
-  padding-right: 6vw;
+  /* padding-right: 6vw; */
 }
 
 .back:hover,
