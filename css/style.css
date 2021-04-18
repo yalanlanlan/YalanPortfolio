@@ -809,7 +809,7 @@ z-index: 1;
 }
 
 .filter-wrapper li a {
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     font-size: 14px;
     font-weight: bold;
      -webkit-text-stroke: 0.5px black;
