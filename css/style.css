@@ -716,6 +716,27 @@ z-index: 1;
   background: url('../images/header-five-bg.jpg') no-repeat;
 }
 
+/* Intro section styles
+/* ========================================== */
+@font-face {
+  font-family: 'Yantramanav';
+  src: url('../fonts/Yantramanav-Thin.ttf') format('truetype');
+}
+.digitalIntro{
+  color: #000000;
+  text-transform: none;
+  padding-top: 80px;
+  text-align: center;
+  line-height: 34px;
+  font-size: 24px;
+  font-family: 'Yantramanav';
+}
+@media screen and (max-width: 420px){
+  .digitalIntro{
+    padding-top: 40px;
+    font-size: 20px;
+  }
+}
 /* Portfolio section styles
 /* ========================================== */
 #portfolio {
@@ -1167,16 +1188,16 @@ padding-top: 180px;
     color: #FFA485;
 	}
 div.gallery {
-  margin: 3vw 0vw;
+  margin: 2vw 0vw;
   float: left;
   width: 30vw;
-  padding-right: 3vw;
+  padding-right: 1vw;
   padding-left: 0vw;
   
 }
 @media screen and (min-width: 1300px) {
 div.gallery {
-  width: 340px;
+  width: 285px;
   height: auto;
 }
 	}
@@ -1200,6 +1221,7 @@ div.gallery img {
 	}
 	.project{
 		margin-bottom: 20vw;
+    text-align: center;
 	}
 div.modal-content h2 {
   padding-left: 15vw;
