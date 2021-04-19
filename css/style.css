@@ -719,22 +719,22 @@ z-index: 1;
 /* Intro section styles
 /* ========================================== */
 @font-face {
-  font-family: 'Yantramanav';
-  src: url('../fonts/Yantramanav-Thin.ttf') format('truetype');
+  font-family: 'Marcellus';
+  src: url('../fonts/Marcellus-Regular.ttf') format('truetype');
 }
 .digitalIntro{
   color: #000000;
   text-transform: none;
   padding-top: 80px;
   text-align: center;
-  line-height: 34px;
-  font-size: 24px;
-  font-family: 'Yantramanav';
+  line-height: 30px;
+  font-size: 16px;
+  font-family: 'Marcellus';
 }
 @media screen and (max-width: 420px){
   .digitalIntro{
     padding-top: 40px;
-    font-size: 20px;
+    font-size: 16px;
   }
 }
 /* Portfolio section styles
@@ -1409,6 +1409,14 @@ div.modal-content p, .watch{
 }
 
   }
+@media screen and (min-width: 1600px) {
+  .project > img{
+    width: 960px;
+  }
+  .myVideo{
+    width: 960px;
+  }
+}
 @media screen and (max-width: 420px){
     .project > img{
       width: 90vw;
