@@ -49,7 +49,12 @@ html {
 		scroll-behavior: auto;
 	}
 } */
-
+@media screen and (max-width: 420px){
+  .cursor{
+    width: 0;
+    height: 0;
+  }
+}
 /* Typography
 ------------------------------------- */
 
@@ -734,7 +739,8 @@ z-index: 1;
 @media screen and (max-width: 420px){
   .digitalIntro{
     padding-top: 40px;
-    font-size: 16px;
+    font-size: 14px;
+    text-align: left;
   }
 }
 /* Portfolio section styles
