@@ -63,6 +63,7 @@ body:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:100;bac
 .home-favicon:before{color:var(--red);opacity:.52;transform:translate(-1px,1px)}.home-favicon:after{color:var(--blue);opacity:.42;transform:translate(1px,-1px)}.site-footer{padding-left:clamp(20px,3vw,46px);padding-right:clamp(20px,3vw,46px)}@media(max-width:650px){.site-footer{padding-left:22px;padding-right:22px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 .floating-piece img{filter:blur(5px);transform:scale(1.08);transition:filter .26s ease}.floating-piece.collision-clear img{filter:blur(0)}
+.floating-piece{pointer-events:auto;cursor:grab;user-select:none;-webkit-user-select:none}.floating-piece img{-webkit-user-drag:none}.floating-piece.is-dragging{z-index:2;cursor:grabbing}.floating-piece.is-dragging img{filter:blur(0)}@media(pointer:coarse){.floating-piece{touch-action:none}}
 @media(max-width:650px){.menu-button{min-width:82px;margin:-14px 0 -14px -34px;padding:14px 0 14px 34px;text-align:right}.intro-mark:not(.intro-minimal){width:min(72vw,300px)}}
 @media(max-width:650px){.menu-open main.route-enter{transform:none!important}}
 @media(max-width:650px){.site-header .main-nav{position:absolute;inset:72px 14px auto}.menu-open .menu-button{position:relative;right:auto}}
@@ -190,3 +191,60 @@ body:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:100;bac
 @media(min-width:651px) and (max-width:900px){.is-design:not(.project-open) .project-list.gallery-view,.is-art.art-expanded .project-list.gallery-view{grid-template-columns:repeat(3,minmax(0,1fr))}}
 /* Home section labels and rules invert over light and dark artwork like the mobile Menu control. */
 .landing .entry-links{color:#fff;mix-blend-mode:difference}.landing .entry-links a:hover{background:transparent}
+
+/* Stable route, media and overflow behavior */
+html,body,#app{max-width:100%;overflow-x:hidden}.split-detail{overflow-x:hidden!important}.split-detail>*{min-width:0;max-width:100%}.split-project{position:relative}.split-project img,.split-project iframe,.split-project video{max-width:100%}.project-links a{max-width:100%;overflow-wrap:anywhere}.media-frame>video{display:block;width:100%;height:100%;max-height:none;object-fit:contain;background:var(--paper)}.project-view-sentinel{position:absolute;z-index:-1;top:0;left:0;width:100%;height:min(50vh,360px);pointer-events:none}
+
+@media(max-width:650px){
+  .mobile-archive-grid .split-detail{display:none}.mobile-project-view .split-index{display:none}.mobile-project-view .split-detail{display:block;overflow:visible}.mobile-project-view .split-layout{display:block}.mobile-project-view .split-project{padding-top:28px}
+  .mobile-archive-grid .project-list.gallery-view,.mobile-archive-grid.is-art .project-list.gallery-view,.mobile-archive-grid.is-design .project-list.gallery-view{grid-template-columns:repeat(2,minmax(0,1fr))!important;max-height:none;overflow:visible;gap:10px}
+  .mobile-archive-grid .project-row{padding-bottom:2px!important}.mobile-archive-grid .row-thumb{aspect-ratio:16/9;margin-bottom:7px}.mobile-archive-grid .project-list.gallery-view .project-row strong{font:400 16.5px/1.15 var(--serif)!important;color:#858585!important}.mobile-archive-grid .project-list.list-view .project-row strong{font-size:21px!important;line-height:1.1;color:var(--ink)!important}
+  .mobile-archive-back{display:block;margin:18px 22px 0;border:0;background:transparent;padding:10px 0;font:500 12px/1 var(--sans);text-transform:uppercase;letter-spacing:.035em;cursor:pointer}
+}
+
+/* Compact mobile chrome: the header ends close to the archive/about content. */
+@media(max-width:650px){
+  .site-header{height:76px;padding-top:14px;padding-bottom:8px}
+  .menu-button,.menu-open .menu-button{top:18px}
+  .site-header .main-nav{inset:62px 14px auto}
+  .split-index{padding-top:16px}
+  .site-header .intro-mark,.site-header .intro-minimal,.about-page .intro-mark{transform:translate(-5px,2px)}
+  .mobile-archive-grid .project-row:hover .row-thumb,.mobile-archive-grid .project-row:hover .row-thumb img{transform:none!important}
+}
+
+/* The desktop header keeps the same navigation but uses less empty vertical space. */
+@media(min-width:651px){
+  .site-header{height:76px;padding-top:12px;padding-bottom:8px}
+  .split-page{grid-template-rows:76px minmax(0,1fr) auto}
+  .site-header .main-nav{transform:translateY(5px)}
+  .site-header .intro-mark,.site-header .intro-minimal,.about-page .intro-mark{transform:translate(-6px,1px)}
+  .split-page.index-collapsed .index-rail-controls{left:26px;right:auto;transform:translateX(-50%)}
+}
+
+/* Compact, evenly spaced social marks on About. */
+.about-contact nav{align-items:center;gap:30px}.about-contact nav a{display:grid;width:23px;height:23px;place-items:center}.about-contact nav svg{display:block;width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.45;stroke-linecap:round;stroke-linejoin:round;transition:opacity .2s,transform .25s cubic-bezier(.16,1,.3,1)}.about-contact nav .social-solid,.about-contact nav a[aria-label="Vimeo"] svg{fill:currentColor;stroke:none}.about-contact nav a:hover svg{opacity:.55;transform:translateY(-1px)}
+
+/* Media needs its own pause when it is the first block after project facts. */
+.split-project>header+.split-media{margin-top:48px}
+.split-copy:has(+.project-links){margin-bottom:28px}.split-copy+.project-links{margin-top:0}.project-links+.split-media{margin-top:48px}
+@media(max-width:650px){.split-project>header+.split-media{margin-top:30px}.split-copy:has(+.project-links){margin-bottom:20px}.project-links+.split-media{margin-top:30px}}
+
+/* Mobile archive stays image-first: one-line quiet labels and no shifting hover state. */
+@media(max-width:650px){
+  .mobile-archive-grid .index-tools{display:none}
+  .mobile-archive-grid .project-list.gallery-view{row-gap:4px!important}
+  .mobile-archive-grid .project-list.gallery-view .project-row,.mobile-archive-grid .project-list.gallery-view .project-row:hover,.mobile-archive-grid .project-list.gallery-view .project-row[aria-current=true]{padding-bottom:5px!important;transform:none!important;transition:none!important}
+  .mobile-archive-grid .project-list.gallery-view .row-thumb,.mobile-archive-grid .project-list.gallery-view .row-thumb img{border-radius:3px;transform:none!important;transition:none!important}
+  .mobile-archive-grid .project-list.gallery-view .project-row strong{display:block;min-height:0;margin-top:6px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink)!important;font-size:13px!important;line-height:1.2!important;transition:none!important}
+}
+
+@media(min-width:651px){
+  .is-design:not(.project-open) .gallery-view .project-row strong,
+  .is-art.art-expanded .gallery-view .project-row strong{font-size:13px}
+}
+/* Desktop unselected entries remain secondary but are dark enough to scan quickly. */
+@media(min-width:651px){.gallery-view .project-row strong,.list-view .project-row strong{color:#747474}.gallery-view .project-row:hover strong,.list-view .project-row:hover strong{color:#333}.gallery-view .project-row[aria-current=true] strong,.list-view .project-row[aria-current=true] strong{color:var(--ink)}}
+
+/* Keep project credits comfortably legible on both viewport sizes. */
+.split-credits{font-size:12px}
+@media(max-width:650px){.split-credits{font-size:13px}}

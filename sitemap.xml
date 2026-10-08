@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://yalanwen.com/</loc></url>
-  <url><loc>https://yalanwen.com/about.html</loc></url>
-  <url><loc>https://yalanwen.com/contact.html</loc></url>
-  <url><loc>https://yalanwen.com/artprojects.html</loc></url>
-  <url><loc>https://yalanwen.com/oilpainting.html</loc></url>
-  <url><loc>https://yalanwen.com/photography.html</loc></url>
-  <url><loc>https://yalanwen.com/sketches.html</loc></url>
-  <url><loc>https://yalanwen.com/digitalprojects.html</loc></url>
-  <url><loc>https://yalanwen.com/hihit.html</loc></url>
-  <url><loc>https://yalanwen.com/weather_fan.html</loc></url>
-  <url><loc>https://yalanwen.com/weather_map.html</loc></url>
-  <url><loc>https://yalanwen.com/weather_ring.html</loc></url>
+  <url><loc>https://yalanwen.com/design/</loc></url>
+  <url><loc>https://yalanwen.com/art/</loc></url>
+  <url><loc>https://yalanwen.com/about/</loc></url>
 </urlset>

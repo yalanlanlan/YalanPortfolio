@@ -1,4 +1,4 @@
-/* Generated from the published portfolio workbook. */
+/* Generated from Google Sheets. */
 window.YALAN_BACKUP = {
   "projects": [
     {
@@ -13,11 +13,11 @@ window.YALAN_BACKUP = {
       "short_description": "Selected editorial arts designed for Digiday, worklife and ModernRetail. ",
       "description": "Selected article links:",
       "credits": "Role:\nDesigner/Illustrator, Animator\nCollaborators:\nArt Director - Ivy Liu",
-      "featured": true,
-      "order": 1,
-      "published": true,
+      "featured": "TRUE",
+      "order": "1",
+      "published": "TRUE",
       "source_url": "https://yalanwen.com/digitalprojects.html",
-      "needs_review": true,
+      "needs_review": "TRUE",
       "Dimensions": "",
       "Medium": ""
     },
@@ -33,11 +33,11 @@ window.YALAN_BACKUP = {
       "short_description": "This is one of the musical instruments that was designed to bring people together. I collaborated with a team searching for sounds made by objects that are easily ignored in our daily lives, \nand we created musical instruments based on our research.",
       "description": "This is one of the musical instruments that was designed to bring people together. I collaborated with a team searching for sounds made by objects that are easily ignored in our daily lives, and we created musical instruments based on our research. As the lead visual designer in the team, I designed the visual identity system, a booklet of user guides, an infographic poster and animated logo. Through this project, we connect people through music, creating an experience that allows people to interact with the instruments as well as other people.\n",
       "credits": "Visual Design: Yalan Wen Product . Design: Yalan Wen, Yu Yu Chen, Yu Ling Huang, Yi-Chun Chen . Music Composition: Yu Yu Chen, Yalan Wen",
-      "featured": false,
-      "order": 9,
-      "published": true,
+      "featured": "FALSE",
+      "order": "9",
+      "published": "TRUE",
       "source_url": "https://yalanwen.com/digitalprojects.html",
-      "needs_review": true,
+      "needs_review": "TRUE",
       "Dimensions": "",
       "Medium": ""
     },
@@ -53,11 +53,11 @@ window.YALAN_BACKUP = {
       "short_description": "The Chain Game is one of the experience package of the Digiday vertical brands-Modern Retail. Each of the gif file were kept under 1MB for the purpose of optimizing the website performance.",
       "description": "The Chain Game was one of several editorial packages created for Modern Retail, a Digiday Media publication. I worked with the editorial team and contributed to the visual development of each package, following the publication’s existing brand system.\n\nEach package included a lead image and around five animated GIFs. The projects were featured on the homepage and often received strong engagement. To support site performance, each GIF was optimized to stay under 1 MB.\n\nView project: ",
       "credits": "Role:\nDesigner, Animator\nCollaborators:\nArt Director - Ivy Liu\nDesigner - Kevin Kim\n",
-      "featured": true,
-      "order": 2,
-      "published": true,
+      "featured": "TRUE",
+      "order": "2",
+      "published": "TRUE",
       "source_url": "https://yalanwen.com/digitalprojects.html",
-      "needs_review": true,
+      "needs_review": "TRUE",
       "Dimensions": "",
       "Medium": ""
     },
@@ -73,11 +73,11 @@ window.YALAN_BACKUP = {
       "short_description": "Annual list of honorees of the people who shaped fashion and beauty. Design 50 profile photo banners and social headshots, as well as design and animate icons for each category.",
       "description": "Glossy 50 is an annual list recognizing the people shaping the fashion and beauty industries. For the project, using Glossy 50 2022 as an example, I designed 50 profile banners and social graphics, along with a set of animated category icons.\n\nI also created sizzle reels and animated social content for Glossy’s fashion and beauty events.\n",
       "credits": "Role:\nDesigner, Animator\nCollaborators:\nArt Director - Ivy Liu",
-      "featured": true,
-      "order": 3,
-      "published": true,
+      "featured": "TRUE",
+      "order": "3",
+      "published": "TRUE",
       "source_url": "https://yalanwen.com/digitalprojects.html",
-      "needs_review": true,
+      "needs_review": "TRUE",
       "Dimensions": "",
       "Medium": ""
     },
@@ -93,11 +93,11 @@ window.YALAN_BACKUP = {
       "short_description": "Poster design for classical music that relates to animals. In this series I was trying to find the form of each animal and deconstructing the body structure.",
       "description": "",
       "credits": "Role\nDesigner",
-      "featured": false,
-      "order": 10,
-      "published": true,
+      "featured": "FALSE",
+      "order": "10",
+      "published": "TRUE",
       "source_url": "https://yalanwen.com/digitalprojects.html",
-      "needs_review": true,
+      "needs_review": "TRUE",
       "Dimensions": "",
       "Medium": ""
     },
@@ -111,13 +111,13 @@ window.YALAN_BACKUP = {
       "role": "Designer / Animator",
       "cover_image": "https://res.cloudinary.com/ez4bug1c/image/upload/v1791140010/motion.gif",
       "short_description": "",
-      "description": "00:01-00:06 Digiday Editorial Art and Animations (00:04 illustration by Simiao Wang)\n00:06-00:10 Glossy Fashion Sizzle Reel and Icons\n00:11-00:13 Worklife brand Sizzle Reel\n00:13-00:16 Token to Play package\n00:17-00:18 BumbleBear logo animation\n00:19-00:22 SAS batting lab UI design\n00:23-00:24 National Geographic Live animation\n00:25 Custom Reel animation\n00:26 Future of TV animation\n00:27-00:29 DPS reel 2023\n00:29-00:30 MR vending machine package (Illustration by Simiao Wang)\n00:31-00:32 Digiday WTF social\n00:33-00:38 Creator Machine package\n\nAfter Effects . Photoshop . Stop Motion . 3ds Max . C4D . Hand Painted Films\nIllustrations",
+      "description": "Timestamps:\n00:01-00:06 Digiday Editorial Art and Animations (00:04 illustration by Simiao Wang)\n00:06-00:10 Glossy Fashion Sizzle Reel and Icons\n00:11-00:13 Worklife brand Sizzle Reel\n00:13-00:16 Token to Play package\n00:17-00:18 BumbleBear logo animation\n00:19-00:22 SAS batting lab UI design\n00:23-00:24 National Geographic Live animation\n00:25 Custom Reel animation\n00:26 Future of TV animation\n00:27-00:29 DPS reel 2023\n00:29-00:30 MR vending machine package (Illustration by Simiao Wang)\n00:31-00:32 Digiday WTF social\n00:33-00:38 Creator Machine package\n\nAfter Effects . Photoshop . Stop Motion . 3ds Max . C4D . Hand Painted Films\nIllustrations",
       "credits": "Role:\nDesigner, Animator\nCollaborators:\nDigiday Art Direction - Ivy Liu\nSee SAS batting lab project on this page for Volvox Lab team credits\n",
-      "featured": true,
-      "order": 4,
-      "published": true,
+      "featured": "TRUE",
+      "order": "4",
+      "published": "TRUE",
       "source_url": "https://yalanwen.com/digitalprojects.html",
-      "needs_review": true,
+      "needs_review": "TRUE",
       "Dimensions": "",
       "Medium": ""
     },
@@ -133,11 +133,11 @@ window.YALAN_BACKUP = {
       "short_description": "",
       "description": "I joined Volvox Labs as a UI designer for Batting Lab in 2021. The six-week interactive experience was designed to help students improve their baseball skills through guided practice and feedback.\n\nI developed the visual direction and UI system, from early concepts and client presentations to the final interface. The experience guided users through four stages: Swing Away, Analyze, Collect Data, and Make Adjustments. I also created UI motion studies and prepared the lesson screens as After Effects compositions for animation.\n\nThe project was nominated in two categories at The Webby Awards 2023.",
       "credits": "Role: Designer\nClient: SAS\nAgency: McCannDesign\nPartner: OBJ\nTechnolgoy Director / Lead Software Engineer: Ben Forest\nCreative Technologist: Matthew Ross\nMotion Designer: Pasakorn Nontananadth\nMotion Designer: Siriphong Tipayakesorn (Preto HF)\nDesigner: Yalan Wen\nPhysical Experience Designer: Zyia Zhang\nFabrication: Max Smith, Benjamin Mosca, AJ Sapala, Ciara Smith\nProducer: Gilad Dor",
-      "featured": true,
-      "order": 5,
-      "published": true,
+      "featured": "TRUE",
+      "order": "5",
+      "published": "TRUE",
       "source_url": "https://yalanwen.com/digitalprojects.html",
-      "needs_review": true,
+      "needs_review": "TRUE",
       "Dimensions": "",
       "Medium": ""
     },
@@ -153,11 +153,11 @@ window.YALAN_BACKUP = {
       "short_description": "BumbleBear Games is an award-winning independent arcade game company. Since 2020, I’ve worked as the main designer with the marketing team designing event visual, logo animation, new website design, email template design, etc.",
       "description": "BumbleBear Games is an award-winning independent arcade game studio. Since 2020, I have worked as the primary designer supporting its marketing team across event visuals, logo animation, website design, email templates, and brand materials.\n\nMy role was to extend the studio’s playful arcade identity across different formats while keeping each piece clear and recognizable. I used pixel art, bold colors, and game-inspired motion to connect the brand’s marketing with the experience of its games.",
       "credits": "Role: Designer\nClient: BumbleBear Games",
-      "featured": true,
-      "order": 6,
-      "published": true,
+      "featured": "TRUE",
+      "order": "6",
+      "published": "TRUE",
       "source_url": "https://yalanwen.com/digitalprojects.html",
-      "needs_review": true,
+      "needs_review": "TRUE",
       "Dimensions": "",
       "Medium": ""
     },
@@ -173,11 +173,11 @@ window.YALAN_BACKUP = {
       "short_description": "Pitch deck series of animation for National Geographic Explorer Alizé Carrère. I animated data of CO2 and temperature graphics as well as earth animation for the Adaptation series.",
       "description": "Adaptation is a PBS documentary series by National Geographic Explorer Alizé Carrère, exploring how communities respond to climate change.\n\nI first created motion graphics for the project pitch, including CO₂ and temperature data visualizations and an animated sequence of the Earth. For the final series, I animated chalkboard-style explanation sequences featured in Episodes 1 and 3, turning scientific information into clear and accessible visuals.",
       "credits": "Role: Designer, Animator\nClient: Alizé Carrère - speaker of National Geographic Live\nCollaborator: \nArt Director: Dustin Grella - Dusty Studio",
-      "featured": true,
-      "order": 7,
-      "published": true,
+      "featured": "TRUE",
+      "order": "7",
+      "published": "TRUE",
       "source_url": "https://yalanwen.com/digitalprojects.html",
-      "needs_review": true,
+      "needs_review": "TRUE",
       "Dimensions": "",
       "Medium": ""
     },
@@ -193,11 +193,11 @@ window.YALAN_BACKUP = {
       "short_description": "The landing page is designed for a novel written by award-winning author Ta-Nehisi Coates. My concept is built upon the mysterious and beautiful journey the young Hiram Walker had.",
       "description": "This landing page was created for The Water Dancer, a novel by award-winning author Ta-Nehisi Coates. The concept centered on revelation and discovery, reflecting the mysterious journey of its protagonist, Hiram Walker.\n\nI developed the visual direction and created a series of animations that served as the page’s main storytelling elements. The result was a focused digital experience that introduced the atmosphere of the novel through image and motion.",
       "credits": "Client\nThe book is published by One World, which is an imprint of Random House, a division of Penguin Random House, the world’s largest trade book publisher. The project was finished during a web design internship at Wix.\nSkills\nMiro Board . Figma . Wix Editor . P5js . Adobe Illustrator . After Effects . Cinema 4D\nRole\nAnimator ・ UI Designer\n",
-      "featured": true,
-      "order": 8,
-      "published": true,
+      "featured": "TRUE",
+      "order": "8",
+      "published": "TRUE",
       "source_url": "https://yalanwen.com/digitalprojects.html",
-      "needs_review": true,
+      "needs_review": "TRUE",
       "Dimensions": "",
       "Medium": ""
     },
@@ -213,11 +213,11 @@ window.YALAN_BACKUP = {
       "short_description": "",
       "description": "This is an experiment to turn weather into abstract forms which allows people to compare weather conditions between two citys. \nThe real-time weather data visualization was wrote with Processing and built into the website.\n",
       "credits": "Category\nData Visualization . Weather API . Google Map API . p5.js . processing",
-      "featured": false,
-      "order": 11,
-      "published": true,
+      "featured": "FALSE",
+      "order": "11",
+      "published": "TRUE",
       "source_url": "https://yalanwen.com/digitalprojects.html",
-      "needs_review": true,
+      "needs_review": "TRUE",
       "Dimensions": "",
       "Medium": ""
     },
@@ -233,11 +233,11 @@ window.YALAN_BACKUP = {
       "short_description": "2018 Interface Idea: The map helps you categorize things in different places. ",
       "description": "",
       "credits": "",
-      "featured": false,
-      "order": 12,
-      "published": true,
+      "featured": "FALSE",
+      "order": "12",
+      "published": "TRUE",
       "source_url": "https://yalanwen.com/digitalprojects.html",
-      "needs_review": true,
+      "needs_review": "TRUE",
       "Dimensions": "",
       "Medium": ""
     },
@@ -253,11 +253,11 @@ window.YALAN_BACKUP = {
       "short_description": "",
       "description": "",
       "credits": "",
-      "featured": false,
-      "order": 13,
-      "published": true,
+      "featured": "FALSE",
+      "order": "13",
+      "published": "TRUE",
       "source_url": "https://yalanwen.com/digitalprojects.html",
-      "needs_review": true,
+      "needs_review": "TRUE",
       "Dimensions": "",
       "Medium": ""
     },
@@ -273,11 +273,11 @@ window.YALAN_BACKUP = {
       "short_description": "The interactive immersive installation, I’m thinking what I am thinking, resembles a diagrammatic huge brain processing everyday data. The environment combines sound and generative graphics, creating a subconscious experience for the visitor that calls on their intuition and cognition.",
       "description": "The interactive immersive installation, I’m thinking what I am thinking, resembles a diagrammatic huge brain processing everyday data. The environment combines sound and generative graphics, creating a subconscious experience for the visitor that calls on their intuition and cognition. It asks the question, ‘Are we completely conscious of our thinking patterns when making a decision?’\nThe computer find the synonym of “Thinking”, and then keep finding the synonym of the synonym.",
       "credits": "",
-      "featured": true,
-      "order": 2,
-      "published": true,
+      "featured": "TRUE",
+      "order": "2",
+      "published": "TRUE",
       "source_url": "https://yalanwen.com/artprojects.html",
-      "needs_review": true,
+      "needs_review": "TRUE",
       "Dimensions": "space dimension: 4m*4m*4m",
       "Medium": "Immersive Installation, Computer generative graphics"
     },
@@ -293,11 +293,11 @@ window.YALAN_BACKUP = {
       "short_description": "This piece was made during the art residency on Governor Island, New York, in 2021. I collected photos of manhattan taken from different angles and started to paint a landscape with pixels.",
       "description": "This piece was made during the art residency on Governor Island, New York, in 2021. I collected photos of manhattan taken from different angles and started to paint a landscape with pixels.\nThe landscapes were subtly shown behind a window, projected on a life-sized wooden house. They were cut, destructed, and merged as time passing, compared to the real window behind the installation, it's subjective, distorted, and more of a dreamlike experience.\nThe installation itself plays with the idea of duality -- the world on the surface and behind the interpretation. It depicts the impulse of finding a truth beyond the realm of our current reality. \n\n",
       "credits": "Collaborated with artist - Kraig Blue",
-      "featured": true,
-      "order": 3,
-      "published": true,
+      "featured": "TRUE",
+      "order": "3",
+      "published": "TRUE",
       "source_url": "https://yalanwen.com/artprojects.html",
-      "needs_review": true,
+      "needs_review": "TRUE",
       "Dimensions": "",
       "Medium": "Wood, digital projection"
     },
@@ -313,11 +313,11 @@ window.YALAN_BACKUP = {
       "short_description": "Cascade was shown at CADAF Art Fair 2022 in NYC Web3 Gallery. It is an experimental film based on the imagery of ripple, deep sea, and cascade effects.",
       "description": "Cascade was shown at CADAF Art Fair 2022 in NYC Web3 Gallery. It is an experimental film based on the imagery of ripple, deep sea, and cascade effects.\nWhile the ripples react to the audio, the color translates subtly from one to another, rippling and covering through other colors.",
       "credits": "",
-      "featured": true,
-      "order": 4,
-      "published": true,
+      "featured": "TRUE",
+      "order": "4",
+      "published": "TRUE",
       "source_url": "https://yalanwen.com/artprojects.html",
-      "needs_review": true,
+      "needs_review": "TRUE",
       "Dimensions": "1920*1080",
       "Medium": "Audio-reactive generative video"
     },
@@ -333,11 +333,11 @@ window.YALAN_BACKUP = {
       "short_description": "Room View is a piece documenting the view outside of my room in Manhattan, from April to March 2020. I recorded the sound during 30 days of quarantine (including radio, sirens, people clapping for the essential workers, etc.), and several views of the Chrysler Building in different weather conditions.",
       "description": "Room View is a piece documenting the view outside of my room in Manhattan, from April to March 2020. I recorded the sound during 30 days of quarantine (including radio, sirens, people clapping for the essential workers, etc.), and several views of the Chrysler Building in different weather conditions. The melting of photographs or videos is triggered by the sounds. Depicting the state of mind when I was absorbed by the view, quiet and slow. As time passed by, the sound became a way I rely on to know what is happening outside my room - in the real world.",
       "credits": "",
-      "featured": true,
-      "order": 5,
-      "published": true,
+      "featured": "TRUE",
+      "order": "5",
+      "published": "TRUE",
       "source_url": "https://yalanwen.com/artprojects.html",
-      "needs_review": true,
+      "needs_review": "TRUE",
       "Dimensions": "720*1280",
       "Medium": "Audio-reactive generative video"
     },
@@ -353,11 +353,11 @@ window.YALAN_BACKUP = {
       "short_description": "Scan is the genrated piece after a performance act in 2019. It was inspired by an accident I encountered at the time.",
       "description": "Scan is the genrated piece after a performance act in 2019. It was inspired by an accident I encountered at the time. After my arm was injured, I barely remember the details of the accident. Through this work, I’d like to explore the relationship between our body memory and the memory we filled up with our own imaginations. As the strips reveal the scar, the memory of the event is not clear anymore, it’s replaced by our own interpretation. ",
       "credits": "",
-      "featured": true,
-      "order": 6,
-      "published": true,
+      "featured": "TRUE",
+      "order": "6",
+      "published": "TRUE",
       "source_url": "https://yalanwen.com/artprojects.html",
-      "needs_review": true,
+      "needs_review": "TRUE",
       "Dimensions": "",
       "Medium": "Graphic created from a generative performance using the injured hand as part of the controller"
     },
@@ -373,11 +373,11 @@ window.YALAN_BACKUP = {
       "short_description": "End of the Summer, installed in one of the old house on Governors Island, assembles a green carpet and a wooden stool with a customized interactive system. The installation invite people to take off their shoes, step on the carpet and experience the cicadas sounds while they sit on the stool.",
       "description": "End of the Summer, installed in one of the old house on Governors Island, assembles a green carpet and a wooden stool with a customized interactive system. The installation invite people to take off their shoes, step on the carpet and experience the cicadas sounds while they sit on the stool. While the natural sound of outdoor and the sound from indoor merged, a special sensation is created by the visiter and the surrounding. \nThe installation uses continuous sound from nature, bringing visitor's attention to the special atmosphere in the room.",
       "credits": "",
-      "featured": true,
-      "order": 7,
-      "published": true,
+      "featured": "TRUE",
+      "order": "7",
+      "published": "TRUE",
       "source_url": "https://yalanwen.com/artprojects.html",
-      "needs_review": true,
+      "needs_review": "TRUE",
       "Dimensions": "",
       "Medium": "Site specific interactive installation"
     },
@@ -393,11 +393,11 @@ window.YALAN_BACKUP = {
       "short_description": "2019 Interactive installation buit with Arduino based touch board and touchdesigner. Category\nPhysical Computing .",
       "description": "2019 Interactive installation buit with Arduino based touch board and touchdesigner.\nCategory\nPhysical Computing . Arduino-Based Touch Board . Interactive installation",
       "credits": "",
-      "featured": false,
-      "order": 8,
-      "published": true,
+      "featured": "FALSE",
+      "order": "8",
+      "published": "TRUE",
       "source_url": "https://yalanwen.com/artprojects.html",
-      "needs_review": true,
+      "needs_review": "TRUE",
       "Dimensions": "",
       "Medium": ""
     },
@@ -413,11 +413,11 @@ window.YALAN_BACKUP = {
       "short_description": "The project explores the idea of how our brain is effected by the surrounding environment. The foam head was taken with me during my visit to Boston.",
       "description": "The project explores the idea of how our brain is effected by the surrounding environment. The foam head was taken with me during my visit to Boston. I collected video and audio of each spot I went, and then played with the prospective of the view from the head. \nCategory\n2018 VDMX projection mapping",
       "credits": "",
-      "featured": false,
+      "featured": "FALSE",
       "order": "",
-      "published": true,
+      "published": "TRUE",
       "source_url": "https://yalanwen.com/artprojects.html",
-      "needs_review": true,
+      "needs_review": "TRUE",
       "Dimensions": "",
       "Medium": ""
     },
@@ -433,13 +433,33 @@ window.YALAN_BACKUP = {
       "short_description": "All other paintings",
       "description": "All other paintings",
       "credits": "",
-      "featured": false,
-      "order": 1,
-      "published": true,
+      "featured": "",
+      "order": "1",
+      "published": "TRUE",
       "source_url": "https://yalanwen.com/artprojects.html",
       "needs_review": "",
       "Dimensions": "",
       "Medium": "Oil on canvas"
+    },
+    {
+      "slug": "4066-62-62",
+      "title": "(4066.62, 62)",
+      "section": "Design",
+      "category": "Media Installation",
+      "year": "2026",
+      "client": "",
+      "role": "",
+      "cover_image": "https://res.cloudinary.com/ez4bug1c/image/upload/v1791326852/exhibition1.jpg",
+      "short_description": "4066.62, 62 traces the journey of a Tai-Japanese Hakka soldier from Guanxi to Siberia during WWII. Through deformed houses shaped by distance and time, the project explores how our sense of home changes through migration and return.",
+      "description": "4066.62, 62 is a community-based project that traces the story of Lai Xingyang, a Tai-Japanese Hakka soldier from Guanxi, Taiwan, who was captured by the Soviet Union and sent to Siberia during WWII. The title refers to the distance between Lai and his hometown, and the 62 months he spent away before finally returning home.\n\nThe project transforms stories of migration into a series of deformed houses, using distance and time to visualize how the idea of “home” shifts through departure and return. Through an interactive website and physical installation, participants are invited to contribute their own journeys and memories of leaving and coming home.\nAs a co-creator of the project, I contributed to the concept development and research, and led the visual direction, web design, and 3D modeling of the installation.",
+      "credits": "",
+      "featured": "TRUE",
+      "order": "14",
+      "published": "",
+      "source_url": "",
+      "needs_review": "",
+      "Dimensions": "",
+      "Medium": ""
     }
   ],
   "media": [
@@ -448,7 +468,7 @@ window.YALAN_BACKUP = {
       "type": "image",
       "url": "https://res.cloudinary.com/ez4bug1c/image/upload/v1791139983/Mask_group.png",
       "caption": "",
-      "order": 1,
+      "order": "1",
       "source_host": "Cloudinary",
       "migration_status": "needs_review",
       "layout": "half"
@@ -458,7 +478,7 @@ window.YALAN_BACKUP = {
       "type": "image",
       "url": "https://res.cloudinary.com/ez4bug1c/image/upload/v1791139983/MR_package_fund_costly_supply6-01_1.png",
       "caption": "",
-      "order": 2,
+      "order": "2",
       "source_host": "Cloudinary",
       "migration_status": "needs_review",
       "layout": "half"
@@ -468,7 +488,7 @@ window.YALAN_BACKUP = {
       "type": "image",
       "url": "https://res.cloudinary.com/ez4bug1c/image/upload/v1791139985/Mask_group-1.png",
       "caption": "",
-      "order": 3,
+      "order": "3",
       "source_host": "Cloudinary",
       "migration_status": "needs_review",
       "layout": "full"
@@ -478,7 +498,7 @@ window.YALAN_BACKUP = {
       "type": "image",
       "url": "https://res.cloudinary.com/ez4bug1c/image/upload/v1791139985/cart-3-3-01_1.png",
       "caption": "",
-      "order": 4,
+      "order": "4",
       "source_host": "Cloudinary",
       "migration_status": "needs_review",
       "layout": ""
@@ -488,7 +508,7 @@ window.YALAN_BACKUP = {
       "type": "image",
       "url": "https://res.cloudinary.com/ez4bug1c/image/upload/v1791139983/flower.gif",
       "caption": "",
-      "order": 5,
+      "order": "5",
       "source_host": "Cloudinary",
       "migration_status": "needs_review",
       "layout": ""
@@ -498,7 +518,7 @@ window.YALAN_BACKUP = {
       "type": "image",
       "url": "https://res.cloudinary.com/ez4bug1c/image/upload/v1791139989/section7_coins_3.gif",
       "caption": "",
-      "order": 6,
+      "order": "6",
       "source_host": "Cloudinary",
       "migration_status": "needs_review",
       "layout": ""
@@ -508,7 +528,7 @@ window.YALAN_BACKUP = {
       "type": "image",
       "url": "https://res.cloudinary.com/ez4bug1c/image/upload/v1791139985/Modern_retail_How_2022_became_the_year_of_the_inventory_glut-72-01.png",
       "caption": "",
-      "order": 7,
+      "order": "7",
       "source_host": "Cloudinary",
       "migration_status": "needs_review",
       "layout": ""
@@ -518,7 +538,7 @@ window.YALAN_BACKUP = {
       "type": "image",
       "url": "https://res.cloudinary.com/ez4bug1c/image/upload/v1791139985/Modern_retail_What_s_ahead_for_BNPL_in_2023-150ppi-02_1.png",
       "caption": "",
-      "order": 8,
+      "order": "8",
       "source_host": "Cloudinary",
       "migration_status": "needs_review",
       "layout": ""
@@ -528,7 +548,7 @@ window.YALAN_BACKUP = {
       "type": "image",
       "url": "https://res.cloudinary.com/ez4bug1c/image/upload/v1791139987/wine4ps_2_1.png",
       "caption": "",
-      "order": 9,
+      "order": "9",
       "source_host": "Cloudinary",
       "migration_status": "needs_review",
       "layout": ""
@@ -538,7 +558,7 @@ window.YALAN_BACKUP = {
       "type": "image",
       "url": "https://res.cloudinary.com/ez4bug1c/image/upload/v1791139987/inside_art_blub_1.gif",
       "caption": "",
-      "order": 10,
+      "order": "10",
       "source_host": "Cloudinary",
       "migration_status": "needs_review",
       "layout": ""
@@ -548,7 +568,7 @@ window.YALAN_BACKUP = {
       "type": "image",
       "url": "https://res.cloudinary.com/ez4bug1c/image/upload/v1791139987/Modern_retail_2022_was_a_record_year_for_unionization-72-01.png",
       "caption": "",
-      "order": 11,
+      "order": "11",
       "source_host": "Cloudinary",
       "migration_status": "needs_review",
       "layout": ""
@@ -558,7 +578,7 @@ window.YALAN_BACKUP = {
       "type": "image",
       "url": "https://res.cloudinary.com/ez4bug1c/image/upload/v1791139988/twitter3_4.gif",
       "caption": "",
-      "order": 12,
+      "order": "12",
       "source_host": "Cloudinary",
       "migration_status": "needs_review",
       "layout": ""
@@ -568,7 +588,7 @@ window.YALAN_BACKUP = {
       "type": "image",
       "url": "https://res.cloudinary.com/ez4bug1c/image/upload/v1791139987/flag_3.gif",
       "caption": "",
-      "order": 13,
+      "order": "13",
       "source_host": "Cloudinary",
       "migration_status": "needs_review",
       "layout": ""
@@ -578,7 +598,7 @@ window.YALAN_BACKUP = {
       "type": "image",
       "url": "https://docs.google.com/thumbnail?id=1kDb-H5UICv2HaevvFaJWuu3hsgsGnkjB&sz=w900",
       "caption": "",
-      "order": 1,
+      "order": "1",
       "source_host": "Google Drive (migrate)",
       "migration_status": "needs_review",
       "layout": ""
@@ -588,7 +608,7 @@ window.YALAN_BACKUP = {
       "type": "image",
       "url": "https://docs.google.com/thumbnail?id=1MuJpmJAmErEyyuaLsdBz0X0Y_EVZiMQj&sz=w900",
       "caption": "",
-      "order": 2,
+      "order": "2",
       "source_host": "Google Drive (migrate)",
       "migration_status": "needs_review",
       "layout": ""
@@ -598,7 +618,7 @@ window.YALAN_BACKUP = {
       "type": "image",
       "url": "https://docs.google.com/thumbnail?id=10SJPWLc6ASmAjsQkHqhUjYf1Q1Ds_6tU&sz=w900",
       "caption": "",
-      "order": 3,
+      "order": "3",
       "source_host": "Google Drive (migrate)",
       "migration_status": "needs_review",
       "layout": ""
@@ -608,7 +628,7 @@ window.YALAN_BACKUP = {
       "type": "image",
       "url": "https://docs.google.com/thumbnail?id=1AISUGhMahBmOKzA61IojMgE3nByLaO6W&sz=w900",
       "caption": "",
-      "order": 4,
+      "order": "4",
       "source_host": "Google Drive (migrate)",
       "migration_status": "needs_review",
       "layout": ""
@@ -618,7 +638,7 @@ window.YALAN_BACKUP = {
       "type": "image",
       "url": "https://docs.google.com/thumbnail?id=1tFz1kVo5RFEq6e1As0sH864V-Op2aRKM&sz=w900",
       "caption": "",
-      "order": 5,
+      "order": "5",
       "source_host": "Google Drive (migrate)",
       "migration_status": "needs_review",
       "layout": ""
@@ -628,7 +648,7 @@ window.YALAN_BACKUP = {
       "type": "image",
       "url": "https://docs.google.com/thumbnail?id=1hNQ4iiEB-9LWk0IUf6bi2LrR4-SfuiiQ&sz=w900",
       "caption": "",
-      "order": 6,
+      "order": "6",
       "source_host": "Google Drive (migrate)",
       "migration_status": "needs_review",
       "layout": ""
@@ -638,7 +658,7 @@ window.YALAN_BACKUP = {
       "type": "image",
       "url": "https://docs.google.com/thumbnail?id=1lGxQrDzt-tTcnYWnXrZj9g7JtoAJqzCs&sz=w900",
       "caption": "",
-      "order": 7,
+      "order": "7",
       "source_host": "Google Drive (migrate)",
       "migration_status": "needs_review",
       "layout": ""
@@ -648,7 +668,7 @@ window.YALAN_BACKUP = {
       "type": "image",
       "url": "https://docs.google.com/thumbnail?id=1lRhxpufaEzvSYULpJNTMtnqLtibf1EYF&sz=w900",
       "caption": "",
-      "order": 8,
+      "order": "8",
       "source_host": "Google Drive (migrate)",
       "migration_status": "needs_review",
       "layout": ""
@@ -658,7 +678,7 @@ window.YALAN_BACKUP = {
       "type": "image",
       "url": "https://res.cloudinary.com/ez4bug1c/image/upload/v1791140010/main_chain_4.gif",
       "caption": "",
-      "order": 1,
+      "order": "1",
       "source_host": "Cloudinary",
       "migration_status": "needs_review",
       "layout": ""
@@ -668,7 +688,7 @@ window.YALAN_BACKUP = {
       "type": "image",
       "url": "https://res.cloudinary.com/ez4bug1c/image/upload/v1791140014/main_2.gif",
       "caption": "",
-      "order": 2,
+      "order": "2",
       "source_host": "Cloudinary",
       "migration_status": "needs_review",
       "layout": ""
@@ -678,7 +698,7 @@ window.YALAN_BACKUP = {
       "type": "image",
       "url": "https://res.cloudinary.com/ez4bug1c/image/upload/v1791140013/Main_cargo_final.gif",
       "caption": "",
-      "order": 3,
+      "order": "3",
       "source_host": "Cloudinary",
       "migration_status": "needs_review",
       "layout": ""
@@ -688,7 +708,7 @@ window.YALAN_BACKUP = {
       "type": "image",
       "url": "https://res.cloudinary.com/ez4bug1c/image/upload/v1791140013/truck_final.gif",
       "caption": "",
-      "order": 4,
+      "order": "4",
       "source_host": "Cloudinary",
       "migration_status": "needs_review",
       "layout": ""
@@ -698,7 +718,7 @@ window.YALAN_BACKUP = {
       "type": "image",
       "url": "https://res.cloudinary.com/ez4bug1c/image/upload/v1791140015/shipped-final.gif",
       "caption": "",
-      "order": 5,
+      "order": "5",
       "source_host": "Cloudinary",
       "migration_status": "needs_review",
       "layout": ""
@@ -708,7 +728,7 @@ window.YALAN_BACKUP = {
       "type": "image",
       "url": "https://res.cloudinary.com/ez4bug1c/image/upload/v1791140031/icons-draft.png",
       "caption": "",
-      "order": 1,
+      "order": "1",
       "source_host": "Cloudinary",
       "migration_status": "needs_review",
       "layout": ""
@@ -718,7 +738,7 @@ window.YALAN_BACKUP = {
       "type": "image",
       "url": "https://res.cloudinary.com/ez4bug1c/image/upload/v1791140033/glossy_50_gif_3.gif",
       "caption": "",
-      "order": 2,
+      "order": "2",
       "source_host": "Cloudinary",
       "migration_status": "needs_review",
       "layout": ""
@@ -728,7 +748,7 @@ window.YALAN_BACKUP = {
       "type": "image",
       "url": "https://res.cloudinary.com/ez4bug1c/image/upload/v1791140031/glossy-profile.png",
       "caption": "",
-      "order": 3,
+      "order": "3",
       "source_host": "Cloudinary",
       "migration_status": "needs_review",
       "layout": ""
@@ -738,7 +758,7 @@ window.YALAN_BACKUP = {
       "type": "image",
       "url": "https://res.cloudinary.com/ez4bug1c/image/upload/v1791140029/glossy-storyboard.png",
       "caption": "",
-      "order": 4,
+      "order": "4",
       "source_host": "Cloudinary",
       "migration_status": "needs_review",
       "layout": ""
@@ -748,7 +768,7 @@ window.YALAN_BACKUP = {
       "type": "image",
       "url": "https://res.cloudinary.com/ez4bug1c/image/upload/v1791140038/glossy.gif",
       "caption": "",
-      "order": 5,
+      "order": "5",
       "source_host": "Cloudinary",
       "migration_status": "needs_review",
       "layout": ""
@@ -758,7 +778,7 @@ window.YALAN_BACKUP = {
       "type": "image",
       "url": "https://docs.google.com/uc?id=1ZcZGpZOWJHdchOvjBB4lPUZp5wgr_dsr",
       "caption": "",
-      "order": 1,
+      "order": "1",
       "source_host": "Google Drive (migrate)",
       "migration_status": "needs_review",
       "layout": ""
@@ -768,7 +788,7 @@ window.YALAN_BACKUP = {
       "type": "image",
       "url": "https://docs.google.com/uc?id=1vchHOsQS8jkGgXAKbb__vWaHyqXDjsYN",
       "caption": "",
-      "order": 2,
+      "order": "2",
       "source_host": "Google Drive (migrate)",
       "migration_status": "needs_review",
       "layout": ""
@@ -778,7 +798,7 @@ window.YALAN_BACKUP = {
       "type": "image",
       "url": "https://docs.google.com/uc?id=1uXDLEO4cmjSvMokXLGCdFdlIigZyEvah",
       "caption": "",
-      "order": 3,
+      "order": "3",
       "source_host": "Google Drive (migrate)",
       "migration_status": "needs_review",
       "layout": ""
@@ -788,7 +808,7 @@ window.YALAN_BACKUP = {
       "type": "video_embed",
       "url": "https://player.vimeo.com/video/824779126",
       "caption": "",
-      "order": 17,
+      "order": "17",
       "source_host": "player.vimeo.com",
       "migration_status": "ready",
       "layout": ""
@@ -798,7 +818,7 @@ window.YALAN_BACKUP = {
       "type": "video_embed",
       "url": "https://player.vimeo.com/video/305373129",
       "caption": "",
-      "order": 18,
+      "order": "18",
       "source_host": "player.vimeo.com",
       "migration_status": "ready",
       "layout": ""
@@ -808,7 +828,7 @@ window.YALAN_BACKUP = {
       "type": "image",
       "url": "https://res.cloudinary.com/ez4bug1c/image/upload/v1791140034/sas.jpg",
       "caption": "",
-      "order": 1,
+      "order": "1",
       "source_host": "Cloudinary",
       "migration_status": "needs_review",
       "layout": ""
@@ -818,7 +838,7 @@ window.YALAN_BACKUP = {
       "type": "image",
       "url": "https://res.cloudinary.com/ez4bug1c/image/upload/v1791140037/bl1.png",
       "caption": "",
-      "order": 2,
+      "order": "2",
       "source_host": "Cloudinary",
       "migration_status": "needs_review",
       "layout": ""
@@ -828,7 +848,7 @@ window.YALAN_BACKUP = {
       "type": "image",
       "url": "https://res.cloudinary.com/ez4bug1c/image/upload/v1791140035/Group_12.png",
       "caption": "",
-      "order": 3,
+      "order": "3",
       "source_host": "Cloudinary",
       "migration_status": "needs_review",
       "layout": ""
@@ -838,7 +858,7 @@ window.YALAN_BACKUP = {
       "type": "image",
       "url": "https://res.cloudinary.com/ez4bug1c/image/upload/v1791140035/Group_11.png",
       "caption": "",
-      "order": 4,
+      "order": "4",
       "source_host": "Cloudinary",
       "migration_status": "needs_review",
       "layout": ""
@@ -848,7 +868,7 @@ window.YALAN_BACKUP = {
       "type": "image",
       "url": "https://res.cloudinary.com/ez4bug1c/image/upload/v1791140035/Group_13.png",
       "caption": "",
-      "order": 5,
+      "order": "5",
       "source_host": "Cloudinary",
       "migration_status": "needs_review",
       "layout": ""
@@ -858,7 +878,7 @@ window.YALAN_BACKUP = {
       "type": "image",
       "url": "https://res.cloudinary.com/ez4bug1c/image/upload/v1791140008/bblogo_black_2s_v3.gif",
       "caption": "",
-      "order": 1,
+      "order": "1",
       "source_host": "Cloudinary",
       "migration_status": "needs_review",
       "layout": ""
@@ -868,7 +888,7 @@ window.YALAN_BACKUP = {
       "type": "image",
       "url": "https://res.cloudinary.com/ez4bug1c/image/upload/v1791140014/casestudy_yalan-compressed3.jpg",
       "caption": "",
-      "order": 2,
+      "order": "2",
       "source_host": "Cloudinary",
       "migration_status": "needs_review",
       "layout": ""
@@ -878,7 +898,7 @@ window.YALAN_BACKUP = {
       "type": "image",
       "url": "https://res.cloudinary.com/ez4bug1c/image/upload/v1791140008/casestudy_yalan-compressed2.jpg",
       "caption": "",
-      "order": 3,
+      "order": "3",
       "source_host": "Cloudinary",
       "migration_status": "needs_review",
       "layout": ""
@@ -888,7 +908,7 @@ window.YALAN_BACKUP = {
       "type": "image",
       "url": "https://res.cloudinary.com/ez4bug1c/image/upload/v1791139997/BE-SellSheet-2021-v3-11.png",
       "caption": "",
-      "order": 4,
+      "order": "4",
       "source_host": "Cloudinary",
       "migration_status": "needs_review",
       "layout": ""
@@ -898,7 +918,7 @@ window.YALAN_BACKUP = {
       "type": "image",
       "url": "https://res.cloudinary.com/ez4bug1c/image/upload/v1791140019/river.png",
       "caption": "",
-      "order": 1,
+      "order": "1",
       "source_host": "Cloudinary",
       "migration_status": "needs_review",
       "layout": ""
@@ -908,7 +928,7 @@ window.YALAN_BACKUP = {
       "type": "image",
       "url": "https://res.cloudinary.com/ez4bug1c/image/upload/v1791140015/graph.gif",
       "caption": "",
-      "order": 2,
+      "order": "2",
       "source_host": "Cloudinary",
       "migration_status": "needs_review",
       "layout": ""
@@ -918,7 +938,7 @@ window.YALAN_BACKUP = {
       "type": "image",
       "url": "https://res.cloudinary.com/ez4bug1c/image/upload/v1791140033/earth_1.gif",
       "caption": "",
-      "order": 3,
+      "order": "3",
       "source_host": "Cloudinary",
       "migration_status": "needs_review",
       "layout": ""
@@ -928,7 +948,7 @@ window.YALAN_BACKUP = {
       "type": "image",
       "url": "https://docs.google.com/thumbnail?id=1S7eOGc8ks4HVuHOWOJZf3fKoso5PpJ52&sz=w900",
       "caption": "",
-      "order": 1,
+      "order": "1",
       "source_host": "Google Drive (migrate)",
       "migration_status": "needs_review",
       "layout": ""
@@ -938,7 +958,7 @@ window.YALAN_BACKUP = {
       "type": "image",
       "url": "https://docs.google.com/thumbnail?id=1bXg4R25t8n-e_qB3pueb1Db0hQcv5ZwM&sz=w900",
       "caption": "",
-      "order": 2,
+      "order": "2",
       "source_host": "Google Drive (migrate)",
       "migration_status": "needs_review",
       "layout": ""
@@ -948,7 +968,7 @@ window.YALAN_BACKUP = {
       "type": "image",
       "url": "https://docs.google.com/thumbnail?id=1XtnKvDMNYVy-N0ckeC9e9BPNJetN0lcZ&sz=w900",
       "caption": "",
-      "order": 3,
+      "order": "3",
       "source_host": "Google Drive (migrate)",
       "migration_status": "needs_review",
       "layout": ""
@@ -958,7 +978,7 @@ window.YALAN_BACKUP = {
       "type": "image",
       "url": "https://docs.google.com/thumbnail?id=1dZjpjYttBZ3SLd_R2Qizvn6LqoTAbavZ&sz=w900",
       "caption": "",
-      "order": 4,
+      "order": "4",
       "source_host": "Google Drive (migrate)",
       "migration_status": "needs_review",
       "layout": ""
@@ -968,7 +988,7 @@ window.YALAN_BACKUP = {
       "type": "image",
       "url": "https://docs.google.com/thumbnail?id=1NidfSg-D4Hn0mom5GB-dkV5FNQMzl5It&sz=w900",
       "caption": "",
-      "order": 5,
+      "order": "5",
       "source_host": "Google Drive (migrate)",
       "migration_status": "needs_review",
       "layout": ""
@@ -978,7 +998,7 @@ window.YALAN_BACKUP = {
       "type": "video_embed",
       "url": "https://www.youtube-nocookie.com/embed/qleu7P8odeA",
       "caption": "",
-      "order": 6,
+      "order": "6",
       "source_host": "www.youtube-nocookie.com",
       "migration_status": "ready",
       "layout": ""
@@ -988,7 +1008,7 @@ window.YALAN_BACKUP = {
       "type": "image",
       "url": "https://docs.google.com/thumbnail?id=1hPr7WsnTuyKtnyvrweV_q0kaVCm5P-eP&sz=w900",
       "caption": "",
-      "order": 1,
+      "order": "1",
       "source_host": "Google Drive (migrate)",
       "migration_status": "needs_review",
       "layout": ""
@@ -998,7 +1018,7 @@ window.YALAN_BACKUP = {
       "type": "image",
       "url": "https://docs.google.com/thumbnail?id=1VWdq2EyKX0JzfS0pJp1tt-2k2NfE468V&sz=w900",
       "caption": "",
-      "order": 2,
+      "order": "2",
       "source_host": "Google Drive (migrate)",
       "migration_status": "needs_review",
       "layout": ""
@@ -1008,7 +1028,7 @@ window.YALAN_BACKUP = {
       "type": "image",
       "url": "https://docs.google.com/thumbnail?id=1MYa-R0VpYIfsA5mIVXga8IVyxwCbtZV7&sz=w900",
       "caption": "",
-      "order": 3,
+      "order": "3",
       "source_host": "Google Drive (migrate)",
       "migration_status": "needs_review",
       "layout": ""
@@ -1018,7 +1038,7 @@ window.YALAN_BACKUP = {
       "type": "image",
       "url": "https://yalanwen.com/img/sitemap.png",
       "caption": "",
-      "order": 1,
+      "order": "1",
       "source_host": "Legacy website",
       "migration_status": "needs_review",
       "layout": ""
@@ -1028,7 +1048,7 @@ window.YALAN_BACKUP = {
       "type": "image",
       "url": "https://yalanwen.com/img/2018-09-wm.png",
       "caption": "",
-      "order": 2,
+      "order": "2",
       "source_host": "Legacy website",
       "migration_status": "needs_review",
       "layout": ""
@@ -1038,7 +1058,7 @@ window.YALAN_BACKUP = {
       "type": "video_embed",
       "url": "https://www.youtube.com/embed/Mk8fn7zgiYY",
       "caption": "",
-      "order": 3,
+      "order": "3",
       "source_host": "www.youtube.com",
       "migration_status": "ready",
       "layout": ""
@@ -1048,7 +1068,7 @@ window.YALAN_BACKUP = {
       "type": "image",
       "url": "https://docs.google.com/uc?id=1HIEVfnWu0DakZM8eTdG_xPCbl7NasDMW",
       "caption": "",
-      "order": 1,
+      "order": "1",
       "source_host": "Google Drive (migrate)",
       "migration_status": "needs_review",
       "layout": ""
@@ -1058,7 +1078,7 @@ window.YALAN_BACKUP = {
       "type": "image",
       "url": "https://docs.google.com/uc?id=1Ce7Wd_EjTP3zmJxf5OXfX28XTZRye44A",
       "caption": "",
-      "order": 2,
+      "order": "2",
       "source_host": "Google Drive (migrate)",
       "migration_status": "needs_review",
       "layout": ""
@@ -1068,7 +1088,7 @@ window.YALAN_BACKUP = {
       "type": "image",
       "url": "https://res.cloudinary.com/ez4bug1c/image/upload/v1791140019/itwit-1.png",
       "caption": "",
-      "order": 1,
+      "order": "1",
       "source_host": "Cloudinary",
       "migration_status": "needs_review",
       "layout": ""
@@ -1078,7 +1098,7 @@ window.YALAN_BACKUP = {
       "type": "image",
       "url": "https://res.cloudinary.com/ez4bug1c/image/upload/v1791140177/itwit-02.jpg",
       "caption": "",
-      "order": 2,
+      "order": "2",
       "source_host": "Cloudinary",
       "migration_status": "needs_review",
       "layout": ""
@@ -1088,7 +1108,7 @@ window.YALAN_BACKUP = {
       "type": "image",
       "url": "https://res.cloudinary.com/ez4bug1c/image/upload/v1791165592/yalan_itwit.jpg",
       "caption": "",
-      "order": 3,
+      "order": "3",
       "source_host": "Google Drive (migrate)",
       "migration_status": "needs_review",
       "layout": ""
@@ -1098,7 +1118,7 @@ window.YALAN_BACKUP = {
       "type": "video_embed",
       "url": "https://www.youtube.com/embed/NHXrGKBA6Mc",
       "caption": "",
-      "order": 4,
+      "order": "4",
       "source_host": "www.youtube.com",
       "migration_status": "ready",
       "layout": ""
@@ -1108,7 +1128,7 @@ window.YALAN_BACKUP = {
       "type": "video_embed",
       "url": "https://player.vimeo.com/video/409846605",
       "caption": "",
-      "order": 5,
+      "order": "5",
       "source_host": "player.vimeo.com",
       "migration_status": "ready",
       "layout": ""
@@ -1118,7 +1138,7 @@ window.YALAN_BACKUP = {
       "type": "image",
       "url": "https://res.cloudinary.com/ez4bug1c/image/upload/v1791140017/hwaw.jpg",
       "caption": "",
-      "order": 1,
+      "order": "1",
       "source_host": "Cloudinary",
       "migration_status": "needs_review",
       "layout": ""
@@ -1128,7 +1148,7 @@ window.YALAN_BACKUP = {
       "type": "video_embed",
       "url": "https://player.vimeo.com/video/575512140?h=44ab117d22",
       "caption": "",
-      "order": 2,
+      "order": "2",
       "source_host": "player.vimeo.com",
       "migration_status": "ready",
       "layout": ""
@@ -1138,7 +1158,7 @@ window.YALAN_BACKUP = {
       "type": "image",
       "url": "https://res.cloudinary.com/ez4bug1c/image/upload/v1791140023/cascade.png",
       "caption": "",
-      "order": 1,
+      "order": "1",
       "source_host": "Cloudinary",
       "migration_status": "needs_review",
       "layout": ""
@@ -1148,7 +1168,7 @@ window.YALAN_BACKUP = {
       "type": "video_embed",
       "url": "https://player.vimeo.com/video/735095245",
       "caption": "",
-      "order": 2,
+      "order": "2",
       "source_host": "player.vimeo.com",
       "migration_status": "ready",
       "layout": ""
@@ -1158,7 +1178,7 @@ window.YALAN_BACKUP = {
       "type": "image",
       "url": "https://res.cloudinary.com/ez4bug1c/image/upload/v1791140025/roomview.png",
       "caption": "",
-      "order": 1,
+      "order": "1",
       "source_host": "Cloudinary",
       "migration_status": "needs_review",
       "layout": ""
@@ -1168,7 +1188,7 @@ window.YALAN_BACKUP = {
       "type": "image",
       "url": "https://res.cloudinary.com/ez4bug1c/image/upload/v1791140019/mobile-roomview.jpg",
       "caption": "",
-      "order": 2,
+      "order": "2",
       "source_host": "Cloudinary",
       "migration_status": "needs_review",
       "layout": ""
@@ -1178,7 +1198,7 @@ window.YALAN_BACKUP = {
       "type": "video_embed",
       "url": "https://player.vimeo.com/video/423768127?h=473fd6f1ee",
       "caption": "",
-      "order": 3,
+      "order": "3",
       "source_host": "player.vimeo.com",
       "migration_status": "ready",
       "layout": ""
@@ -1186,9 +1206,9 @@ window.YALAN_BACKUP = {
     {
       "project_slug": "scan",
       "type": "image",
-      "url": "https://drive.google.com/uc?id=1xTD96VUJJ0Bh-yFxNTnUHzCvWlj9mHqJ",
+      "url": "https://res.cloudinary.com/ez4bug1c/image/upload/v1791237936/scan-yalan-wen.png",
       "caption": "",
-      "order": 1,
+      "order": "1",
       "source_host": "Google Drive (migrate)",
       "migration_status": "needs_review",
       "layout": ""
@@ -1198,7 +1218,7 @@ window.YALAN_BACKUP = {
       "type": "video_embed",
       "url": "https://www.youtube.com/embed/KP6bvg0kRkc",
       "caption": "",
-      "order": 2,
+      "order": "2",
       "source_host": "www.youtube.com",
       "migration_status": "ready",
       "layout": ""
@@ -1208,7 +1228,7 @@ window.YALAN_BACKUP = {
       "type": "image",
       "url": "https://res.cloudinary.com/ez4bug1c/image/upload/v1791140025/eots.png",
       "caption": "",
-      "order": 1,
+      "order": "1",
       "source_host": "Cloudinary",
       "migration_status": "needs_review",
       "layout": ""
@@ -1218,7 +1238,7 @@ window.YALAN_BACKUP = {
       "type": "image",
       "url": "https://res.cloudinary.com/ez4bug1c/image/upload/v1791140032/eots-2.jpg",
       "caption": "",
-      "order": 2,
+      "order": "2",
       "source_host": "Cloudinary",
       "migration_status": "needs_review",
       "layout": ""
@@ -1228,7 +1248,7 @@ window.YALAN_BACKUP = {
       "type": "video_embed",
       "url": "",
       "caption": "",
-      "order": 3,
+      "order": "3",
       "source_host": "player.vimeo.com",
       "migration_status": "ready",
       "layout": ""
@@ -1238,7 +1258,7 @@ window.YALAN_BACKUP = {
       "type": "image",
       "url": "https://drive.google.com/uc?id=1c8dsrVXeIywzS-KZWNPGM8wXEpJxX7ob",
       "caption": "",
-      "order": 1,
+      "order": "1",
       "source_host": "Google Drive (migrate)",
       "migration_status": "needs_review",
       "layout": ""
@@ -1248,7 +1268,7 @@ window.YALAN_BACKUP = {
       "type": "video_embed",
       "url": "https://www.youtube.com/embed/C1U79vWRJHI",
       "caption": "",
-      "order": 2,
+      "order": "2",
       "source_host": "www.youtube.com",
       "migration_status": "ready",
       "layout": ""
@@ -1258,7 +1278,7 @@ window.YALAN_BACKUP = {
       "type": "image",
       "url": "https://drive.google.com/uc?id=1zWajl0rt_vWpyeAtdv-jJNhpXWju_gP9",
       "caption": "",
-      "order": 1,
+      "order": "1",
       "source_host": "Google Drive (migrate)",
       "migration_status": "needs_review",
       "layout": ""
@@ -1268,9 +1288,29 @@ window.YALAN_BACKUP = {
       "type": "video_embed",
       "url": "https://www.youtube.com/embed/C0a1FVJWH-c",
       "caption": "",
-      "order": 2,
+      "order": "2",
       "source_host": "www.youtube.com",
       "migration_status": "ready",
+      "layout": ""
+    },
+    {
+      "project_slug": "4066-62-62",
+      "type": "image",
+      "url": "https://res.cloudinary.com/ez4bug1c/image/upload/v1791327032/guansi.png",
+      "caption": "",
+      "order": "1",
+      "source_host": "Cloudinary",
+      "migration_status": "",
+      "layout": ""
+    },
+    {
+      "project_slug": "4066-62-63",
+      "type": "video_loop",
+      "url": "https://res.cloudinary.com/ez4bug1c/video/upload/v1791327427/website.mp4",
+      "caption": "",
+      "order": "2",
+      "source_host": "Cloudinary",
+      "migration_status": "",
       "layout": ""
     }
   ],
@@ -1280,245 +1320,245 @@ window.YALAN_BACKUP = {
       "type": "article",
       "label": "How the Great Resignation is unlocking surprising new career paths for women",
       "url": "https://www.worklife.news/talent/how-the-great-resignation-is-unlocking-surprising-new-career-paths-for-women/",
-      "order": 1
+      "order": "1"
     },
     {
       "project_slug": "digiday-editorial-arts",
       "type": "article",
       "label": "‘More expensive to make mistakes’: How bootstrapped brands have navigated the supply chain crisis",
       "url": "https://www.modernretail.co/retailers/more-expensive-to-make-mistakes-how-bootstrapped-brands-have-navigated-the-supply-chain-crisis/",
-      "order": 2
+      "order": "2"
     },
     {
       "project_slug": "digiday-editorial-arts",
       "type": "article",
       "label": "The rise and fall of 15-minute delivery startups, an oral history",
       "url": "https://www.modernretail.co/operations/the-rise-and-fall-of-15-minute-delivery-startups-an-oral-history/",
-      "order": 3
+      "order": "3"
     },
     {
       "project_slug": "digiday-editorial-arts",
       "type": "article",
       "label": "How off-pricers are poised to win thanks to late inventory",
       "url": "https://www.modernretail.co/retailers/how-off-pricers-are-poised-to-win-thanks-to-late-inventory/",
-      "order": 4
+      "order": "4"
     },
     {
       "project_slug": "digiday-editorial-arts",
       "type": "article",
       "label": "What’s a Chief Heat Officer? Companies creating unusual roles for new challenges",
       "url": "https://www.worklife.news/leadership/whats-a-chief-heat-officer-companies-creating-unusual-roles-for-new-challenges/",
-      "order": 5
+      "order": "5"
     },
     {
       "project_slug": "digiday-editorial-arts",
       "type": "article",
       "label": "‘Didn’t contribute positively to my mental state’: People quitting social media find job productivity soars",
       "url": "https://www.worklife.news/talent/didnt-contribute-positively-to-my-mental-state-people-quitting-social-media-find-job-productivity-soars/",
-      "order": 6
+      "order": "6"
     },
     {
       "project_slug": "digiday-editorial-arts",
       "type": "article",
       "label": "Unilever, HSBC, Nestlé among companies turning to talent marketplaces to plug skills shortages and meet demand for flexible working",
       "url": "https://www.worklife.news/talent/unilever-hsbc-nestle-among-companies-turning-to-talent-marketplaces-to-plug-skills-shortages-and-meet-demand-for-flexible-working/",
-      "order": 7
+      "order": "7"
     },
     {
       "project_slug": "digiday-editorial-arts",
       "type": "article",
       "label": "‘Important we stimulate ourselves in new ways’: Why people are changing how they commute, for the better",
       "url": "https://www.worklife.news/talent/important-we-stimulate-ourselves-in-new-ways-why-people-are-changing-how-they-commute-for-the-better/",
-      "order": 8
+      "order": "8"
     },
     {
       "project_slug": "digiday-editorial-arts",
       "type": "article",
       "label": "Amazon is moving to a single monthly storage cap for FBA sellers",
       "url": "https://www.modernretail.co/technology/amazon-is-moving-to-a-single-monthly-storage-cap-for-fba-sellers/",
-      "order": 9
+      "order": "9"
     },
     {
       "project_slug": "digiday-editorial-arts",
       "type": "article",
       "label": "Growth and growing pains await buy now, pay later platforms in 2023",
       "url": "https://www.modernretail.co/technology/growth-and-growing-pains-await-buy-now-pay-later-platforms-in-2023/",
-      "order": 10
+      "order": "10"
     },
     {
       "project_slug": "digiday-editorial-arts",
       "type": "article",
       "label": "How Gen Z helped galvanize a national retail unionization movement in 2022",
       "url": "https://www.modernretail.co/operations/how-gen-z-helped-galvanize-a-national-retail-unionization-movement-in-2022/",
-      "order": 11
+      "order": "11"
     },
     {
       "project_slug": "digiday-editorial-arts",
       "type": "article",
       "label": "Publishers lament the removal of Twitter Moments as referral traffic dips",
       "url": "https://digiday.com/media/publishers-lament-the-removal-of-twitter-moments-as-referral-traffic-dips/?utm_campaign=digidaydis&utm_source=twitter&utm_medium=social&utm_content=11823",
-      "order": 12
+      "order": "12"
     },
     {
       "project_slug": "digiday-editorial-arts",
       "type": "article",
       "label": "TikTok’s uncertain future: the issues marketers should (and shouldn’t) fret over",
       "url": "https://digiday.com/marketing/tiktoks-uncertain-future-the-issues-marketers-should-and-shouldnt-fret-over/",
-      "order": 13
+      "order": "13"
     },
     {
       "project_slug": "hihit-visual-identity",
       "type": "external_project",
       "label": "View More",
       "url": "https://yalanwen.com/hihit.html",
-      "order": 1
+      "order": "1"
     },
     {
       "project_slug": "digiday-experience-packages",
       "type": "article",
       "label": "View project: The Chain Game",
       "url": "https://www.modernretail.co/retailers/the-chain-game/",
-      "order": 1
+      "order": "1"
     },
     {
       "project_slug": "digiday-experience-packages",
       "type": "article",
       "label": "The Chain Game",
       "url": "https://www.modernretail.co/retailers/the-chain-game/",
-      "order": 2
+      "order": "2"
     },
     {
       "project_slug": "digiday-experience-packages",
       "type": "article",
       "label": "Token To Play",
       "url": "https://digiday.com/media/token-to-play/",
-      "order": 3
+      "order": "3"
     },
     {
       "project_slug": "digiday-experience-packages",
       "type": "article",
       "label": "The Creator Machine",
       "url": "https://digiday.com/marketing/how-the-creator-economy-is-operating/",
-      "order": 4
+      "order": "4"
     },
     {
       "project_slug": "digiday-experience-packages",
       "type": "article",
       "label": "The Great Mall Overhaul",
       "url": "https://www.modernretail.co/operations/the-great-mall-overhaul/",
-      "order": 5
+      "order": "5"
     },
     {
       "project_slug": "digiday-experience-packages",
       "type": "article",
       "label": "Glossy Metaverse",
       "url": "https://www.glossy.co/fashion/guide-to-the-metaverse/",
-      "order": 6
+      "order": "6"
     },
     {
       "project_slug": "digiday-experience-packages",
       "type": "article",
       "label": "Social Fragmentation",
       "url": "https://digiday.com/marketing/how-marketers-are-responding-to-a-fragmented-social-media-landscape/",
-      "order": 7
+      "order": "7"
     },
     {
       "project_slug": "glossy-50",
       "type": "article",
       "label": "View project",
       "url": "https://www.glossy.co/beauty/glossy-50-2022-the-people-who-shaped-fashion-and-beauty-this-year/",
-      "order": 1
+      "order": "1"
     },
     {
       "project_slug": "sas-batting-lab-ui-design",
       "type": "external_project",
       "label": "View project",
       "url": "https://volvoxlabs.com/project/sas-the-batting-lab/",
-      "order": 1
+      "order": "1"
     },
     {
       "project_slug": "bumblebear-games-visual-design",
       "type": "external_project",
       "label": "View project",
       "url": "http://bumblebeargames.com/",
-      "order": 1
+      "order": "1"
     },
     {
       "project_slug": "national-geo-live-animation",
       "type": "external_project",
       "label": "PBS Adaptation series",
       "url": "https://www.pbs.org/show/adaptation/",
-      "order": 1
+      "order": "1"
     },
     {
       "project_slug": "the-water-dancer",
       "type": "external_project",
       "label": "View website",
       "url": "https://leaps7bounds.wixsite.com/waterdancer",
-      "order": 1
+      "order": "1"
     },
     {
       "project_slug": "weather-visualization-2019",
       "type": "external_project",
       "label": "View website",
       "url": "https://yalanwen.com/weather_ring.html",
-      "order": 1
+      "order": "1"
     },
     {
       "project_slug": "this-website",
       "type": "external_project",
       "label": "www.instagram.com",
       "url": "https://www.instagram.com/yalanlanlan/",
-      "order": 1
+      "order": "1"
     },
     {
       "project_slug": "this-website",
       "type": "external_project",
       "label": "lantrip.tumblr.com",
       "url": "https://lantrip.tumblr.com/",
-      "order": 2
+      "order": "2"
     },
     {
       "project_slug": "this-website",
       "type": "external_project",
       "label": "www.linkedin.com",
       "url": "https://www.linkedin.com/in/yalan-wen-822058a9/",
-      "order": 3
+      "order": "3"
     },
     {
       "project_slug": "this-website",
       "type": "external_project",
       "label": "",
       "url": "mailto:ywen5@sva.edu",
-      "order": 4
+      "order": "4"
     },
     {
       "project_slug": "drifting",
       "type": "external_project",
       "label": "www.instagram.com",
       "url": "https://www.instagram.com/yalanlanlan/",
-      "order": 1
+      "order": "1"
     },
     {
       "project_slug": "drifting",
       "type": "external_project",
       "label": "lantrip.tumblr.com",
       "url": "https://lantrip.tumblr.com/",
-      "order": 2
+      "order": "2"
     },
     {
       "project_slug": "drifting",
       "type": "external_project",
       "label": "www.linkedin.com",
       "url": "https://www.linkedin.com/in/yalan-wen-822058a9/",
-      "order": 3
+      "order": "3"
     },
     {
       "project_slug": "drifting",
       "type": "external_project",
       "label": "",
       "url": "mailto:ywen5@sva.edu",
-      "order": 4
+      "order": "4"
     }
   ],
   "paintings": [
@@ -1527,42 +1567,48 @@ window.YALAN_BACKUP = {
       "type": "image",
       "url": "https://res.cloudinary.com/ez4bug1c/image/upload/v1790954749/Yalan_Wen_04.jpg",
       "caption": "",
-      "order": 1,
+      "order": "1",
       "source_host": "Google Drive (migrate)",
       "migration_status": "",
       "title": "Room View",
-      "year": 2024,
+      "year": "2024",
       "medium": "Oil on canvas",
       "dimensions": "24 × 36 in",
-      "show": true
+      "show": "TRUE"
     },
     {
       "project_slug": "paintings",
       "type": "image",
       "url": "https://yalanwen.com/img/ngl/river.png",
       "caption": "",
-      "order": 2,
+      "order": "2",
       "source_host": "Google Drive (migrate)",
       "migration_status": "",
       "title": "",
       "year": "",
       "medium": "",
       "dimensions": "",
-      "show": true
+      "show": "TRUE"
     },
     {
       "project_slug": "paintings",
       "type": "image",
       "url": "https://yalanwen.com/img/art/cascade.png",
       "caption": "",
-      "order": 3,
+      "order": "3",
       "source_host": "Google Drive (migrate)",
       "migration_status": "",
       "title": "",
       "year": "",
       "medium": "",
       "dimensions": "",
-      "show": true
+      "show": "TRUE"
+    }
+  ],
+  "contentOrder": [
+    {
+      "slug": "digiday-editorial-arts",
+      "order": "images,description,links"
     }
   ]
 };
