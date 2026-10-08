@@ -1610,5 +1610,18 @@ window.YALAN_BACKUP = {
       "slug": "digiday-editorial-arts",
       "order": "images,description,links"
     }
-  ]
+  ],
+  "about": {
+    "bio": "Yalan Wen 温雅嵐 is a Taiwanese artist and designer based in New York City. Working across painting, computational imagery, media installations, and motion , her practice draws from close observations of nature to explore subtle emotions and philosophical questions beneath the surface.\n\nWith a foundation in graphic design, she further developed her visual language through the MFA Computer Arts program at the School of Visual Arts. She has presented her practice at EVA London, Queens College at the City University of New York, and the School of Visual Arts.\n\nHer work has been exhibited internationally at CADAF Art Fair, the SIGGRAPH Asia Art Gallery, Kaohsiung Museum of Fine Arts, CultureHub’s Re-Fest, Crossing Art Gallery, Valid World Hall Gallery, and West Harlem Art Fund on Governors Island. She was a 2025-26 Artist Fellow at the National Arts Club.",
+    "cvLabel": "ARTIST CV ↓",
+    "cvUrl": "https://docs.google.com/document/d/1G1lPUZSIjBGugRj2SBBAOe_W6zxHeG76/edit?usp=sharing&ouid=108871304742083947256&rtpof=true&sd=true",
+    "press": [
+      {"title":"NAC-In the Studio with Artist Fellow Yalan Wen","url":"https://www.youtube.com/watch?v=mrvXjWPNOzU&xstg=CAMSEBUJ_b-oH-PhF0yjBgaukzY%3D","featured":true},
+      {"title":"10 Questions with Yalan Wen","url":"https://www.google.com/search?q=yalan+wen&oq=yalan+wen&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MggIARAAGBYYHjIICAIQABgWGB4yCAgDEAAYFhgeMgYIBBBFGDwyBggFEEUYQTIGCAYQRRg8MgYIBxBFGEHSAQgyMzM3ajBqNKgCALACAQ&sourceid=chrome&source=chrome.ob&ie=UTF-8#:~:text=INTERVIEW%20with%20Yalan%20Wen%20%2D%20Al,%E2%80%BA%20artist%2Dinterviews%20%E2%80%BA%20yalan%2Dwen...","featured":true},
+      {"title":"Fictional Characters Evoke Memories: 17 Artists Present Stories of Taiwanese Immigrants from the 1980s and 1990s","url":"https://www.worldjournal.com/wj/story/121390/9694611","featured":false},
+      {"title":"We catch up with designer Yalan Wen","url":"https://www.grafik.net/we-catch-up-with-designer-yalan-wen/","featured":true},
+      {"title":"Editors’ Picks: 12 Events for Your Art Calendar This Week, From a History of Christo in New York to a Spooky Mausoleum Tour","url":"https://news.artnet.com/art-world/editors-picks-october-26-2021-2016060?utm_source=chatgpt.com","featured":true},
+      {"title":"Beyond the Canvas: Yalan Wen’s Visionary Integration of Technology and Traditional Art Forms","url":"https://1883magazine.com/beyond-the-canvas-yalan-wens-visionary-integration-of-technology-and-traditional-art-forms/?utm_source=chatgpt.com","featured":true}
+    ]
+  }
 };

@@ -1,6 +1,6 @@
 const CONFIG = {
   sheetId: "1ruHwmGddPjtYLAeccyI1-_7KmIXfXoGUCN8aheEkUMg",
-  sheets: { projects: "Projects", media: "Media", links: "Links", paintings: "Paintings", contentOrder: "content_order" },
+  sheets: { projects: "Projects", media: "Media", links: "Links", paintings: "Paintings", contentOrder: "content_order", about: "About" },
   timeout: 9000,
 };
 const OLD_FAVICON = "data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAn8D//wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAAAP+fwP//n8D//5/A//8AAAD/AAAA/wAAAP8AAAD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAAAn8D//5/A//+fwP//n8D//wAAAP8AAAD/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJ/A//+fwP//n8D//5/A//8AAAD/AAAA/wAAAP8AAAAAAAAAAAAAAAAAAAAAAAAA/wAAAAAAAAAAAAAAAAAAAACfwP//n8D//5/A//+fwP//n8D//wAAAP8AAAD/AAAAAAAAAAAAAAAAAAAAAAAAAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/AAAA/wAAAOMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAP//AAD+BwAA/gMAAP4DAAD4AwAA/gMAAP4DAADeAwAA398AAN/fAAD//wAA//8AAPj/AAD//wAA//8AAA==";
@@ -8,8 +8,9 @@ const OLD_FAVICON = "data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAA
 const PROTECTED_PROJECTS = { "the-water-dancer": "4013460f" };
 const unlockedProjects = new Set();
 const app = document.querySelector("#app");
+if(window.__prerenderTimer)clearTimeout(window.__prerenderTimer);
 const cache = new Map();
-const state = { projects: [], media: [], links: [], paintings: [], contentOrder: [], source: "loading" };
+const state = { projects: [], media: [], links: [], paintings: [], contentOrder: [], about: {}, source: "loading", liveFailed: false };
 let activeArchiveSection = "";
 let lastTrackedPage = "";
 let renderWithTransition = false;
@@ -133,19 +134,39 @@ function normalize(payload) {
   const body = labelsContainFields ? rows : rows.slice(1);
   return body.map(row => Object.fromEntries(headers.map((h, i) => [h, cell(row.c?.[i])]))).filter(row => Object.values(row).some(Boolean));
 }
-function jsonp(sheet) {
-  if (cache.has(sheet)) return cache.get(sheet);
+function matrix(payload) {
+  return (payload?.table?.rows||[]).map(row=>(row.c||[]).map(cell)).filter(row=>row.some(Boolean));
+}
+function parseAbout(rows=[]) {
+  const about={bio:"",cvLabel:"ARTIST CV ↓",cvUrl:"",press:[]};let section="";
+  rows.forEach(row=>{
+    const first=String(row[0]||"").trim(),second=String(row[1]||"").trim(),label=key(first);
+    if(label==="bio"){section="bio";return}
+    if(label.startsWith("artist_cv")){section="cv";about.cvLabel=first||about.cvLabel;return}
+    if(label==="selected_press"){section="press";return}
+    if(section==="bio"&&first){about.bio=first;section="";return}
+    if(section==="cv"&&first){about.cvUrl=first;section="";return}
+    if(section==="press"&&first&&label!=="link"){
+      const featuredRaw=row.slice(2).map(value=>String(value||"").trim()).find(value=>/^(?:true|false|yes|no|1|0)$/i.test(value))||"";
+      about.press.push({title:first,url:second,featured:/^(?:true|yes|1)$/i.test(featuredRaw)});
+    }
+  });
+  return about;
+}
+function jsonp(sheet,asMatrix=false) {
+  const cacheKey=`${asMatrix?"matrix":"records"}:${sheet}`;
+  if (cache.has(cacheKey)) return cache.get(cacheKey);
   const request = new Promise((resolve, reject) => {
     const callback = `yw_${Date.now()}_${Math.random().toString(36).slice(2)}`;
     const script = document.createElement("script");
     const timer = setTimeout(() => done(new Error("timeout")), CONFIG.timeout);
     function done(error, result) { clearTimeout(timer); delete window[callback]; script.remove(); error ? reject(error) : resolve(result); }
-    window[callback] = response => done(null, normalize(response));
+    window[callback] = response => done(null, asMatrix?matrix(response):normalize(response));
     script.onerror = () => done(new Error("network"));
-    script.src = `https://docs.google.com/spreadsheets/d/${CONFIG.sheetId}/gviz/tq?tqx=out:json;responseHandler:${callback}&headers=1&sheet=${encodeURIComponent(sheet)}&t=${Date.now()}`;
+    script.src = `https://docs.google.com/spreadsheets/d/${CONFIG.sheetId}/gviz/tq?tqx=out:json;responseHandler:${callback}&headers=${asMatrix?0:1}&sheet=${encodeURIComponent(sheet)}&t=${Date.now()}`;
     document.head.appendChild(script);
   });
-  cache.set(sheet, request);
+  cache.set(cacheKey, request);
   return request;
 }
 async function jsonpFirst(sheets) {
@@ -155,7 +176,7 @@ async function jsonpFirst(sheets) {
   return [];
 }
 async function loadData() {
-  const backup = window.YALAN_BACKUP || { projects: [], media: [], links: [], paintings: [], contentOrder: [] };
+  const backup = window.YALAN_BACKUP || { projects: [], media: [], links: [], paintings: [], contentOrder: [], about: {} };
   let saved={};
   try{saved=JSON.parse(localStorage.getItem("yw-portfolio-cache-v1")||"{}")||{}}catch{}
   const initial=(backup.projects?.length?backup:saved);
@@ -165,23 +186,30 @@ async function loadData() {
     state.links = initial.links || [];
     state.paintings = initial.paintings || [];
     state.contentOrder = initial.contentOrder || [];
+    state.about = initial.about || {};
     state.source = backup.projects?.length ? "backup" : (saved.projects?.length ? "cache" : "backup");
     renderRoute(false);
   }
   try {
-    const [projects, media, links, paintings, contentOrder] = await Promise.all([jsonp(CONFIG.sheets.projects), jsonp(CONFIG.sheets.media), jsonp(CONFIG.sheets.links).catch(()=>[]), jsonpFirst([CONFIG.sheets.paintings,"Painting","Paintings Gallery","Paintings 畫廊"]), jsonpFirst([CONFIG.sheets.contentOrder,"Content Order","Content_Order"])]);
+    const [projects, media, links, paintings, contentOrder, aboutRows] = await Promise.all([jsonp(CONFIG.sheets.projects), jsonp(CONFIG.sheets.media), jsonp(CONFIG.sheets.links).catch(()=>[]), jsonpFirst([CONFIG.sheets.paintings,"Painting","Paintings Gallery","Paintings 畫廊"]), jsonpFirst([CONFIG.sheets.contentOrder,"Content Order","Content_Order"]), jsonp(CONFIG.sheets.about,true).catch(()=>[])]);
     if (!projects.some(row => val(row, "slug") || val(row, "title"))) throw new Error("invalid sheet");
     state.projects = projects;
     state.media = media;
     state.links = links;
     state.paintings = paintings;
     state.contentOrder = contentOrder;
+    const liveAbout=parseAbout(aboutRows);
+    if(liveAbout.bio||liveAbout.cvUrl||liveAbout.press.length)state.about=liveAbout;
     state.source = "sheet";
-    try{localStorage.setItem("yw-portfolio-cache-v1",JSON.stringify({projects,media,links,paintings,contentOrder,savedAt:new Date().toISOString()}))}catch{}
+    state.liveFailed = false;
+    try{localStorage.setItem("yw-portfolio-cache-v1",JSON.stringify({projects,media,links,paintings,contentOrder,about:state.about,savedAt:new Date().toISOString()}))}catch{}
     // The home links are already usable from the bundled snapshot. Do not replace
     // the whole home DOM after the network response, which made them appear late.
     if(mainRoute().path!=="/")renderRoute(false,true);
   } catch (error) {
+    state.liveFailed = true;
+    const index=document.querySelector(".split-index");
+    if(index&&!index.querySelector(".data-note"))index.insertAdjacentHTML("beforeend",status());
     console.info("Portfolio is using its built-in backup.", error.message);
   }
 }
@@ -221,10 +249,12 @@ function sectionOf(row) {
 }
 function navigate(path, project="", options={}){
   const href=route(path,project);
+  const navigationState={...(options.state||{})};
+  if(canonicalPath(path)==="/about/")navigationState.aboutFromArt=mainRoute().path==="/art/";
   if(isFilePreview()){
-    if(options.replace)history.replaceState(options.state||null,"",href);else history.pushState(options.state||null,"",href);
+    if(options.replace)history.replaceState(navigationState,"",href);else history.pushState(navigationState,"",href);
   }else{
-    if(options.replace)history.replaceState(options.state||null,"",href);else history.pushState(options.state||null,"",href);
+    if(options.replace)history.replaceState(navigationState,"",href);else history.pushState(navigationState,"",href);
   }
   renderWithTransition=options.animate!==false;
   renderRoute(renderWithTransition);
@@ -233,7 +263,7 @@ function header(minimal = false) {
   return `<header class="site-header"><a class="intro-mark ${minimal?"intro-minimal":""}" href="${route("/")}" data-route="/" aria-label="Yalan Wen home"><span class="home-logo" aria-hidden="true"><img src="https://res.cloudinary.com/ez4bug1c/image/upload/v1791139982/logo2.gif" alt=""><img src="https://res.cloudinary.com/ez4bug1c/image/upload/v1791139976/logo2hover.gif" alt=""></span></a>${minimal?`<a class="home-about" href="${route("/about")}" data-route="/about/">About</a>`:""}<button class="menu-button" type="button" aria-expanded="false">Menu</button><button class="menu-backdrop" type="button" aria-label="Close menu"></button><nav class="main-nav ${minimal?"home-menu":""}" aria-label="Main navigation"><a class="menu-star" href="${route("/")}" data-route="/" aria-label="Home">✦</a><a class="nav-design" href="${route("/design")}" data-route="/design/"><small>01</small><strong>Design</strong><span>設計　デザイン　&#x2197;&#xFE0E;</span></a><a class="nav-art" href="${route("/art")}" data-route="/art/"><small>02</small><strong>Art</strong><span>藝術　アート　&#x2197;&#xFE0E;</span></a><a class="nav-about" href="${route("/about")}" data-route="/about/"><small>03</small><strong>About</strong><span></span></a></nav></header>`;
 }
 function footer() { return `<footer class="site-footer"><span>© ${new Date().getFullYear()} Yalan Wen</span><nav><a href="https://www.instagram.com/yalanlanlan/" target="_blank" rel="noreferrer">Instagram</a><a href="https://www.linkedin.com/in/yalan-wen-822058a9/" target="_blank" rel="noreferrer">LinkedIn</a><a href="mailto:ywen5@sva.edu">Email</a></nav></footer>`; }
-function status() { return state.source === "backup" ? `<p class="data-note">Showing the saved archive. Live updates are temporarily unavailable.</p>` : ""; }
+function status() { return state.liveFailed ? `<p class="data-note">Showing the saved archive. Live updates are temporarily unavailable.</p>` : ""; }
 function setupCommon(animate = renderWithTransition) {
   window.onscroll = null;
   document.onkeydown = null;
@@ -284,7 +314,16 @@ function renderHome() {
 }
 function renderAbout(){
   document.title="About — Yalan Wen";
-  app.innerHTML=`<main class="about-page">${header()}<section class="about-layout"><div class="about-grid"><article><h1>Bio.</h1><p>Yalan Wen is a Taiwanese artist and designer based in New York City. Working across computational imagery, media installations, motion, and painting, her practice draws from close observations of nature to explore subtle emotions and philosophical questions beneath the surface.</p><p>With a foundation in graphic design, she further developed her visual language through the MFA Computer Arts program at the School of Visual Arts. She has presented her practice at EVA London, Queens College at the City University of New York, and the School of Visual Arts.</p><p>Her work has been exhibited internationally at CADAF Art Fair, the SIGGRAPH Asia Art Gallery, Kaohsiung Museum of Fine Arts, CultureHub’s Re-Fest, Crossing Art Gallery, Valid World Hall Gallery, and West Harlem Art Fund on Governors Island. She is a former Artist Fellow-in-Residence at the National Arts Club.</p></article><figure><img src="https://res.cloudinary.com/ez4bug1c/image/upload/f_auto,q_auto/artist-profile-yalan" alt="Portrait of Yalan Wen" loading="lazy"></figure></div><div class="about-contact"><div><b>CV</b><p>Available upon request</p></div><nav aria-label="Contact and social links"><a href="mailto:ywen5@sva.edu" aria-label="Email"><svg class="social-solid" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3Zm1.7 2 7.3 5.3L19.3 7Z"/></svg></a><a href="https://www.instagram.com/yalanlanlan/" target="_blank" rel="noreferrer" aria-label="Instagram"><svg class="social-solid" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4Zm4.4 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm5.35-2.8a1.15 1.15 0 1 1 0 2.3 1.15 1.15 0 0 1 0-2.3Z"/></svg></a><a href="https://www.linkedin.com/in/yalan-wen-822058a9/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><svg class="social-solid" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Zm-10.66 14.34v-7H6v7Zm-1.17-8.3a1.36 1.36 0 1 0 0-2.72 1.36 1.36 0 0 0 0 2.72Zm10.83 8.3V13.5c0-2.06-1.1-3.26-3.06-3.26-1.21 0-2.02.67-2.35 1.31v-1.21h-2.34v7h2.34v-3.47c0-.92.17-1.81 1.31-1.81 1.12 0 1.13 1.05 1.13 1.87v3.41Z"/></svg></a><a href="https://vimeo.com/user57460687" target="_blank" rel="noreferrer" aria-label="Vimeo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 8.5c2.7-3.2 5.1-3.5 6.1.4l1.8 6.7c.4 1.4.8 1.5 1.6.3 1.5-2.2 3.2-5.2 1.3-5.2-.6 0-1.1.3-1.6.6 1-3.4 6.3-5.5 7.5-2.4 1.3 3.4-5.8 11.4-9.4 11.4-2.5 0-3.2-3.7-4-6.7-.7-2.8-.9-4.2-3.3-2.5Z"/></svg></a></nav></div></section>${footer()}</main>`;
+  const fallbackBio="Yalan Wen is a Taiwanese artist and designer based in New York City. Working across computational imagery, media installations, motion, and painting, her practice draws from close observations of nature to explore subtle emotions and philosophical questions beneath the surface.\n\nWith a foundation in graphic design, she further developed her visual language through the MFA Computer Arts program at the School of Visual Arts. She has presented her practice at EVA London, Queens College at the City University of New York, and the School of Visual Arts.\n\nHer work has been exhibited internationally at CADAF Art Fair, the SIGGRAPH Asia Art Gallery, Kaohsiung Museum of Fine Arts, CultureHub’s Re-Fest, Crossing Art Gallery, Valid World Hall Gallery, and West Harlem Art Fund on Governors Island. She is a former Artist Fellow-in-Residence at the National Arts Club.";
+  const about=state.about||{},bio=about.bio||fallbackBio,paragraphs=bio.split(/\n\s*\n/).filter(Boolean);
+  const press=(about.press||[]).filter(item=>item.title&&safeUrl(item.url)&&String(item.featured).toLowerCase()==="true");
+  const fromArt=history.state?.aboutFromArt===true||(()=>{try{return new URL(document.referrer).origin===location.origin&&canonicalPath(new URL(document.referrer).pathname)==="/art/"}catch{return false}})();
+  const cvUrl=safeUrl(about.cvUrl);
+  const cv=fromArt&&cvUrl?`<div class="about-cv"><a href="${esc(cvUrl)}" target="_blank" rel="noreferrer">Artist CV <b aria-hidden="true">&#x2197;&#xFE0E;</b></a></div>`:"";
+  const pressMarkup=press.length?`<section class="about-press"><h2>Selected Press</h2><ul>${press.map(item=>`<li><a href="${esc(safeUrl(item.url))}" target="_blank" rel="noreferrer"><span>${esc(item.title)}</span><b aria-hidden="true">&#x2197;&#xFE0E;</b></a></li>`).join("")}</ul></section>`:"";
+  app.innerHTML=`<main class="about-page">${header()}<section class="about-layout"><div class="about-grid"><article><h1>Bio.</h1>${paragraphs.map(paragraph=>`<p>${esc(paragraph)}</p>`).join("")}</article><figure><img src="https://res.cloudinary.com/ez4bug1c/image/upload/f_auto,q_auto/artist-profile-yalan" alt="Portrait of Yalan Wen" loading="lazy"><figcaption>Photo credit: Yu Yu Chen</figcaption></figure></div>${pressMarkup}<div class="about-contact ${cv?"":"no-cv"}">${cv}<nav aria-label="Contact and social links"><a href="mailto:ywen5@sva.edu" aria-label="Email"><svg class="social-solid" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3Zm1.7 2 7.3 5.3L19.3 7Z"/></svg></a><a href="https://www.instagram.com/yalanlanlan/" target="_blank" rel="noreferrer" aria-label="Instagram"><svg class="social-solid" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4Zm4.4 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm5.35-2.8a1.15 1.15 0 1 1 0 2.3 1.15 1.15 0 0 1 0-2.3Z"/></svg></a><a href="https://www.linkedin.com/in/yalan-wen-822058a9/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><svg class="social-solid" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Zm-10.66 14.34v-7H6v7Zm-1.17-8.3a1.36 1.36 0 1 0 0-2.72 1.36 1.36 0 0 0 0 2.72Zm10.83 8.3V13.5c0-2.06-1.1-3.26-3.06-3.26-1.21 0-2.02.67-2.35 1.31v-1.21h-2.34v7h2.34v-3.47c0-.92.17-1.81 1.31-1.81 1.12 0 1.13 1.05 1.13 1.87v3.41Z"/></svg></a><a href="https://vimeo.com/user57460687" target="_blank" rel="noreferrer" aria-label="Vimeo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 8.5c2.7-3.2 5.1-3.5 6.1.4l1.8 6.7c.4 1.4.8 1.5 1.6.3 1.5-2.2 3.2-5.2 1.3-5.2-.6 0-1.1.3-1.6.6 1-3.4 6.3-5.5 7.5-2.4 1.3 3.4-5.8 11.4-9.4 11.4-2.5 0-3.2-3.7-4-6.7-.7-2.8-.9-4.2-3.3-2.5Z"/></svg></a></nav></div></section>${footer()}</main>`;
+  const contact=document.querySelector(".about-contact"),pressSection=document.querySelector(".about-press");
+  if(contact&&pressSection)pressSection.before(contact);
   setupCommon();
 }
 function projectPager(project,projects) {
@@ -297,7 +336,7 @@ function projectPager(project,projects) {
 function archiveProject(project,navigationProjects=[]) {
   const slug=val(project,"slug");
   const isArt=sectionOf(project)==="Art";
-  if(isLocked(slug)) return lockedProject(project);
+  if(isLocked(slug)) return lockedProject(project,navigationProjects);
   const image=safeUrl(val(project,"cover_image"));
   const media=state.media.filter(m=>isContentVisible(m)&&mediaMatchesProject(m,slug)&&val(m,"url")).sort((a,b)=>numericOrder(a)-numericOrder(b));
   const links=state.links.filter(link=>isContentVisible(link)&&sameProject(val(link,"project_slug"),slug)&&val(link,"url")).sort((a,b)=>(Number(val(a,"order"))||9999)-(Number(val(b,"order"))||9999));
@@ -317,9 +356,9 @@ function archiveProject(project,navigationProjects=[]) {
   const content=order.map(token=>blocks[token]).join("");
   return `<article class="split-project" id="project-${esc(slug)}" data-project-section="${esc(slug)}" data-project-name="${esc(val(project,"title"))}" data-project-category="${esc(categoryLabel(project))}"><div class="project-view-sentinel" aria-hidden="true"></div><header><h1>${esc(val(project,"title"))}</h1><div class="project-overview">${image?`<figure class="split-cover"><img src="${esc(image)}" alt="${esc(val(project,"title"))}" loading="lazy" decoding="async"></figure>`:""}<dl>${facts.map(([k,v])=>`<div><dt>${k}</dt><dd>${esc(v)}</dd></div>`).join("")}</dl></div></header>${content}${projectPager(project,navigationProjects)}</article>`;
 }
-function lockedProject(project) {
+function lockedProject(project,navigationProjects=[]) {
   const slug=val(project,"slug");
-  return `<article class="split-project protected-project" id="project-${esc(slug)}" data-project-section="${esc(slug)}"><header><p>Protected project</p><h1>${esc(val(project,"title"))}</h1></header><form class="password-form" data-project-password="${esc(slug)}"><label for="password-${esc(slug)}">Enter password to view this project</label><div><input id="password-${esc(slug)}" name="password" type="password" autocomplete="current-password" required><button type="submit">View project</button></div><p class="password-error" role="alert" aria-live="polite"></p></form></article>`;
+  return `<article class="split-project protected-project" id="project-${esc(slug)}" data-project-section="${esc(slug)}"><div class="protected-project-inner"><header><p>Protected project</p><h1>${esc(val(project,"title"))}</h1></header><form class="password-form" data-project-password="${esc(slug)}"><label for="password-${esc(slug)}">Enter password to view this project</label><div><input id="password-${esc(slug)}" name="password" type="password" autocomplete="current-password" required><button type="submit">View project</button></div><p class="password-error" role="alert" aria-live="polite"></p></form></div>${projectPager(project,navigationProjects)}</article>`;
 }
 function setupProjectLocks() {
   document.querySelectorAll("[data-project-password]").forEach(form=>form.addEventListener("submit",event=>{
@@ -387,7 +426,7 @@ function renderArchive(section, requestedSlug="", preservePreferences=false) {
   const mobile=innerWidth<=650;
   const initialDetail = mobile
     ? (activeSlug&&selected?archiveProject(selected,all):"")
-    : section === "Design" ? (selected ? archiveProject(selected,all) : "") : all.map(project=>archiveProject(project)).join("")+((hasPaintingsProject||hasPaintingsRow)?"":paintingGallery());
+    : section === "Design" ? (selected ? archiveProject(selected,all) : "") : all.map(project=>archiveProject(project,all)).join("")+((hasPaintingsProject||hasPaintingsRow)?"":paintingGallery());
   const mobileBack=mobile&&activeSlug?`<button class="mobile-archive-back" type="button">← Back to ${section}</button>`:"";
   app.innerHTML = `<main class="split-page ${section==="Art"?"is-art":"is-design"} ${activeSlug?"selection-active":""} ${activeSlug&&section==="Design"?"project-open":""} ${sidebarCollapsed?"index-collapsed":""} ${mobile?(activeSlug?"mobile-project-view":"mobile-archive-grid"):""}">${header()}<section class="split-layout"><aside class="split-index"><header><h2>${section === "Design" ? "Selected Design Work" : "Selected Artworks"}</h2><button class="collapse-index" type="button" aria-label="${sidebarCollapsed?"Expand":"Collapse"} project sidebar" aria-expanded="${!sidebarCollapsed}"><svg viewBox="0 0 6.87 8.84" aria-hidden="true"><path d="M6.59 8.84a.28.28 0 0 1-.28-.28V.28a.28.28 0 1 1 .56 0v8.28c0 .15-.13.28-.28.28Z"/><path d="M6.59 4.7H1.04a.28.28 0 1 1 0-.56h5.55a.28.28 0 1 1 0 .56Z"/><path d="M1.15 4.42c.3.3.45.91.46 1.32A4.42 4.42 0 0 0 0 4.42c.66-.26 1.17-.78 1.62-1.32-.04.45-.15.99-.46 1.32Z"/></svg></button></header><div class="index-tools"><label class="filter-select" style="--filter-color:${colors[0]}"><span>Filter</span><select aria-label="Filter projects">${categories.map((c,i)=>`<option value="${esc(c)}" data-color="${colors[i%colors.length]}">${esc(c)}</option>`).join("")}</select></label><div class="view-toggle" aria-label="Change project view"><button class="expand-index" type="button" aria-label="Expand project gallery" title="Expand gallery"><span>↔</span></button><div class="view-switch" role="group" aria-label="Project view"><span class="view-switch-thumb" aria-hidden="true"></span><button class="list-toggle" type="button" aria-label="List view" aria-pressed="false"><i></i></button><button class="gallery-toggle" type="button" aria-label="Gallery view" aria-pressed="true"><i></i></button></div></div></div><p class="count"></p><div class="project-list gallery-view"></div><div class="hover-preview" aria-hidden="true"><img alt=""></div>${status()}</aside><section class="split-detail">${mobileBack}${initialDetail||(!mobile?`<div class="split-empty"><p>No featured projects yet.</p></div>`:"")}</section></section><button class="back-to-top" type="button" aria-label="Back to top"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6.5 10.5 12 5l5.5 5.5"/></svg></button>${footer()}</main>`;
   if(section==="Art"&&!activeSlug&&!mobile)document.querySelector(".split-page").classList.add("art-expanded");
@@ -395,7 +434,7 @@ function renderArchive(section, requestedSlug="", preservePreferences=false) {
   collapseControl.innerHTML=`<svg class="sidebar-glyph sidebar-glyph-single" viewBox="0 0 7.26 7.26" aria-hidden="true"><rect x=".25" y=".25" width="6.76" height="6.76" rx=".67" ry=".67"/><line x1="2.69" y1=".25" x2="2.69" y2="7.01"/></svg>`;
   const scrollArtTarget=(target,delay=0)=>{if(!target)return;const move=()=>{const detail=document.querySelector(".split-detail");if(!detail||!target.isConnected)return;const locate=()=>target.getBoundingClientRect().top-detail.getBoundingClientRect().top+detail.scrollTop;detail.scrollTo({top:locate(),behavior:"smooth"});setTimeout(()=>{if(!target.isConnected)return;const correction=locate();if(Math.abs(detail.scrollTop-correction)>3)detail.scrollTo({top:correction,behavior:"smooth"})},520)};delay?setTimeout(move,delay):requestAnimationFrame(move)};
   const scrollMobileTarget=target=>{const heading=target?.querySelector("h1");if(!heading)return;const locate=()=>Math.max(0,scrollY+heading.getBoundingClientRect().top-116);scrollTo({top:locate(),behavior:"smooth"});setTimeout(()=>{if(!heading.isConnected)return;const correction=locate();if(Math.abs(scrollY-correction)>3)scrollTo({top:correction,behavior:"smooth"})},520)};
-  const jumpToProject = project => {
+  const jumpToProject = (project,options={}) => {
     const slug=val(project,"slug");
     const page=document.querySelector(".split-page");
     const base=section==="Art"?"/art":"/design";
@@ -409,6 +448,10 @@ function renderArchive(section, requestedSlug="", preservePreferences=false) {
       // Previous / Next replaces the current project entry. This keeps browser
       // Back pointed at the grid instead of walking through every viewed project.
       navigate(base,slug,{replace:!fromGrid,state:{mobileProject:true,section,gridScroll},animate:true});
+      if(options.resetTop){
+        const reset=()=>{const html=document.documentElement,previous=html.style.scrollBehavior;html.style.scrollBehavior="auto";scrollTo(0,0);html.style.scrollBehavior=previous};
+        requestAnimationFrame(()=>requestAnimationFrame(reset));
+      }
       return;
     }
     if(activeSlug===slug){
@@ -449,7 +492,7 @@ function renderArchive(section, requestedSlug="", preservePreferences=false) {
     }
     history.replaceState(null,"",route(base,slug));
   };
-  const setupProjectPager=()=>document.querySelectorAll(".project-step[data-project-step]").forEach(link=>{link.onclick=event=>{const project=all.find(item=>sameProject(val(item,"slug"),link.dataset.projectStep));if(!project)return;event.preventDefault();jumpToProject(project)}});
+  const setupProjectPager=()=>document.querySelectorAll(".project-step[data-project-step]").forEach(link=>{link.onclick=event=>{const project=all.find(item=>sameProject(val(item,"slug"),link.dataset.projectStep));if(!project)return;event.preventDefault();jumpToProject(project,{resetTop:innerWidth<=650})}});
   const draw = (filter="All") => {
     const list=document.querySelector(".project-list");
     const oldRects=new Map([...list.querySelectorAll(".project-row")].map(row=>[row.dataset.slug||row.dataset.special,row.getBoundingClientRect()]));
@@ -678,9 +721,9 @@ if(!isFilePreview()&&location.hash.startsWith("#/")){
   history.replaceState(null,"",route(legacyPath,legacyProject));
 }
 {
-  const backup=window.YALAN_BACKUP||{projects:[],media:[],links:[],paintings:[],contentOrder:[]};let saved={};try{saved=JSON.parse(localStorage.getItem("yw-portfolio-cache-v1")||"{}")||{}}catch{}
+  const backup=window.YALAN_BACKUP||{projects:[],media:[],links:[],paintings:[],contentOrder:[],about:{}};let saved={};try{saved=JSON.parse(localStorage.getItem("yw-portfolio-cache-v1")||"{}")||{}}catch{}
   const initial=backup.projects?.length?backup:saved;
-  state.projects=initial.projects||[];state.media=initial.media||[];state.links=initial.links||[];state.paintings=initial.paintings||[];state.contentOrder=initial.contentOrder||[];state.source=backup.projects?.length?"backup":(saved.projects?.length?"cache":"backup");
+  state.projects=initial.projects||[];state.media=initial.media||[];state.links=initial.links||[];state.paintings=initial.paintings||[];state.contentOrder=initial.contentOrder||[];state.about=initial.about||{};state.source=backup.projects?.length?"backup":(saved.projects?.length?"cache":"backup");
 }
 renderRoute(false);
 loadData();
