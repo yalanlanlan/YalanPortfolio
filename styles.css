@@ -233,7 +233,7 @@ html,body,#app{max-width:100%;overflow-x:hidden}.split-detail{overflow-x:hidden!
 @media(max-width:650px){
   .mobile-archive-grid .index-tools{display:none}
   .mobile-archive-grid .project-list.gallery-view{row-gap:4px!important}
-  .mobile-archive-grid .project-list.gallery-view .project-row,.mobile-archive-grid .project-list.gallery-view .project-row:hover,.mobile-archive-grid .project-list.gallery-view .project-row[aria-current=true]{padding-bottom:5px!important;transform:none!important;transition:none!important}
+  .mobile-archive-grid .project-list.gallery-view .project-row,.mobile-archive-grid .project-list.gallery-view .project-row:hover,.mobile-archive-grid .project-list.gallery-view .project-row[aria-current=true]{padding-bottom:10px!important;transform:none!important;transition:none!important}
   .mobile-archive-grid .project-list.gallery-view .row-thumb,.mobile-archive-grid .project-list.gallery-view .row-thumb img{border-radius:3px;transform:none!important;transition:none!important}
   .mobile-archive-grid .project-list.gallery-view .project-row strong{display:block;min-height:0;margin-top:6px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink)!important;font-size:13px!important;line-height:1.2!important;transition:none!important}
 }
