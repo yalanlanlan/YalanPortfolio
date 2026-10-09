@@ -370,7 +370,12 @@ function setupProjectLocks() {
   }));
 }
 function setupArtSummaries() {
-  document.querySelectorAll(".art-summary .summary-toggle").forEach(button=>button.onclick=()=>{const summary=button.closest(".art-summary"),expanded=summary.classList.toggle("is-expanded");summary.classList.toggle("is-collapsed",!expanded);button.setAttribute("aria-expanded",String(expanded));button.textContent=expanded?"Show less −":"Read more +"});
+  document.querySelectorAll(".art-summary .summary-toggle").forEach(button=>requestAnimationFrame(()=>{
+    if(!button.isConnected)return;
+    const summary=button.closest(".art-summary"),paragraph=summary?.querySelector("p");
+    if(!paragraph||paragraph.scrollHeight<=paragraph.clientHeight+1){summary?.classList.remove("is-collapsed");button.remove();return}
+    button.onclick=()=>{const expanded=summary.classList.toggle("is-expanded");summary.classList.toggle("is-collapsed",!expanded);button.setAttribute("aria-expanded",String(expanded));button.textContent=expanded?"Show less −":"Read more +"};
+  }));
 }
 function setupProjectTracking(projects){
   const page=document.querySelector(".split-page");
@@ -426,7 +431,7 @@ function renderArchive(section, requestedSlug="", preservePreferences=false) {
   const mobile=innerWidth<=650;
   const initialDetail = mobile
     ? (activeSlug&&selected?archiveProject(selected,all):"")
-    : section === "Design" ? (selected ? archiveProject(selected,all) : "") : all.map(project=>archiveProject(project,all)).join("")+((hasPaintingsProject||hasPaintingsRow)?"":paintingGallery());
+    : section === "Design" ? (selected ? archiveProject(selected,all) : "") : all.map(project=>archiveProject(project)).join("")+((hasPaintingsProject||hasPaintingsRow)?"":paintingGallery());
   const mobileBack=mobile&&activeSlug?`<button class="mobile-archive-back" type="button">← Back to ${section}</button>`:"";
   app.innerHTML = `<main class="split-page ${section==="Art"?"is-art":"is-design"} ${activeSlug?"selection-active":""} ${activeSlug&&section==="Design"?"project-open":""} ${sidebarCollapsed?"index-collapsed":""} ${mobile?(activeSlug?"mobile-project-view":"mobile-archive-grid"):""}">${header()}<section class="split-layout"><aside class="split-index"><header><h2>${section === "Design" ? "Selected Design Work" : "Selected Artworks"}</h2><button class="collapse-index" type="button" aria-label="${sidebarCollapsed?"Expand":"Collapse"} project sidebar" aria-expanded="${!sidebarCollapsed}"><svg viewBox="0 0 6.87 8.84" aria-hidden="true"><path d="M6.59 8.84a.28.28 0 0 1-.28-.28V.28a.28.28 0 1 1 .56 0v8.28c0 .15-.13.28-.28.28Z"/><path d="M6.59 4.7H1.04a.28.28 0 1 1 0-.56h5.55a.28.28 0 1 1 0 .56Z"/><path d="M1.15 4.42c.3.3.45.91.46 1.32A4.42 4.42 0 0 0 0 4.42c.66-.26 1.17-.78 1.62-1.32-.04.45-.15.99-.46 1.32Z"/></svg></button></header><div class="index-tools"><label class="filter-select" style="--filter-color:${colors[0]}"><span>Filter</span><select aria-label="Filter projects">${categories.map((c,i)=>`<option value="${esc(c)}" data-color="${colors[i%colors.length]}">${esc(c)}</option>`).join("")}</select></label><div class="view-toggle" aria-label="Change project view"><button class="expand-index" type="button" aria-label="Expand project gallery" title="Expand gallery"><span>↔</span></button><div class="view-switch" role="group" aria-label="Project view"><span class="view-switch-thumb" aria-hidden="true"></span><button class="list-toggle" type="button" aria-label="List view" aria-pressed="false"><i></i></button><button class="gallery-toggle" type="button" aria-label="Gallery view" aria-pressed="true"><i></i></button></div></div></div><p class="count"></p><div class="project-list gallery-view"></div><div class="hover-preview" aria-hidden="true"><img alt=""></div>${status()}</aside><section class="split-detail">${mobileBack}${initialDetail||(!mobile?`<div class="split-empty"><p>No featured projects yet.</p></div>`:"")}</section></section><button class="back-to-top" type="button" aria-label="Back to top"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6.5 10.5 12 5l5.5 5.5"/></svg></button>${footer()}</main>`;
   if(section==="Art"&&!activeSlug&&!mobile)document.querySelector(".split-page").classList.add("art-expanded");
